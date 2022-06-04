@@ -87,14 +87,14 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         userList1=new ArrayList<>();
-        userList1.add(new ModelClass(R.drawable.war));
         userList1.add(new ModelClass(R.drawable.titanic));
+        userList1.add(new ModelClass(R.drawable.war));
         userList1.add(new ModelClass(R.drawable.extraction));
         userList1.add(new ModelClass(R.drawable.movie));
-        userList1.add(new ModelClass(R.drawable.war));
         userList1.add(new ModelClass(R.drawable.titanic));
+        userList1.add(new ModelClass(R.drawable.war));
         userList1.add(new ModelClass(R.drawable.extraction));
-        userList1.add(new ModelClass(R.drawable.movie));
+
 
 
     }
