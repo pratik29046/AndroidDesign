@@ -37,37 +37,34 @@
             android:layout_marginTop="10dp"
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        android:id="@+id/l2"
-        android:layout_alignStart="@id/l1"
-        >
+
         <TextView
+            android:id="@+id/sub"
+            android:layout_below="@+id/l1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="   SUBSCRIBE TO WATCH"
             android:textColor="#F40529"
-            android:textSize="20dp"
+            android:textSize="18dp"
             />
         <TextView
+            android:id="@+id/rec"
+            android:layout_below="@+id/sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="   Recommended"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="18dp"
             />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/l4"
+        android:layout_below="@+id/rec"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
         android:background="@drawable/ract"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -197,12 +194,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="____________________________________________________"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_marginTop="-10dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -223,12 +221,13 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/general"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/l4"
+        android:layout_below="@+id/l4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="215dp"
         android:background="@drawable/rect_2"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -358,12 +357,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="____________________________________________________"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:layout_marginTop="-10dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -381,14 +381,15 @@
 
         </LinearLayout>
 
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/l5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="530dp"
-        android:layout_marginBottom="-9dp"
+        android:layout_below="@+id/general"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -436,29 +437,27 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5dp">
 
-            >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favorite"
-                android:layout_marginStart="38dp"
-                android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"
+                android:text="Favorite"
+                android:textColor="@color/white"
+                android:layout_marginStart="35dp"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Watchlist"
+                android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="43dp"
-
+                android:layout_marginStart="42dp"
                 />
 
             <TextView
@@ -466,19 +465,22 @@
                 android:layout_height="wrap_content"
                 android:text="Plans"
                 android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="49dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginEnd="5dp"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Profile"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:layout_marginStart="55dp"
-                />
+                android:text=" Profile"
+                android:layout_marginStart="45dp"
+                android:textColor="@color/white" />
+
         </LinearLayout>
+
+
+
 
         <TextView
             android:id="@+id/line"
@@ -486,18 +488,16 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:text="___________________________________________________________"
+            android:text="__________________________________________________________"
             android:textColor="@color/white"
-            android:layout_marginTop="5dp"
             />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_marginTop="3dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -532,28 +532,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/l5"
+        android:layout_below="@+id/l5"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:text="__________________________________________________________"
-        android:textColor="@color/white"
-        android:layout_marginBottom="5dp"
-        />
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:id="@+id/l7"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp">
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
             android:layout_weight="1"
             android:text="Terms Of Use"
-            android:textColor="@color/white"
+            android:textColor="#41FFFFFF"
             />
 
         <TextView
@@ -562,7 +562,7 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Version 1.1.20"
-            android:textColor="@color/white"
+            android:textColor="#41FFFFFF"
             />
 
         <TextView
@@ -571,7 +571,8 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Privacy Policy"
-            android:textColor="@color/white"
+            android:textColor="#41FFFFFF"
+
             />
     </LinearLayout>
 </RelativeLayout>
