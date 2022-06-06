@@ -24,7 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
 //    ArrayList name= new ArrayList<>(Arrays.asList("name1","name2","name3","name4"));
 //    ArrayList image= new ArrayList<>(Arrays.asList(R.drawable.music1,R.drawable.music1,R.drawable.music1));
 //     RecyclerView r;
-     ImageView menu;
+    ImageView menu;
     RecyclerView recyclerView,recyclerView1,recyclerView2;
     LinearLayoutManager layoutManager;
     List<ModelClass>userList;
@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 //        r.setLayoutManager(linearLayoutManager);
 //        show();
+
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +50,6 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(menu);
             }
         });
-
 
         data();
         adp();

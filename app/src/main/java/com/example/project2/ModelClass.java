@@ -17,10 +17,6 @@ public class ModelClass {
 //    public void setImg(int newImg){
 //        this.img=newImg;
 //    }
-//
-//    public void setName(String newName){
-//        this.name=newName;
-//    }
 
 
 }

@@ -37,9 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull @NotNull Adapter.ViewHolder h, int position) {
         int img =userList.get(position).getImg();
 
-
         h.setData(img);
-
 
     }
 
@@ -49,7 +47,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView n1;
         private ImageView i1;
 
         public ViewHolder(@NonNull View itemView) {
