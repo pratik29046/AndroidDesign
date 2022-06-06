@@ -1,17 +1,22 @@
 package com.example.project2;
 
 import  androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,15 +26,13 @@ import java.util.List;
 
 
 public class MainActivity2 extends AppCompatActivity {
-//    ArrayList name= new ArrayList<>(Arrays.asList("name1","name2","name3","name4"));
-//    ArrayList image= new ArrayList<>(Arrays.asList(R.drawable.music1,R.drawable.music1,R.drawable.music1));
-//     RecyclerView r;
     ImageView menu;
     RecyclerView recyclerView,recyclerView1,recyclerView2;
     LinearLayoutManager layoutManager;
     List<ModelClass>userList;
     List<ModelClass>userList1;
     Adapter adapter;
+    RelativeLayout popup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,36 @@ public class MainActivity2 extends AppCompatActivity {
         recyclerView=findViewById(R.id.review);
         recyclerView1=findViewById(R.id.review1);
         menu=findViewById(R.id.menu);
+        popup=findViewById(R.id.continues);
+
+
+        popup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+
+                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
+                );
+
+                bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+
+            }
+        });
+
+
+
+
+
+
 
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 //        r.setLayoutManager(linearLayoutManager);

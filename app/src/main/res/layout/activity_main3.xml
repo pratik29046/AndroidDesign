@@ -6,19 +6,23 @@
 
     <LinearLayout
         android:id="@+id/r"
-        android:layout_width="100dp"
+        android:layout_width="125dp"
         android:layout_height="100dp"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/image2"
             android:layout_weight="5"
             app:shapeAppearanceOverlay="@style/RoundedSquare"
             />
+
     </LinearLayout>
 
 
