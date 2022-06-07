@@ -26,7 +26,7 @@ import java.util.List;
 
 
 public class MainActivity2 extends AppCompatActivity {
-    ImageView menu;
+    ImageView menu,bro;
     RecyclerView recyclerView,recyclerView1,recyclerView2;
     LinearLayoutManager layoutManager;
     List<ModelClass>userList;
@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
         recyclerView1=findViewById(R.id.review1);
         menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
+        bro=findViewById(R.id.bro);
 
 
         popup.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +84,16 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(menu);
             }
         });
+
+        bro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bro=new Intent(MainActivity2.this,MainActivity5.class);
+                startActivity(bro);
+            }
+        });
+
+
 
         data();
         adp();

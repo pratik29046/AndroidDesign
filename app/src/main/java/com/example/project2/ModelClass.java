@@ -14,6 +14,8 @@ public class ModelClass {
     }
 
 
+
+
 //    public void setImg(int newImg){
 //        this.img=newImg;
 //    }

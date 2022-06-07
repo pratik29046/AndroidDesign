@@ -7,7 +7,7 @@
         <item name="colorOnPrimary">#CEC12C2C</item>
         <item name="android:windowTranslucentStatus">true</item>
 <!--        <item name="android:windowTranslucentNavigation">true</item>-->
-<!--        <item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowFullscreen">true</item>
         <item name="windowNoTitle">true</item>
 
 
@@ -24,6 +24,7 @@
     <style name="Theme.AppCompat.slidrActivityTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
 
     </style>
