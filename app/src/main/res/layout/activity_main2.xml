@@ -9,29 +9,26 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="490dp"
+        android:layout_height="400dp"
         android:background="@drawable/image2"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:layout_weight="7"
             android:text=" GULLAR"
             android:textColor="@color/white"
             android:textFontWeight="@integer/material_motion_duration_long_2"
-            android:textSize="30dp"
-            />
+            android:textSize="30dp" />
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="60dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_search_24"
-
-            />
+            android:src="@drawable/ic_baseline_search_24" />
     </LinearLayout>
 
 
@@ -42,13 +39,15 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="251dp"
         android:background="#00000000"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/icon"
-            android:src="@drawable/ic_baseline_play_circle_24" />
+            android:src="@drawable/ic_baseline_play_circle_24"
+            />
 
 
     </LinearLayout>
@@ -83,9 +82,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Continue Watching"
+            android:layout_marginStart="5dp"
+            android:text="Continue Watching"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -114,9 +114,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text=" Award Winning Movies"
+            android:text="Award Winning Movies"
+            android:layout_marginStart="5dp"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/review1"
@@ -169,7 +170,6 @@
             android:src="@drawable/ic_baseline_menu_24"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-
             />
 
     </LinearLayout>
@@ -182,44 +182,43 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Home"
-            android:textColor="@color/white"
-            />
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Download"
             android:textColor="@color/white"
-
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="26dp"
             android:layout_marginBottom="5dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:text="Browse"
             android:textColor="@color/white" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="5dp"
+            android:gravity="center"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:text="Menu"
+            android:layout_marginStart="8dp"
             android:textColor="@color/white" />
     </LinearLayout>
 

@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,13 +16,19 @@ public class MainActivity7 extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     List<ModelClass2> userList2;
     Adapters adapter;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
         recyclerView=findViewById(R.id.season);
-
-
+        imageView=findViewById(R.id.img1);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });
 
         data1();
         adp4();
@@ -49,6 +57,9 @@ public class MainActivity7 extends AppCompatActivity {
         userList2.add(new ModelClass2("R.raw.videos" ,"11. The pickup \n 32m",R.drawable.download5,"Video is an electronic medium for the recording,"));
         userList2.add(new ModelClass2("R.raw.videos" ,"12. The pickup \n 34m",R.drawable.download5,"Video is an electronic medium for the recording,"));
 
+    }
 
+    public void back(){
+        super.onBackPressed();
     }
 }

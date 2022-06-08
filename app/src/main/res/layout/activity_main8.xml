@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/r"
         android:layout_width="fill_parent"
-        android:layout_height="140dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         >
 
@@ -16,19 +16,18 @@
         <VideoView
             android:id="@+id/video"
             android:layout_width="160dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="5dp"
-            />
+            android:layout_height="70dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp" />
 
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1. The pickup \n 33m"
             android:layout_marginStart="180dp"
             android:layout_marginTop="20dp"
-            />
+            android:text="1. The pickup \n 33m" />
         <ImageView
             android:id="@+id/img"
             android:layout_width="wrap_content"
@@ -41,13 +40,12 @@
 
         <TextView
             android:id="@+id/desc"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_below="@+id/video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Video is an electronic medium for the recording, copying, playback, broadcasting, and display of moving visual media"
-            />
+            android:layout_below="@+id/video"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Video is an electronic medium for the recording, copying, playback, broadcasting, and display of moving visual media" />
 
 
 

@@ -10,11 +10,10 @@
 
     <RelativeLayout
         android:id="@+id/rele1"
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/imgblur"
-        >
+        android:layout_alignParentRight="true"
+        android:background="@drawable/imgblur">
 
 
         <LinearLayout
@@ -365,7 +364,6 @@
             </LinearLayout>
 
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -504,49 +502,52 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:text="_____________________________________________________"
+                android:text="____________________________________________________"
                 android:textColor="@color/white" />
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:textSize="20dp"
                     android:text="Account"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:textSize="20dp"
                     android:text="App Setting"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:textSize="20dp"
                     android:text="Help"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:textSize="20dp"
                     android:text="Sign Up/Log In"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
             </LinearLayout>
 
         </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -554,8 +555,10 @@
             android:layout_below="@+id/l5"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:text="_____________________________________________________"
-            android:textColor="@color/white" />
+            android:text="____________________________________________________"
+            android:textColor="@color/white"
+            />
+
 
         <LinearLayout
             android:id="@+id/l7"
@@ -593,6 +596,7 @@
 
 
     </RelativeLayout>
+
 
 
 

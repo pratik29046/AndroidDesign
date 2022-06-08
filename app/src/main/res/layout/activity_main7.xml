@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity7">
+
     <ImageView
         android:id="@+id/img1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/arrowleft"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        />
+        android:src="@drawable/arrowleft" />
 
     <ImageView
         android:id="@+id/img2"
@@ -36,20 +36,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img3"
-        android:text="Season number"
         android:layout_marginStart="20dp"
+        android:text="Season number"
         android:textColor="@color/white"
-        android:textSize="20dp"
-        />
-
+        android:textSize="20dp" />
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/season"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/season"
-        android:layout_below="@+id/text1"
-        >
+        android:layout_below="@+id/text1">
 
     </androidx.recyclerview.widget.RecyclerView>
 

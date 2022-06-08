@@ -13,7 +13,7 @@
         android:layout_height="30dp"
         android:src="@drawable/arrowleft"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
         />
 
     <ImageView
@@ -21,16 +21,17 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/search5" />
 
     <ImageView
+        android:layout_marginTop="2dp"
         android:id="@+id/img3"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:layout_below="@+id/img1"
-        android:scaleX="2"
+        android:scaleX="1"
         android:src="@drawable/she" />
 
     <TextView
@@ -159,13 +160,13 @@
         android:id="@+id/text9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel &amp; molestful to her since childhood, is an impressive story telling of a dicothom."
         android:layout_below="@+id/img6"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/white"
         android:layout_marginTop="5dp"
-        />
+        android:textSize="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel &amp; molestful to her since childhood, is an impressive story telling of a dicothom."
+        android:textColor="@color/white" />
     <TextView
         android:id="@+id/text10"
         android:layout_width="wrap_content"
@@ -221,11 +222,12 @@
 
     <TextView
         android:id="@+id/text14"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text13"
-        android:textColor="@color/information_background"
-        android:text="____________________________________________________________" />
+        android:gravity="center"
+        android:text="___________________________________________________________"
+        android:textColor="@color/information_background" />
 
     <TextView
         android:id="@+id/text15"
