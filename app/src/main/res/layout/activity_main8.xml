@@ -49,20 +49,14 @@
 
 
 
+
+
     </RelativeLayout>
 
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignBottom="@+id/r"-->
-<!--        android:text="____________________________________"-->
-<!--        android:layout_marginStart="110dp"-->
-<!--        android:gravity="center"-->
-<!--        android:textColor="@color/purple_700"-->
-<!--        android:textFontWeight="@integer/material_motion_duration_long_2"-->
-<!--        android:textColorHighlight="@color/black"-->
-<!--        />-->
+
+
+
 
 
 </RelativeLayout>
