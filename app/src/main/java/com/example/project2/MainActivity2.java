@@ -106,7 +106,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList,this);
+        adapter=new Adapter(userList,this,this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -115,7 +115,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView1.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList1,this);
+        adapter=new Adapter(userList1,this,this);
         recyclerView1.setAdapter(adapter);
 
     }
@@ -163,5 +163,6 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         bottomSheetDialog.show();
 
     }
+
 
 }
