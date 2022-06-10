@@ -25,25 +25,24 @@
 
         <TextView
             android:id="@+id/text1"
-            android:layout_alignLeft="@+id/img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/img"
+            android:layout_marginStart="138dp"
             android:layout_marginTop="4dp"
             android:text="Title name"
-            android:textSize="28dp"
-            android:layout_marginStart="138dp"
             android:textColor="@color/white"
-            />
+            android:textSize="28dp" />
+
         <TextView
             android:id="@+id/text2"
-            android:layout_below="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2020 A 1 Session"
-            android:textSize="15dp"
+            android:layout_below="@+id/text1"
             android:layout_marginStart="138dp"
+            android:text="2020 A 1 Session"
             android:textColor="#6FFFFFFF"
-            />
+            android:textSize="15dp" />
 
         <ImageView
             android:id="@+id/close"
@@ -114,6 +113,7 @@
 
                 />
             <TextView
+                android:id="@+id/episodesinfo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:text="Episodes &amp; Info"

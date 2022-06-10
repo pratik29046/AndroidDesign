@@ -44,12 +44,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         final  ModelClass temp=userList.get(position);
         int img =userList.get(position).getImg();
 
+
         h.setData(img);
         h.i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,MainActivity9.class);
                 intent.putExtra("img",temp.getImg());
+                intent.putExtra("title",temp.getTitle());
+                intent.putExtra("session",temp.getSession());
+                intent.putExtra("decs",temp.getDecs());
                 context.startActivity(intent);
 
             }

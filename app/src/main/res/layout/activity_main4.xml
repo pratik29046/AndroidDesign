@@ -10,9 +10,9 @@
 
     <RelativeLayout
         android:id="@+id/rele1"
-        android:layout_width="340dp"
+        android:layout_width="360dp"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:background="@drawable/imgblur">
 
 
@@ -373,7 +373,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-10dp"
-                    android:text="____________________________________________________"
+                    android:text="__________________________________________________"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -497,7 +497,6 @@
 
 
             <TextView
-                android:id="@+id/line"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -556,8 +555,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:text="____________________________________________________"
-            android:textColor="@color/white"
-            />
+            android:textColor="@color/white" />
 
 
         <LinearLayout

@@ -121,24 +121,26 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     }
     public void data(){
         userList=new ArrayList<>();
-        userList.add(new ModelClass(R.drawable.titanic));
-        userList.add(new ModelClass(R.drawable.war));
-        userList.add(new ModelClass(R.drawable.extraction));
-        userList.add(new ModelClass(R.drawable.movie));
-        userList.add(new ModelClass(R.drawable.titanic));
-        userList.add(new ModelClass(R.drawable.war));
-        userList.add(new ModelClass(R.drawable.extraction));
+        userList.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
+        userList.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
+        userList.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
+        userList.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
+        userList.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
+        userList.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
+        userList.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
+        userList.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
 
 
 
         userList1=new ArrayList<>();
-        userList1.add(new ModelClass(R.drawable.titanic));
-        userList1.add(new ModelClass(R.drawable.war));
-        userList1.add(new ModelClass(R.drawable.extraction));
-        userList1.add(new ModelClass(R.drawable.movie));
-        userList1.add(new ModelClass(R.drawable.titanic));
-        userList1.add(new ModelClass(R.drawable.war));
-        userList1.add(new ModelClass(R.drawable.extraction));
+        userList1.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
+        userList1.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
+        userList1.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
+        userList1.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
+        userList1.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
+        userList1.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
 
 
 
