@@ -19,9 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private List<ModelClass> userList;
+    private  Recycler recycler;
 
-    public Adapter(List<ModelClass> userList){
+    public Adapter(List<ModelClass> userList,Recycler recycler){
         this.userList=userList;
+        this.recycler=recycler;
     }
 
 
@@ -49,13 +51,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return userList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public  class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView i1;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             i1 =itemView.findViewById(R.id.img);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    recycler.onItemClick(getAdapterPosition());
+                }
+            });
 
         }
 

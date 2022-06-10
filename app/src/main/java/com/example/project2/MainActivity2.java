@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -25,7 +26,7 @@ import java.util.List;
 //import com.CustomAdapter;
 
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements Recycler{
     ImageView menu,bro;
     RecyclerView recyclerView,recyclerView1,recyclerView2;
     LinearLayoutManager layoutManager;
@@ -48,20 +49,20 @@ public class MainActivity2 extends AppCompatActivity {
         popup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
-
-                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
-                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
-                );
-
-                bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        bottomSheetDialog.dismiss();
-                    }
-                });
-                bottomSheetDialog.setContentView(bottomSheetView);
-                bottomSheetDialog.show();
+//                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+//
+//                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
+//                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
+//                );
+//
+//                bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        bottomSheetDialog.dismiss();
+//                    }
+//                });
+//                bottomSheetDialog.setContentView(bottomSheetView);
+//                bottomSheetDialog.show();
 
 
             }
@@ -105,7 +106,7 @@ public class MainActivity2 extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList);
+        adapter=new Adapter(userList,this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -114,7 +115,7 @@ public class MainActivity2 extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView1.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList1);
+        adapter=new Adapter(userList1,this);
         recyclerView1.setAdapter(adapter);
 
     }
@@ -142,4 +143,25 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onItemClick(int position) {
+
+        BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+
+        View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
+                R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
+        );
+
+        bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+            }
+        });
+        bottomSheetDialog.setContentView(bottomSheetView);
+        bottomSheetDialog.show();
+
+    }
+
 }
