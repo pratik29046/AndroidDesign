@@ -32,7 +32,6 @@
         android:src="@drawable/she" />
 
 
-
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
@@ -44,13 +43,11 @@
         android:textSize="20dp" />
 
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/season"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/text1"
-        >
+        android:layout_below="@+id/text1">
 
     </androidx.recyclerview.widget.RecyclerView>
 

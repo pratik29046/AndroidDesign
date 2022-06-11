@@ -31,7 +31,7 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final Adapters.ViewHolder holder, int position) {
-        final  ModelClass2 temp=userList2.get(position);
+        final  ModelClass2 temp1=userList2.get(position);
 
         String vid=userList2.get(position).getVid();
         String name=userList2.get(position).getName();
@@ -43,7 +43,7 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context1,MainActivity7.class);
-                intent.putExtra("vid",temp.getVid());
+                intent.putExtra("vid",temp1.getVid());
 //                intent.putExtra("name",temp.getVid());
 //                intent.putExtra("img",temp.getVid());
 //                intent.putExtra("desc",temp.getVid());
