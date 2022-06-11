@@ -16,7 +16,7 @@
 
 
         <VideoView
-            android:id="@+id/video"
+            android:id="@+id/video1"
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_marginStart="5dp"
@@ -44,7 +44,7 @@
             android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/video"
+            android:layout_below="@+id/video1"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:text="Video is an electronic medium for the recording, copying, playback, broadcasting, and display of moving visual media" />

@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
+    android:background="@color/black"
     >
 
     <LinearLayout
+        android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:background="@drawable/image2"
@@ -75,7 +77,7 @@
         android:id="@+id/continues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Award"
+        android:layout_below="@+id/post"
         android:background="#0B0909">
 
         <TextView
@@ -84,7 +86,7 @@
             android:layout_marginStart="5dp"
             android:text="Continue Watching"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -104,9 +106,9 @@
         android:id="@+id/Award"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         android:background="#0B0909"
+        android:layout_below="@+id/continues"
+        android:layout_marginTop="5dp"
         >
 
         <TextView
@@ -116,7 +118,7 @@
             android:text="Award Winning Movies"
             android:layout_marginStart="5dp"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/review1"

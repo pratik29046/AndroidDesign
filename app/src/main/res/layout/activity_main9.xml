@@ -4,30 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1DFAF4F4"
+    android:background="@color/black"
     >
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/cri2"
+        android:src="@drawable/close" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        android:src="@drawable/image2" />
 
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="240dp"
+        android:layout_height="wrap_content"
         android:id="@+id/hello"
-        android:orientation="horizontal"
-        android:background="@color/information_background"
+        android:background="@color/black"
         android:layout_alignParentBottom="true"
         >
+
         <ImageView
-            android:id="@+id/img"
+            android:id="@+id/img1"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="2dp"
             android:src="@drawable/image2" />
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/img"
+            android:layout_alignLeft="@+id/img1"
             android:layout_marginStart="138dp"
             android:layout_marginTop="4dp"
             android:text="Title name"
@@ -44,15 +64,7 @@
             android:textColor="#6FFFFFFF"
             android:textSize="15dp" />
 
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/cri"
-            android:src="@drawable/close" />
+
 
         <TextView
             android:id="@+id/text3"
@@ -70,7 +82,7 @@
             android:id="@+id/playdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img"
+            android:layout_below="@+id/img1"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="4dp"
@@ -80,7 +92,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/playsong"
                 android:layout_weight="2"
-                android:background="#A83E3E"
+                android:background="#FF9800"
                 android:layout_marginStart="20dp"
                 />
             <ImageView
@@ -102,14 +114,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/playdown"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="2dp"
             android:layout_marginTop="3dp"
+            android:background="#08A82424"
             >
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:src="@drawable/info"
                 android:layout_weight="4"
+                android:layout_marginStart="20dp"
 
                 />
             <TextView
@@ -119,7 +133,7 @@
                 android:text="Episodes &amp; Info"
                 android:gravity="center_vertical"
                 android:layout_weight="8"
-                android:layout_marginEnd="80dp"
+                android:layout_marginEnd="150dp"
                 android:textColor="@color/white"
                 />
             <ImageView

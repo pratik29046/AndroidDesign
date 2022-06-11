@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity6"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     >
 
     <ImageView
@@ -15,14 +20,6 @@
         android:layout_marginTop="1dp"
         android:src="@drawable/arrowleft" />
 
-    <ImageView
-        android:id="@+id/img2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/search5" />
 
     <ImageView
         android:id="@+id/img3"
@@ -265,100 +262,27 @@
         android:src="@drawable/ic_baseline_linear_scale_24"
         android:textColor="#B61212" />
 
-    <TextView
-        android:id="@+id/text18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text17"
-        android:layout_marginStart="20dp"
-        android:text="Season number"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/text18"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/text17"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="Season number"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20dp" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/seasons"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/text18">
+        android:layout_below="@+id/text17"
+        android:layout_marginTop="0dp">
+
 
     </androidx.recyclerview.widget.RecyclerView>
 
 
-
-
-    <LinearLayout
-        android:id="@+id/home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#1C1A1A"
-        android:layout_marginBottom="22dp"
-        >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_home_24"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_arrow_circle_down_24"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-
-            />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/ic_baseline_grid_view_24"
-            android:layout_weight="1"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:background="#1C1A1A"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Home"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Download"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Browse"
-            android:gravity="center"
-            android:textColor="@color/white" />
-
-
-    </LinearLayout>
-
-
 </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

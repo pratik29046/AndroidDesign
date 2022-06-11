@@ -39,7 +39,7 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
         String desc=userList2.get(position).getDesc();
         holder.setData(vid,name,img,desc);
 
-        holder.v.setOnClickListener(new View.OnClickListener() {
+        holder.n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context1,MainActivity7.class);
@@ -53,6 +53,8 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
 
 
 
+
+
     }
 
     @Override
@@ -61,21 +63,21 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private VideoView v;
+        private VideoView vs;
         private TextView n;
         private  ImageView i;
         private  TextView d;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            v=itemView.findViewById(R.id.video);
+            vs=itemView.findViewById(R.id.video1);
             n=itemView.findViewById(R.id.name);
             i=itemView.findViewById(R.id.img);
             d=itemView.findViewById(R.id.desc);
         }
 
         public void setData(String vid, String name, int img, String desc) {
-            v.setVideoPath(vid);
+            vs.setVideoPath(vid);
             n.setText(name);
             i.setImageResource(img);
             d.setText(desc);

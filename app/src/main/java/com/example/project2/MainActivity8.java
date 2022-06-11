@@ -24,7 +24,7 @@ public class MainActivity8 extends AppCompatActivity {
         textView=findViewById(R.id.name);
         textView1=findViewById(R.id.desc);
         imageView=findViewById(R.id.img);
-        videoView=findViewById(R.id.video);
+        videoView=findViewById(R.id.video1);
 
         Intent intent=getIntent();
         String vid=intent.getStringExtra("vid");

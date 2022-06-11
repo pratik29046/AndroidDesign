@@ -25,20 +25,24 @@ public class MainActivity7 extends AppCompatActivity {
         recyclerView=findViewById(R.id.season);
         imageView=findViewById(R.id.img1);
         videoView=findViewById(R.id.img3);
+
+        //get data
+        Intent intent=getIntent();
+        String vid=intent.getStringExtra("vid");
+        videoView.setVideoPath(vid);
+
+        data1();
+        adp4();
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 back();
             }
         });
-
-        data1();
-        adp4();
-
-        Intent intent=getIntent();
-        String vid=intent.getStringExtra("vid");
-        videoView.setVideoPath(vid);
     }
+
+
     public void adp4(){
         recyclerView=findViewById(R.id.season);
         layoutManager=new LinearLayoutManager(this);
@@ -46,6 +50,8 @@ public class MainActivity7 extends AppCompatActivity {
         adapter=new Adapters(userList2,this);
         recyclerView.setAdapter(adapter);
     }
+
+
     public void data1(){
         userList2=new ArrayList<ModelClass2>();
         userList2.add(new ModelClass2("R.raw.videos" ,"1. The pickup \n 100m",R.drawable.download5,"Video is an electronic medium for the recording, "));
@@ -63,9 +69,6 @@ public class MainActivity7 extends AppCompatActivity {
     }
 
     public void back(){
-
-
         super.onBackPressed();
-
     }
 }

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity6">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/arrowleft" />
+
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/img1"
+            android:scaleX="2"
+            android:src="@drawable/she" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img3"
+            android:layout_marginStart="20dp"
+            android:text="N S E R I E S" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:layout_marginStart="20dp"
+            android:text="Movie Name"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="98% Macth"
+            android:textColor="#F5119717" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/text3"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="2dp"
+            android:text="2022" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/text4"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="2dp"
+            android:background="#272626"
+            android:text="A"
+            android:textScaleX="2"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/text5"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:text="1 Season" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/text6"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="2dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_hd_24" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text6"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="#E10F0F"
+            android:text="TOP\n 10"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text6"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:text="#3 in Tv Show Today"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/text8"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:src="@drawable/play5" />
+
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/img5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="#AD7C7979"
+            android:src="@drawable/download5" />
+
+        <TextView
+            android:id="@+id/text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img6"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel &amp; molestful to her since childhood."
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text9"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Starring :"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text9"
+            android:layout_alignLeft="@+id/text10"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="2dp"
+            android:text="A ordinary girl tryinr which has ...more" />
+
+        <TextView
+            android:id="@+id/text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text11"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Creator :"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text11"
+            android:layout_alignLeft="@+id/text10"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="2dp"
+            android:text="Imtiaz Ali" />
+
+        <ImageView
+            android:id="@+id/img7"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/text6"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_baseline_share_24" />
+
+
+        <TextView
+            android:id="@+id/text14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text13"
+            android:gravity="center"
+            android:text="___________________________________________________________"
+            android:textColor="@color/information_background" />
+
+        <TextView
+            android:id="@+id/text15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="EPISODES"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_alignLeft="@+id/text15"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="2dp"
+            android:text="TRAILERS &amp; MORE"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/text17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_alignLeft="@+id/text16"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="2dp"
+            android:text="MORE LIKE THIS"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_marginTop="-14dp"
+            android:scaleX="4"
+            android:src="@drawable/ic_baseline_linear_scale_24"
+            android:textColor="#B61212" />
+
+        <TextView
+            android:id="@+id/text18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text17"
+            android:layout_marginStart="20dp"
+            android:text="Season number"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/seasons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/text18">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

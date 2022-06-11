@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
-    ImageView imageView,close;
+    ImageView imageView,close,img1;
     TextView textView ,Title,Session,Decs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity9 extends AppCompatActivity {
         Title=findViewById(R.id.text1);
         Session=findViewById(R.id.text2);
         Decs=findViewById(R.id.text3);
+        img1=findViewById(R.id.img1);
 
 
         Intent intent=getIntent();
@@ -32,6 +33,7 @@ public class MainActivity9 extends AppCompatActivity {
         Title.setText(title);
         Session.setText(session);
         Decs.setText(desc);
+        img1.setImageResource(img);
 
 
         //close event
