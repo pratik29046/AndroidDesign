@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
     ImageView imageView,close,img1;
+    ImageView plays;
     TextView textView ,Title,Session,Decs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity9 extends AppCompatActivity {
         Session=findViewById(R.id.text2);
         Decs=findViewById(R.id.text3);
         img1=findViewById(R.id.img1);
+        plays=findViewById(R.id.video);
 
 
         Intent intent=getIntent();
@@ -49,6 +51,14 @@ public class MainActivity9 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent(MainActivity9.this,MainActivity5.class);
+                startActivity(intent1);
+            }
+        });
+
+        plays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(MainActivity9.this,MainActivity10.class);
                 startActivity(intent1);
             }
         });

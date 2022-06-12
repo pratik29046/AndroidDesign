@@ -27,7 +27,7 @@ public class MainActivity6 extends AppCompatActivity {
         setContentView(R.layout.activity_main6);
         recyclerView=findViewById(R.id.seasons);
         imageView=findViewById(R.id.img1);
-        textView=findViewById(R.id.text18);
+        textView=findViewById(R.id.text14);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
