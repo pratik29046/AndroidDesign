@@ -2,53 +2,53 @@
     <string name="app_name">project2</string>
 
 
-        <string name="see_more">See More</string>
-        <string name="free">FREE</string>
-        <string name="str_play">Play</string>
-        <string name="str_trailer">Trailer</string>
-        <string name="watch_next">Watch Next</string>
-        <string name="more_info">More Info</string>
-        <string name="search">Search...</string>
-        <string name="home">Home</string>
-        <string name="movies">Movies</string>
-        <string name="series">Series</string>
-        <string name="subscribe">Subscribe</string>
-        <string name="about">About</string>
-        <string name="contact_us">Contact Us</string>
-        <string name="privacy_policy">Privacy Policy</string>
-        <string name="terms_of_service">Terms of Service</string>
-        <string name="str_version">Version - 1.0.1</string>
-        <string name="str_logout">Logout</string>
-        <string name="sign_in">Sign In</string>
-        <string name="please_sign_in">Please Sign In</string>
-        <string name="guest">Guest</string>
-        <string name="sign_in_with_google">Sign in with Google</string>
-        <string name="_1x">1x</string>
-        <string name="_00_00">00:00</string>
-        <string name="_00_00_">[00:00]</string>
-        <string name="_0">0</string>
-        <string name="speed">Speed</string>
-        <string name="track_selection_title">Video Quality</string>
-        <string name="str_coming_soon">Coming Soon</string>
-        <string name="privacy">Privacy</string>
-        <string name="help">Help</string>
+    <string name="see_more">See More</string>
+    <string name="free">FREE</string>
+    <string name="str_play">Play</string>
+    <string name="str_trailer">Trailer</string>
+    <string name="watch_next">Watch Next</string>
+    <string name="more_info">More Info</string>
+    <string name="search">Search...</string>
+    <string name="home">Home</string>
+    <string name="movies">Movies</string>
+    <string name="series">Series</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="about">About</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="str_version">Version - 1.0.1</string>
+    <string name="str_logout">Logout</string>
+    <string name="sign_in">Sign In</string>
+    <string name="please_sign_in">Please Sign In</string>
+    <string name="guest">Guest</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="_1x">1x</string>
+    <string name="_00_00">00:00</string>
+    <string name="_00_00_">[00:00]</string>
+    <string name="_0">0</string>
+    <string name="speed">Speed</string>
+    <string name="track_selection_title">Video Quality</string>
+    <string name="str_coming_soon">Coming Soon</string>
+    <string name="privacy">Privacy</string>
+    <string name="help">Help</string>
 
-        <string name="exo_track_selection_title_video">Vídeo</string>
-        <string name="exo_track_selection_title_audio">Àudio</string>
-        <string name="exo_track_selection_title_text">Text</string>
+    <string name="exo_track_selection_title_video">Vídeo</string>
+    <string name="exo_track_selection_title_audio">Àudio</string>
+    <string name="exo_track_selection_title_text">Text</string>
 
-        <string name="episodes">Episodes</string>
-        <string name="share">Share</string>
-        <string name="watch_now">Watch Now</string>
+    <string name="episodes">Episodes</string>
+    <string name="share">Share</string>
+    <string name="watch_now">Watch Now</string>
 
-        <string name="str_directors">Directors:</string>
-        <string name="str_starring_">Starring:</string>
-        <string name="str_genres_">Genres:</string>
-        <string name="str_language_">Language:</string>
-        <string name="str_developed">Developed by © Vipul IIoT Solutions, 2022.</string>
-        <string name="rupee">₹</string>
-        <string name="buy">Buy</string>
-        <string name="valid_for_30_days">Valid for 30 days.</string>
+    <string name="str_directors">Directors:</string>
+    <string name="str_starring_">Starring:</string>
+    <string name="str_genres_">Genres:</string>
+    <string name="str_language_">Language:</string>
+    <string name="str_developed">Developed by © Vipul IIoT Solutions, 2022.</string>
+    <string name="rupee">₹</string>
+    <string name="buy">Buy</string>
+    <string name="valid_for_30_days">Valid for 30 days.</string>
 
 </resources>
 

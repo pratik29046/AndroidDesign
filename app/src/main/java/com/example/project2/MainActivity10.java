@@ -327,22 +327,24 @@ public class MainActivity10 extends AppCompatActivity {
                 }
             });
 
-//            setting.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if (!isShowingTrackSelectionDialog
-//                            && TrackSelectionDialog.willHaveContent(trackSelector)) {
-//                        isShowingTrackSelectionDialog = true;
-//                        TrackSelectionDialog trackSelectionDialog =
-//                                TrackSelectionDialog.createForTrackSelector(
-//                                        trackSelector,
-//                                        /* onDismissListener= */
-//                                        dismissedDialog ->
-//                                                isShowingTrackSelectionDialog = false);
-//                        trackSelectionDialog.show(getSupportFragmentManager(), /* tag= */ null);
-//                    }
-//                }
-//            });
+
+            setting.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!isShowingTrackSelectionDialog
+                            && TrackSelectionDialog.willHaveContent(trackSelector)) {
+                        isShowingTrackSelectionDialog = true;
+                        TrackSelectionDialog trackSelectionDialog =
+                                TrackSelectionDialog.createForTrackSelector(
+                                        trackSelector,
+                                        /* onDismissListener= */
+                                        dismissedDialog ->
+                                                isShowingTrackSelectionDialog = false);
+                        trackSelectionDialog.show(getSupportFragmentManager(), /* tag= */ null);
+                    }
+                }
+            });
+
 
 
             Runnable runnable = new Runnable() {
