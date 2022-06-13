@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
-    ImageView imageView,close,img1;
-    ImageView plays;
+    ImageView imageView,close,img1,pratik;
+
     TextView textView ,Title,Session,Decs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,15 @@ public class MainActivity9 extends AppCompatActivity {
         Session=findViewById(R.id.text2);
         Decs=findViewById(R.id.text3);
         img1=findViewById(R.id.img1);
-        plays=findViewById(R.id.video);
+        pratik=findViewById(R.id.pratik);
 
+        pratik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent video=new Intent(MainActivity9.this,MainActivity10.class);
+                startActivity(video);
+            }
+        });
 
         Intent intent=getIntent();
         int img=intent.getIntExtra("img",0);
@@ -38,14 +45,6 @@ public class MainActivity9 extends AppCompatActivity {
         img1.setImageResource(img);
 
 
-        //close event
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                back();
-            }
-        });
-
         // for move Episodes
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,13 +54,15 @@ public class MainActivity9 extends AppCompatActivity {
             }
         });
 
-        plays.setOnClickListener(new View.OnClickListener() {
+        //close event
+        close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(MainActivity9.this,MainActivity10.class);
-                startActivity(intent1);
+                back();
             }
         });
+
+
 
 
     }

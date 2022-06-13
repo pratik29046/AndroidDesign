@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public final class TrackSelectionDialog extends DialogFragment {
+public  class TrackSelectionDialog extends DialogFragment {
 
     private final SparseArray<TrackSelectionViewFragment> tabFragments;
     private final ArrayList<Integer> tabTrackTypes;
@@ -335,13 +335,14 @@ public final class TrackSelectionDialog extends DialogFragment {
                 @Nullable Bundle savedInstanceState) {
             View rootView =
                     inflater.inflate(
-                            R.layout.exo_track_selection_dialog1, container, /* attachToRoot= */ false);
+                            R.layout.track_selection_dialog,container, /* attachToRoot= */ false);
 //      TrackNameProvider trackNameProvider = new DefaultTrackNameProvider(getResources());
 //      TrackSelectionView trackSelectionView = rootView.findViewById(R.id.exo_track_selection_view);
 //      trackSelectionView.setTrackNameProvider(f -> f.height != Format.NO_VALUE  ?
 //              (Math.round(f.frameRate) + " FPS, " + (f.bitrate == Format.NO_VALUE ? ""
 //                      : (getResources().getString(R.string.exo_track_bitrate, f.bitrate / 1000000f)) )
 //                      + ", " + f.height + " P"): trackNameProvider.getTrackName(f));
+
             TrackSelectionView trackSelectionView = rootView.findViewById(R.id.exo_track_selection_view);
             trackSelectionView.setShowDisableOption(true);
 //      trackSelectionView.setAllowMultipleOverrides(allowMultipleOverrides);

@@ -46,7 +46,7 @@ import com.google.android.exoplayer2.upstream.DefaultAllocator;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -55,7 +55,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-//import ott.laddoodigital.R;
+import com.example.project2.R;
 
 public class MainActivity10 extends AppCompatActivity {
 
@@ -98,7 +98,7 @@ public class MainActivity10 extends AppCompatActivity {
 
     //    private ArrayList<VideoModel> videoModels = new ArrayList<>();
 //String url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-    String url = "http://devimages.apple.com/samplecode/adDemo/ad.m3u8";
+    String url = "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
     String url1 = "https://play.dyntube.io/videos/E9nTksPigkCzsfSBsrJP4w"; //Kempe Gowda
 
     private final String[] aspectmode = {
@@ -773,7 +773,7 @@ public class MainActivity10 extends AppCompatActivity {
 
     public void intializePlayer() {
         try {
-            Uri uri = Uri.parse(url);
+            Uri uri = Uri.parse(url1);
             MediaItem mediaItem = MediaItem.fromUri(uri);
             player.setMediaItem(mediaItem, currentitemseek);
             currentitemseek = 0;
@@ -1060,6 +1060,5 @@ public class MainActivity10 extends AppCompatActivity {
         }
     }
 
-    private class Gson {
-    }
+
 }

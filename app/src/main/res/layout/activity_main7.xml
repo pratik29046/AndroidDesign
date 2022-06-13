@@ -14,14 +14,6 @@
         android:layout_marginTop="5dp"
         android:src="@drawable/arrowleft" />
 
-    <ImageView
-        android:id="@+id/img2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/search5" />
 
     <VideoView
         android:id="@+id/img3"
@@ -44,7 +36,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/season"
+        android:id="@+id/season1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/text1">

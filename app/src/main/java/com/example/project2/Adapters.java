@@ -51,10 +51,6 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
             }
         });
 
-
-
-
-
     }
 
     @Override
