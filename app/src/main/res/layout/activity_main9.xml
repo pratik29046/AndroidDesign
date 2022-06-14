@@ -14,6 +14,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="15dp"
         android:background="@drawable/cri2"
+        android:layout_marginTop="30dp"
         android:src="@drawable/close" />
 
     <ImageView
@@ -22,135 +23,155 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/hello"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="100dp"
         android:background="@color/black"
         android:src="@drawable/image2" />
 
 
     <RelativeLayout
+        android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/hello"
-        android:background="@color/black"
         android:layout_alignParentBottom="true"
-        >
+        android:layout_marginBottom="60dp"
+        android:background="@color/black">
 
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="2dp"
-            android:src="@drawable/image2" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img1"-->
+        <!--            android:layout_width="150dp"-->
+        <!--            android:layout_height="150dp"-->
+        <!--            android:layout_marginTop="2dp"-->
+        <!--            android:src="@drawable/image2" />-->
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/img1"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true"
             android:text="Title name"
             android:textColor="@color/white"
-            android:textSize="28dp" />
+            android:textSize="28dp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text1"
-            android:layout_marginStart="138dp"
+            android:layout_centerHorizontal="true"
             android:text="2020 A 1 Session"
             android:textColor="#6FFFFFFF"
             android:textSize="15dp" />
 
 
-
-        <TextView
+        <com.borjabravo.readmoretextview.ReadMoreTextView
             android:id="@+id/text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text2"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="10dp"
-            android:text="You means of communication. And not just phones — in order to be truly contemporary."
-            android:textColor="@color/white"
-            android:textSize="16dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:text="hello dhdhdh hdhdh diid uhd kkdh iidi ddjjdh dhdh hdhhd ueuddhdh djdjdjh duduudb udbh jydhdn jj "
+            android:textColor="#6FFFFFFF"
+            android:textSize="16dp"
+            app:colorClickableText="@color/white"
+            app:trimCollapsedText=" @string/read_more"
+            app:trimExpandedText="@string/read_less"
+            app:trimLength="10"
+            app:trimMode="trimModeLength" />
+
+        <!--        <Button-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@color/black"-->
+        <!--            android:text="More"-->
+        <!--            android:textColor="@color/information_background"-->
+        <!--            />-->
 
 
         <LinearLayout
             android:id="@+id/playdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img1"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="4dp"
-            >
+            android:layout_below="@+id/text3"
+            android:layout_marginStart="45dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/pratik"
-                android:layout_width="30dp"
+                android:layout_width="60dp"
                 android:layout_height="40dp"
-                android:src="@drawable/playsong"
-                android:layout_weight="2"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
                 android:background="#FF9800"
-                android:layout_marginStart="20dp"
+                android:src="@drawable/playsong" />
 
-                />
             <ImageView
                 android:id="@+id/downloads"
                 android:layout_width="30dp"
                 android:layout_height="40dp"
-                android:src="@drawable/download"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                />
+                android:src="@drawable/download" />
+
             <ImageView
+                android:id="@+id/next"
                 android:layout_width="30dp"
                 android:layout_height="40dp"
-                android:src="@drawable/playsong"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                />
-
+                android:src="@drawable/playsong" />
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/playdown"
-            android:layout_marginBottom="2dp"
-            android:layout_marginTop="3dp"
-            android:background="#08A82424"
-            >
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="22dp"
+            android:background="#08A82424">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:layout_marginStart="18dp"
+                android:layout_weight="8"
                 android:src="@drawable/info"
-                android:layout_weight="4"
-                android:layout_marginStart="20dp"
 
                 />
+
             <TextView
                 android:id="@+id/episodesinfo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:text="Episodes &amp; Info"
-                android:gravity="center_vertical"
-                android:layout_weight="8"
                 android:layout_marginEnd="150dp"
+                android:layout_weight="25"
+                android:gravity="center_vertical"
+                android:text="Episodes &amp; Info"
                 android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+
                 />
+
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/rightarrow"
-                android:layout_weight="1"
                 android:layout_marginEnd="10dp"
-                />
+                android:layout_weight="1"
+                android:src="@drawable/rightarrow" />
 
         </LinearLayout>
 
+
     </RelativeLayout>
+
 
 
 </RelativeLayout>

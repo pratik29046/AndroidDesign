@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="TrackSelectionDialogThemeOverlay"></style>
+    <style parent="ThemeOverlay.AppCompat.Dialog.Alert" name="TrackSelectionDialogThemeOverlay">
+
+        <item name="windowNoTitle">false</item>
+
+    </style>
 </resources>

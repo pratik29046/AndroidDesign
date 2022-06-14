@@ -1,50 +1,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/white" />
+    android:background="@color/black"
+    >
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/track_selection_dialog_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="200dp"
+       >
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/white" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/track_selection_dialog_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+    </androidx.viewpager.widget.ViewPager>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center|end"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/track_selection_dialog_cancel_button"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@android:string/cancel"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/track_selection_dialog_ok_button"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@android:string/ok"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
 
     </LinearLayout>
 

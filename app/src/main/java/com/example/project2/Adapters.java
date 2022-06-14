@@ -39,7 +39,7 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
         String desc=userList2.get(position).getDesc();
         holder.setData(vid,name,img,desc);
 
-        holder.n.setOnClickListener(new View.OnClickListener() {
+        holder.vs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context1,MainActivity7.class);

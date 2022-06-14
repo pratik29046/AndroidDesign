@@ -49,5 +49,9 @@ dependencies {
 
     implementation "com.brightcove.player:exoplayer2:6.11.0"
 
+    implementation "com.borjabravo:readmoretextview:2.1.0"
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+
 
 }

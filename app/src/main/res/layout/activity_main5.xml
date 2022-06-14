@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity5"
+    android:background="@color/black"
     >
 
     <ImageView
@@ -18,13 +19,15 @@
 
 
     <ImageView
-        android:layout_marginTop="2dp"
         android:id="@+id/img3"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="260dp"
         android:layout_below="@+id/img1"
+        android:layout_marginTop="2dp"
         android:scaleX="1"
-        android:src="@drawable/she" />
+        android:src="@drawable/she"
+        android:background="@color/black"
+        />
 
     <TextView
         android:id="@+id/text1"
@@ -33,6 +36,7 @@
         android:layout_below="@+id/img3"
         android:text="N S E R I E S"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
         />
     <TextView
         android:id="@+id/text2"
@@ -134,6 +138,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
+
         />
 
     <ImageView
@@ -157,8 +162,8 @@
         android:layout_marginTop="5dp"
         android:textSize="16dp"
         android:layout_marginEnd="20dp"
-        android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel &amp; molestful to her since childhood, is an impressive story telling of a dicothom."
-        android:textColor="@color/white" />
+        android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
+        android:textColor="#D7DDD7" />
     <TextView
         android:id="@+id/text10"
         android:layout_width="wrap_content"
@@ -168,17 +173,25 @@
         android:layout_marginStart="20dp"
         android:textColor="@color/white"
         android:layout_marginTop="5dp"
+        android:textStyle="bold"
         />
 
-    <TextView
+
+    <com.borjabravo.readmoretextview.ReadMoreTextView
         android:id="@+id/text11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text9"
         android:layout_alignLeft="@+id/text10"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="5dp"
-        android:text="A ordinary girl tryinr which has ...more" />
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="6dp"
+        android:text="A ordinary girl tryinr which has hdhdhdhdhdhdhdhhdhdhhdhdhhd pratik pawade "
+        app:colorClickableText="@color/white"
+        app:trimCollapsedText="@string/read_more"
+        app:trimExpandedText="@string/read_less"
+        app:trimLength="30"
+        app:trimMode="trimModeLength"
+        />
 
     <TextView
         android:id="@+id/text12"
@@ -188,7 +201,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:text="Creator :"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
 
     <TextView
         android:id="@+id/text13"
@@ -229,7 +244,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:text="EPISODES"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
     <TextView
         android:id="@+id/text16"
         android:layout_width="wrap_content"
@@ -240,6 +257,7 @@
         android:layout_marginStart="80dp"
         android:textColor="@color/white"
         android:layout_marginTop="5dp"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/text17"
@@ -251,6 +269,7 @@
         android:layout_marginStart="140dp"
         android:textColor="@color/white"
         android:layout_marginTop="5dp"
+        android:textStyle="bold"
         />
 
     <ImageView

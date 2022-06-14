@@ -10,6 +10,7 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/cri2.xml" value="0.112" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_crop_3_2_24.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_forward_10_24.xml" value="0.198" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_fullscreen_24.xml" value="0.1875" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_pause_24.xml" value="0.198" />
@@ -34,10 +35,11 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main10.xml" value="0.15520833333333334" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main11.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main12.xml" value="0.23645833333333333" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main13.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main2.xml" value="0.1902834008097166" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main3.xml" value="0.16799999999999998" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main4.xml" value="0.264" />
-        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main5.xml" value="0.264" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main5.xml" value="0.2" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main6.xml" value="0.2" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main7.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main8.xml" value="0.23645833333333333" />
@@ -45,6 +47,7 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/bottomsheet.xml" value="0.176" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/exo_track_selection_dialog1.xml" value="0.15520833333333334" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/track_selection_dialog.xml" value="0.23541666666666666" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/ustom_controls.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/menu/nav.xml" value="0.22239583333333332" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.156" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/mipmap-anydpi-v26/information_round.xml" value="0.156" />

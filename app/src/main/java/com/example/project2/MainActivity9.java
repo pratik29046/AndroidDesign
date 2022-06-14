@@ -28,7 +28,7 @@ public class MainActivity9 extends AppCompatActivity {
         pratik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent video=new Intent(MainActivity9.this,MainActivity10.class);
+                Intent video=new Intent(MainActivity9.this,MainActivity13.class);
                 startActivity(video);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity9 extends AppCompatActivity {
         Title.setText(title);
         Session.setText(session);
         Decs.setText(desc);
-        img1.setImageResource(img);
+//        img1.setImageResource(img);
 
 
         // for move Episodes
