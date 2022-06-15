@@ -58,7 +58,7 @@ public class MainActivity6 extends AppCompatActivity {
     }
     public void data1(){
         userList2=new ArrayList<ModelClass2>();
-        userList2.add(new ModelClass2("R.raw.videos" ,"1. The pratik \n 33m",R.drawable.download5,"Video is an electronic medium for the recording, "));
+        userList2.add(new ModelClass2("R.raw.videos" ,"1. The pratik \n 33m",R.drawable.download5,"Video is an electronic medium for the recording,hdhhdh dhdh dd jd jdj hfh jjfj fjfj jfjfjb jfj pratik "));
         userList2.add(new ModelClass2("R.raw.videos" ,"2. She \n 38m",R.drawable.download5,"Video is an electronic medium for the recording, "));
         userList2.add(new ModelClass2("R.raw.videos" ,"3. The pickup \n 34m",R.drawable.download5,"Video is an electronic medium for the recording, "));
         userList2.add(new ModelClass2("R.raw.videos" ,"4. The pickup \n 27m",R.drawable.download5,"Video is an electronic medium for the recording, "));

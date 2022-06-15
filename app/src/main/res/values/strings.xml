@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">project2</string>
-
-    <string name="see_more">See More</string>
+     <string name="read_more"> ..Show_More</string>
+    <string name="read_less"> ..Show_Less</string>
+    <string name="see_more"> ..See More</string>
     <string name="free">FREE</string>
     <string name="str_play">Play</string>
     <string name="str_trailer">Trailer</string>

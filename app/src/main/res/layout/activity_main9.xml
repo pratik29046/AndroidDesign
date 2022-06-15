@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     >
-
     <ImageView
         android:id="@+id/close"
         android:layout_width="30dp"
@@ -22,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/hello"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
         android:background="@color/black"
         android:src="@drawable/image2" />
@@ -34,6 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="60dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:background="@color/black">
 
         <!--        <ImageView-->
@@ -78,7 +79,7 @@
             android:textColor="#6FFFFFFF"
             android:textSize="16dp"
             app:colorClickableText="@color/white"
-            app:trimCollapsedText=" @string/read_more"
+            app:trimCollapsedText="@string/read_more"
             app:trimExpandedText="@string/read_less"
             app:trimLength="10"
             app:trimMode="trimModeLength" />
@@ -135,12 +136,13 @@
             android:layout_marginStart="19dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="22dp"
-            android:background="#08A82424">
+            android:background="#08A82424"
+            >
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="24dp"
                 android:layout_weight="8"
                 android:src="@drawable/info"
 
@@ -148,23 +150,21 @@
 
             <TextView
                 android:id="@+id/episodesinfo"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginEnd="150dp"
-                android:layout_weight="25"
-                android:gravity="center_vertical"
+                android:layout_weight="29"
+                android:gravity="center"
                 android:text="Episodes &amp; Info"
                 android:textColor="@color/white"
-                android:layout_gravity="center"
                 android:textStyle="bold"
-
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="4"
                 android:src="@drawable/rightarrow" />
 
         </LinearLayout>

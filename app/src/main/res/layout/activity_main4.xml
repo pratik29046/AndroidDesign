@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:id="@+id/rele1"
-        android:layout_width="360dp"
+        android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:background="@drawable/imgblur">
@@ -30,20 +30,22 @@
                 android:src="@drawable/ic_baseline_assignment_ind_24" />
 
             <TextView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:text="GUEST \nSign In "
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:layout_marginTop="-4dp"
+                />
 
             <TextView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="2"
-                android:text="GULLAR"
-                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="KATTO"
+                android:textColor="#FFC107"
                 android:textSize="25dp" />
 
         </LinearLayout>
@@ -54,18 +56,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/l1"
-            android:text="   SUBSCRIBE TO WATCH"
+            android:text="SUBSCRIBE TO WATCH"
+            android:layout_marginStart="8dp"
             android:textColor="#F40529"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:textStyle="normal"
+            />
 
         <TextView
             android:id="@+id/rec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/sub"
-            android:text="   Recommended"
+            android:text="Recommended"
             android:textColor="@color/white"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="8dp"
+            android:textStyle="normal"
+            />
 
         <LinearLayout
             android:id="@+id/l4"
@@ -73,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rec"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginTop="8dp"
             android:background="@drawable/ract"
             android:gravity="center"
@@ -83,7 +93,9 @@
                 android:layout_height="wrap_content"
                 android:text="GENERAL PLAN"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
 
 
             <LinearLayout
@@ -235,6 +247,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/l4"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/rect_2"
             android:gravity="center"
@@ -245,7 +258,9 @@
                 android:layout_height="wrap_content"
                 android:text="GENERAL PLAN"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
 
 
             <LinearLayout
@@ -400,10 +415,12 @@
 
         <LinearLayout
             android:id="@+id/l5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/general"
             android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:orientation="vertical">
 
             <LinearLayout
@@ -496,21 +513,19 @@
             </LinearLayout>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:text="____________________________________________________"
-                android:textColor="@color/white" />
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:layout_marginStart="5dp"
                 android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="____________________________________________________"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-8dp"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -543,19 +558,23 @@
                     android:text="Sign Up/Log In"
                     android:textColor="@color/white"
                     android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="____________________________________________________"
+                    android:textColor="#FF9800"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-8dp"
+                    />
             </LinearLayout>
 
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/l5"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:text="____________________________________________________"
-            android:textColor="@color/white" />
+
 
 
         <LinearLayout
@@ -564,6 +583,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginBottom="8dp"
             android:gravity="center">
 
@@ -572,7 +592,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Terms Of Use"
-                android:textColor="#41FFFFFF" />
+                android:textColor="#FF9800" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -580,7 +600,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:text="Version 1.1.20"
-                android:textColor="#41FFFFFF" />
+                android:textColor="#FF9800" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -588,7 +608,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:text="Privacy Policy"
-                android:textColor="#41FFFFFF" />
+                android:textColor="#FF9800" />
 
         </LinearLayout>
 

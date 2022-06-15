@@ -8,10 +8,10 @@
         android:width="60dp"
         />
     <stroke
-        android:color="#EA0606"
+        android:color="#FF9800"
 
         />
     <solid
-        android:color="#F40505"
+        android:color="#F11F03"
         />
 </shape>

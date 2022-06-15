@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,10 @@
     tools:context=".MainActivity5"
     android:background="@color/black"
     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/img1"
@@ -34,10 +38,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/img3"
-        android:text="N S E R I E S"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
-        />
+        android:layout_marginTop="5dp"
+        android:text="N S E R I E S" />
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
@@ -133,12 +136,13 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@+id/text8"
-        android:background="@color/white"
-        android:src="@drawable/play5"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
-
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/playvideo"
+        android:src="@drawable/play5"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         />
 
     <ImageView
@@ -146,11 +150,13 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@+id/img5"
-        android:background="#AD7C7979"
+        android:background="@drawable/downloadvideo"
         android:src="@drawable/download5"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         />
 
     <TextView
@@ -160,10 +166,10 @@
         android:layout_below="@+id/img6"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:textSize="16dp"
         android:layout_marginEnd="20dp"
         android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
-        android:textColor="#D7DDD7" />
+        android:textColor="#C1D7DDD7"
+        android:textSize="16dp" />
     <TextView
         android:id="@+id/text10"
         android:layout_width="wrap_content"
@@ -185,13 +191,12 @@
         android:layout_alignLeft="@+id/text10"
         android:layout_marginStart="64dp"
         android:layout_marginTop="6dp"
-        android:text="A ordinary girl tryinr which has hdhdhdhdhdhdhdhhdhdhhdhdhhd pratik pawade "
+        android:text="Hi hello my dear frineds how are your and what are your doing in your life "
         app:colorClickableText="@color/white"
-        app:trimCollapsedText="@string/read_more"
-        app:trimExpandedText="@string/read_less"
+        app:trimCollapsedText=" @string/read_more"
+        app:trimExpandedText=" @string/read_less"
         app:trimLength="30"
-        app:trimMode="trimModeLength"
-        />
+        app:trimMode="trimModeLength" />
 
     <TextView
         android:id="@+id/text12"
@@ -217,14 +222,14 @@
 
     <ImageView
         android:id="@+id/img7"
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_baseline_share_24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/text6"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        />
+        android:background="@drawable/share"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_share_24" />
 
 
     <TextView
@@ -232,9 +237,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text13"
+        android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="___________________________________________________________"
-        android:textColor="@color/information_background" />
+        android:text="_______________________________________________________________"
+        android:textColor="@color/play_background"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text15"
@@ -244,7 +251,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:text="EPISODES"
-        android:textColor="@color/white"
+        android:textColor="#FF9800"
         android:textStyle="bold"
         />
     <TextView
@@ -255,7 +262,7 @@
         android:text="TRAILERS &amp; MORE"
         android:layout_alignLeft="@+id/text15"
         android:layout_marginStart="80dp"
-        android:textColor="@color/white"
+        android:textColor="#FF5722"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         />
@@ -267,19 +274,19 @@
         android:text="MORE LIKE THIS"
         android:layout_alignLeft="@+id/text16"
         android:layout_marginStart="140dp"
-        android:textColor="@color/white"
+        android:textColor="#F80303"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text14"
-        android:layout_marginTop="-14dp"
-        android:scaleX="4"
-        android:src="@drawable/ic_baseline_linear_scale_24"
-        android:textColor="#B61212" />
+<!--    <ImageView-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/text14"-->
+<!--        android:layout_marginTop="-14dp"-->
+<!--        android:scaleX="4"-->
+<!--        android:src="@drawable/ic_baseline_linear_scale_24"-->
+<!--        android:textColor="#B61212" />-->
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>
