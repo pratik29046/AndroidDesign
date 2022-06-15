@@ -6,19 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
     ImageView imageView,close,img1,pratik;
 
     TextView textView ,Title,Session,Decs;
+    LinearLayout linearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main9);
         imageView=findViewById(R.id.img);
         close=findViewById(R.id.close);
-        textView=findViewById(R.id.episodesinfo);
+        linearLayout=findViewById(R.id.episodesinfo);
         Title=findViewById(R.id.text1);
         Session=findViewById(R.id.text2);
         Decs=findViewById(R.id.text3);
@@ -46,7 +48,7 @@ public class MainActivity9 extends AppCompatActivity {
 
 
         // for move Episodes
-        textView.setOnClickListener(new View.OnClickListener() {
+        linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent(MainActivity9.this,MainActivity5.class);

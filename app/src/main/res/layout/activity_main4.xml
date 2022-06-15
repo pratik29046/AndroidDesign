@@ -13,7 +13,8 @@
         android:layout_width="350dp"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/imgblur">
+        android:background="@color/black"
+        >
 
 
         <LinearLayout
@@ -246,8 +247,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/l4"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/rect_2"
             android:gravity="center"
@@ -259,8 +259,7 @@
                 android:text="GENERAL PLAN"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
 
             <LinearLayout
@@ -454,14 +453,14 @@
 
                     />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="33dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/cri"
-                    android:src="@drawable/ic_baseline_person_24" />
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="33dp"-->
+<!--                    android:layout_marginEnd="30dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/cri"-->
+<!--                    android:src="@drawable/ic_baseline_person_24" />-->
 
             </LinearLayout>
 
@@ -474,7 +473,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="28dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Favorite"
@@ -483,7 +482,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Watchlist"
@@ -492,22 +492,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="9dp"
-                    android:layout_marginEnd="18dp"
+                    android:layout_marginStart="40dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Plans"
                     android:textColor="@color/white" />
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="21dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=" Profile"
-                    android:textColor="@color/white" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="21dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text=" Profile"-->
+<!--                    android:textColor="@color/white" />-->
 
 
             </LinearLayout>

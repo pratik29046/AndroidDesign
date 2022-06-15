@@ -49,7 +49,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         h.i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,MainActivity9.class);
+                Intent intent=new Intent(context,MainActivity6.class);
                 intent.putExtra("img",temp.getImg());
                 intent.putExtra("title",temp.getTitle());
                 intent.putExtra("session",temp.getSession());

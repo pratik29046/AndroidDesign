@@ -122,7 +122,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     public void data(){
         userList=new ArrayList<>();
         userList.add(new ModelClass(R.drawable.p3,"Titanic","2020 A 1 session","hii i am pratik pawade"));
-        userList.add(new ModelClass(R.drawable.p3,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd name is luck dhd"));
+        userList.add(new ModelClass(R.drawable.p3,"War","2022 B 1 session","hdhhd dhdh hdhd hdhd hdh hdd hdh hdh hd  dhhdh hdh hdh i id jd  jdjd jjd jdj jdj jdjdj jdj jdjdj jjdj jdjdj jdjdj jdjdj jdjd jdjdj jdjd jdj pratik "));
         userList.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
         userList.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
         userList.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));

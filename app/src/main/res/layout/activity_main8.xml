@@ -41,7 +41,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:src="@drawable/download5" />
+            android:src="@drawable/download_recy" />
 
         <com.borjabravo.readmoretextview.ReadMoreTextView
             android:id="@+id/desc"

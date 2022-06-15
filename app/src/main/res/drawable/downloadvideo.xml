@@ -13,7 +13,7 @@
 
         />
     <solid
-        android:color="#B51A39"
+        android:color="#FF9800"
         />
     <corners
         android:radius="10dp"

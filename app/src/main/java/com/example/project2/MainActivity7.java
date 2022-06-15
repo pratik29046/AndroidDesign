@@ -54,18 +54,18 @@ public class MainActivity7 extends AppCompatActivity {
 
     public void data1(){
         userList3=new ArrayList<ModelClass3>();
-        userList3.add(new ModelClass3("R.raw.videos" ,"1. The pickup \n 100m",R.drawable.download5,"hhd hdh ddjdj djdj jdj jd jd djdjd jj hdh  djjd jdj jjd jjd jjd jjd jjd jjd jjd jdj jdn dj jdj jdj jdj jdj jdj jd pratik dhdd  dgyd yyyd yydy ydyy yyyd ydydy dydyd ydydy ydydy dydy ydydy ydydy ydydy ydydy ydydy ydydy dyhhdhdhdhh ydyydyd dydydh dhhdbddubdud ydydy"));
-        userList3.add(new ModelClass3("R.raw.videos" ,"2. She \n 38m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"3. The pickup \n 34m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"4. The pickup \n 27m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"5. The pickup \n 3m",R.drawable.download5,"Video is an electronic medium for the recording,"));
-        userList3.add(new ModelClass3("R.raw.videos" ,"6. The pickup \n 43m",R.drawable.download5,"Video is an electronic medium for the recording,"));
-        userList3.add(new ModelClass3("R.raw.videos" ,"7. The pickup \n 83m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"8. The pickup \n 43m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"9. The pickup \n 39m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"10. The pickup \n 31m",R.drawable.download5,"Video is an electronic medium for the recording, "));
-        userList3.add(new ModelClass3("R.raw.videos" ,"11. The pickup \n 32m",R.drawable.download5,"Video is an electronic medium for the recording,"));
-        userList3.add(new ModelClass3("R.raw.videos" ,"12. The pickup \n 34m",R.drawable.download5,"Video is an electronic medium for the recording,"));
+        userList3.add(new ModelClass3("R.raw.videos" ,"1. The pickup \n 100m",R.drawable.download_recy,"hhd hdh ddjdj djdj jdj jd jd djdjd jj hdh  djjd jdj jjd jjd jjd jjd jjd jjd jjd jdj jdn dj jdj jdj jdj jdj jdj jd pratik dhdd  dgyd yyyd yydy ydyy yyyd ydydy dydyd ydydy ydydy dydy ydydy ydydy ydydy ydydy ydydy ydydy dyhhdhdhdhh ydyydyd dydydh dhhdbddubdud ydydy"));
+        userList3.add(new ModelClass3("R.raw.videos" ,"2. She \n 38m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"3. The pickup \n 34m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"4. The pickup \n 27m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"5. The pickup \n 3m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
+        userList3.add(new ModelClass3("R.raw.videos" ,"6. The pickup \n 43m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
+        userList3.add(new ModelClass3("R.raw.videos" ,"7. The pickup \n 83m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"8. The pickup \n 43m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"9. The pickup \n 39m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"10. The pickup \n 31m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
+        userList3.add(new ModelClass3("R.raw.videos" ,"11. The pickup \n 32m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
+        userList3.add(new ModelClass3("R.raw.videos" ,"12. The pickup \n 34m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
     }
 
     public void back(){
