@@ -167,10 +167,69 @@
                 android:layout_weight="4"
                 android:src="@drawable/rightarrow" />
 
+
         </LinearLayout>
 
 
     </RelativeLayout>
+
+
+
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableLeft="@drawable/play5"-->
+<!--        android:text="@string/str_play"-->
+<!--        android:background="#A4E60F0F"-->
+<!--        android:textColor="@color/black"-->
+<!--        -->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/play5"-->
+<!--        android:drawablePadding="6dp"-->
+<!--        android:gravity="left|center"-->
+<!--        android:height="60dp"-->
+<!--        android:padding="6dp"-->
+<!--        android:text="AndroidDhina"-->
+<!--        android:textColor="#E30D0D"-->
+<!--        android:textStyle="bold"  -->
+<!--        android:layout_height="80dp"/>-->
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/play_background"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/playsong"
+
+            />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:text="PLAY"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
 
 
 

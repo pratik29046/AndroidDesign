@@ -1,21 +1,21 @@
 package com.example.project2;
 
 public class ModelClass2 {
-    private String vid;
+    private int img1;
     private String name;
     private int img;
     private String desc;
 
 
-    ModelClass2(String vid,String name,int img,String desc){
-        this.vid=vid;
+    ModelClass2(int img1,String name,int img,String desc){
+        this.img1=img1;
         this.name=name;
         this.img=img;
         this.desc=desc;
     }
 
-    public String getVid(){
-        return vid;
+    public int getVid(){
+        return img1;
     }
     public String getName(){
         return name;

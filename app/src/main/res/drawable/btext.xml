@@ -4,8 +4,8 @@
         android:radius="20dp"
         />
     <size
-        android:height="35dp"
-        android:width="500dp"
+        android:height="20dp"
+        android:width="60dp"
 
         />
     <stroke
@@ -13,9 +13,9 @@
 
         />
     <solid
-        android:color="@color/white"
+        android:color="@color/information_background"
         />
     <corners
-        android:radius="5dp"
+        android:radius="1dp"
         />
 </shape>

@@ -14,7 +14,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity8 extends AppCompatActivity {
      TextView textView,textView1;
-     VideoView videoView;
+     ImageView videoView;
      ImageView imageView;
 
     @Override
@@ -27,12 +27,12 @@ public class MainActivity8 extends AppCompatActivity {
         videoView=findViewById(R.id.video1);
 
         Intent intent=getIntent();
-        String vid=intent.getStringExtra("vid");
+        int vid=intent.getIntExtra("vid",0);
         String name=intent.getStringExtra("name");
         int img=intent.getIntExtra("img",0);
         String desc=intent.getStringExtra("desc");
 
-        videoView.setVideoPath(vid);
+        videoView.setImageResource(vid);
         textView.setText(name);
         imageView.setImageResource(img);
         textView1.setText(desc);

@@ -3,14 +3,19 @@ package com.example.project2;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.GestureDetectorCompat;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.media.Image;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -26,7 +31,7 @@ import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 
-public class MainActivity13 extends AppCompatActivity {
+public class MainActivity13 extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private boolean isShowingTrackSelectionDialog;
     private DefaultTrackSelector trackSelector;
@@ -39,6 +44,9 @@ public class MainActivity13 extends AppCompatActivity {
     SimpleExoPlayer simpleExoPlayer;
     Boolean isLock= false;
 
+    private GestureDetectorCompat gestureDetectorCompat;
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +69,22 @@ public class MainActivity13 extends AppCompatActivity {
         ImageView speedBtn = playerView.findViewById(R.id.exo_playback_speed);
         TextView speedTxt = playerView.findViewById(R.id.speed);
         ImageView lock = playerView.findViewById(R.id.lock);
-
         RelativeLayout name=playerView.findViewById(R.id.names);
+        Button button=playerView.findViewById(R.id.brightness);
+
+
+
+        gestureDetectorCompat= new GestureDetectorCompat(this,this);
+        button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetectorCompat.onTouchEvent(event);
+                Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                return false;
+
+            }
+        });
+
 
 
 
@@ -262,6 +284,9 @@ public class MainActivity13 extends AppCompatActivity {
 
             }
         });
+
+
+
     }
 
     protected void releasePlayer() {
@@ -311,4 +336,51 @@ public class MainActivity13 extends AppCompatActivity {
         releasePlayer();
     }
 
+
+
+
+
+    @Override
+    public boolean onDown(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent e) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent e) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent e) {
+    }
+
+    @Override
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        return false;
+    }
+
+
+    @Override
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        Button button1=playerView.findViewById(R.id.brightness);
+        float sWidth= Resources.getSystem().getDisplayMetrics().widthPixels;
+        if(Math.abs(distanceX) <= Math.abs(distanceY)){
+            if((e1.getXPrecision()) < (sWidth/2)){
+                button1.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(),"Hello hhddhdhdhhdhd",Toast.LENGTH_SHORT).show();
+            }else{
+                button1.setVisibility(View.GONE);
+                Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
+            }
+//            button1.setVisibility(View.VISIBLE);
+
+
+        }
+        return true;
+    }
 }

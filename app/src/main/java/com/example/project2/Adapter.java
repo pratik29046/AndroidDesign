@@ -52,6 +52,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 Intent intent=new Intent(context,MainActivity6.class);
                 intent.putExtra("img",temp.getImg());
                 intent.putExtra("title",temp.getTitle());
+                intent.putExtra("date",temp.getDate());
+                intent.putExtra("age",temp.getAge());
                 intent.putExtra("session",temp.getSession());
                 intent.putExtra("decs",temp.getDecs());
                 context.startActivity(intent);

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/background_movies.xml" value="0.1" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/btext.xml" value="0.1235" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/close.xml" value="0.1" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/colorroundbg.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/cri.xml" value="0.1765" />
@@ -35,6 +36,8 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/seekbar_track.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/share.xml" value="0.196" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/thumb_image.xml" value="0.198" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/watchlist.xml" value="0.198" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/watchnow_1.xml" value="0.1235" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/Bottomsheet.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main10.xml" value="0.15520833333333334" />

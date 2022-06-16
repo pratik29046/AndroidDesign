@@ -49,6 +49,7 @@
     <string name="rupee">₹</string>
     <string name="buy">Buy</string>
     <string name="valid_for_30_days">Valid for 30 days.</string>
+    <string name="O">0</string>
 
 </resources>
 

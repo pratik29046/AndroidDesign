@@ -1,35 +1,33 @@
 package com.example.project2;
 
 public class ModelClass3 {
-    private String vid;
+    private int img1;
     private String name;
     private int img;
     private String desc;
 
 
-    ModelClass3(String vid,String name,int img,String desc){
-        this.vid=vid;
-        this.name=name;
-        this.img=img;
-        this.desc=desc;
+    ModelClass3(int img1, String name, int img, String desc) {
+        this.img1 = img1;
+        this.name = name;
+        this.img = img;
+        this.desc = desc;
     }
 
-    public String getVid(){
-        return vid;
+    public int getVid() {
+        return img1;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public int getImg(){
+
+    public int getImg() {
         return img;
     }
-    public String getDesc(){
+
+    public String getDesc() {
         return desc;
     }
 
-
-
-
-
 }
-

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#208A8A8A">
-    <ImageView
-        android:id="@+id/lock"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:src="@drawable/ic_baseline_lock_open_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        android:layout_marginVertical="20dp"
-        >
 
-    </ImageView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_lock_open_24"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            />
+    </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,11 +36,25 @@
 
 
             <ImageView
+                android:id="@+id/back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/playerback"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/rew"
+                android:layout_marginHorizontal="160dp"
+                android:layout_marginTop="19dp"
+                >
+
+            </ImageView>
+
+
+            <ImageView
                 android:id="@+id/exo_playback_speed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="28dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="250dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/exo_ic_speed"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/speed"
@@ -64,10 +78,10 @@
 
             <ImageView
                 android:id="@+id/exo_track_selection_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="28dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="145dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/exo_ic_settings"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/fullscreen"
@@ -77,10 +91,10 @@
 
             <ImageView
                 android:id="@+id/fullscreen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="28dp"
+                android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_baseline_screen_rotation_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,8 +104,8 @@
 
             <ImageView
                 android:id="@+id/exo_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/exo_ic_play_circle_filled"
                 app:layout_constraintBottom_toBottomOf="@+id/exo_pause"
                 app:layout_constraintEnd_toEndOf="@+id/exo_pause"
@@ -103,8 +117,8 @@
 
             <ImageView
                 android:id="@+id/exo_pause"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/exo_ic_pause_circle_filled"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -118,9 +132,9 @@
 
             <ImageView
                 android:id="@+id/fwd"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginEnd="150dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_baseline_forward_10_24"
                 app:layout_constraintBottom_toBottomOf="@+id/exo_play"
@@ -134,8 +148,8 @@
                 android:id="@+id/exo_duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="33dp"
                 android:text="00:0"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -158,8 +172,8 @@
 
             <TextView
                 android:id="@+id/exo_position"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="2dp"
                 android:text="00"
                 android:textColor="@color/white"
@@ -172,9 +186,9 @@
 
             <ImageView
                 android:id="@+id/rew"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="150dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_baseline_replay_10_24"
                 app:layout_constraintBottom_toBottomOf="@+id/exo_play"
@@ -184,14 +198,37 @@
 
             </ImageView>
 
+
+            <Button
+                android:id="@+id/brightness"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:background="#E30B0B"
+                android:drawableLeft="@drawable/brightness4"
+                android:scaleType="centerCrop"
+                android:text="@string/O"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/exo_play"
+                app:tint="@color/white"
+                tools:ignore="RtHardcoded">
+
+            </Button>
+
+
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/exo_progress_placeholder"
-                android:layout_width="match_parent"
+                android:layout_width="701dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-
                 >
 
             </com.google.android.material.progressindicator.LinearProgressIndicator>

@@ -121,28 +121,23 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     }
     public void data(){
         userList=new ArrayList<>();
-        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020 A 1 session","hii i am pratik pawade"));
-        userList.add(new ModelClass(R.drawable.p3,"War","2022 B 1 session","hdhhd dhdh hdhd hdhd hdh hdd hdh hdh hd  dhhdh hdh hdh i id jd  jdjd jjd jdj jdj jdjdj jdj jdjdj jjdj jdjdj jdjdj jdjdj jdjd jdjdj jdjd jdj pratik "));
-        userList.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
-        userList.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
-        userList.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
-        userList.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
-        userList.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
-        userList.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
+        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+
 
 
 
         userList1=new ArrayList<>();
-        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020 A 1 session","hii i am pratik pawade"));
-        userList1.add(new ModelClass(R.drawable.p3,"War","2022 B 1 session","hii i am War hdhd dhgd hh eueu eueu ueueu"));
-        userList1.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddgddgdgdgdggdgdnsjsjj djdjdbjdjsdbjd"));
-        userList1.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
-        userList1.add(new ModelClass(R.drawable.titanic,"Titanic","2020 A 1 session","hii i am pratik pawade"));
-        userList1.add(new ModelClass(R.drawable.war,"War","2022 B 1 session","hii i am War hdhddgdgdgdgdgddggd"));
-        userList1.add(new ModelClass(R.drawable.extraction,"Extraction","2025 A 1 session","hii i am  dddg eg ey hyy yyeyey yyeye 2igi2 uee ueube"));
-        userList1.add(new ModelClass(R.drawable.movie,"1919","2020 55 1 session","hii i am ram shsgsgsgg ydhghd yydyey"));
-
-
+        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
 
     }
 
