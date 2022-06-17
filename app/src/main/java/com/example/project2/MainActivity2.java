@@ -13,6 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -33,17 +36,42 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     RelativeLayout popup;
     LinearLayout linearLayoutplay;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         recyclerView=findViewById(R.id.review);
         recyclerView1=findViewById(R.id.review1);
-        recyclerView2=findViewById(R.id.post);
+//        recyclerView2=findViewById(R.id.post);
         menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
         bro=findViewById(R.id.bro);
         linearLayoutplay=findViewById(R.id.plays);
+        ImageSlider imageSlider=findViewById(R.id.post);
+
+        List<SlideModel> slideModels=new ArrayList<>();
+
+
+        slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.extraction, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.war, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
+
+        imageSlider.setImageList(slideModels);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,7 +138,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         data();
         adp();
         adp1();
-        adp2();
+//        adp2();
     }
 
     public void adp(){
