@@ -50,8 +50,8 @@ dependencies {
     implementation "com.borjabravo:readmoretextview:2.1.0"
 
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
-    
 
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
 
 

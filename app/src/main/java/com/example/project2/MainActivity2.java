@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -30,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     Adapter adapter;
     Adapters2 adapters;
     RelativeLayout popup;
+    LinearLayout linearLayoutplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,29 +43,31 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
         bro=findViewById(R.id.bro);
+        linearLayoutplay=findViewById(R.id.plays);
 
 
-        popup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+
+//        popup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+////
+////                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
+////                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
+////                );
+////
+////                bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
+////                    @Override
+////                    public void onClick(View v) {
+////                        bottomSheetDialog.dismiss();
+////                    }
+////                });
+////                bottomSheetDialog.setContentView(bottomSheetView);
+////                bottomSheetDialog.show();
 //
-//                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
-//                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
-//                );
 //
-//                bottomSheetView.findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        bottomSheetDialog.dismiss();
-//                    }
-//                });
-//                bottomSheetDialog.setContentView(bottomSheetView);
-//                bottomSheetDialog.show();
-
-
-            }
-        });
+//            }
+//        });
 
 
 
@@ -74,6 +78,16 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 //        r.setLayoutManager(linearLayoutManager);
 //        show();
+
+
+
+        linearLayoutplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),MainActivity13.class);
+                startActivity(intent);
+            }
+        });  // go to play video
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,28 +147,28 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 
     public void data(){
         userList=new ArrayList<>();
-        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22+","Season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42+","Season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82+","Season 5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22+","Season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.extraction,"War","2022","42+","Season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList.add(new ModelClass(R.drawable.war,"Extraction","2025","82+","Season 5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
 
 
 
 
         userList1=new ArrayList<>();
-        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
-        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22+","season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season 5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+        userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season 5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
 
         userList4=new ArrayList<>();
         userList4.add(new ModelClass4(R.drawable.image2));
-        userList4.add(new ModelClass4(R.drawable.image));
-        userList4.add(new ModelClass4(R.drawable.p1));
+        userList4.add(new ModelClass4(R.drawable.image2));
+        userList4.add(new ModelClass4(R.drawable.image2));
         userList4.add(new ModelClass4(R.drawable.image2));
         userList4.add(new ModelClass4(R.drawable.image2));
     }

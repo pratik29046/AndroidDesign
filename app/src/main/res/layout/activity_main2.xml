@@ -60,11 +60,10 @@
      <androidx.recyclerview.widget.RecyclerView
          android:id="@+id/post"
          android:layout_width="match_parent"
-         android:layout_height="502dp"
-         >
-
+         android:layout_height="505dp">
 
      </androidx.recyclerview.widget.RecyclerView>
+
 
 
 
@@ -100,46 +99,47 @@
 
 
 
-<!--     <ImageView-->
-<!--         android:layout_width="40dp"-->
-<!--         android:layout_height="40dp"-->
-<!--         android:layout_alignParentRight="true"-->
-<!--         android:layout_marginTop="39dp"-->
-<!--         android:layout_marginEnd="22dp"-->
-<!--         android:src="@drawable/ic_baseline_search_24"-->
-<!--         />-->
+     <ImageView
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="39dp"
+         android:layout_marginEnd="22dp"
+         android:src="@drawable/ic_baseline_search_24"
+         />
 
 
-<!--     <LinearLayout-->
-<!--         android:layout_width="wrap_content"-->
-<!--         android:layout_height="wrap_content"-->
-<!--         android:layout_above="@+id/continues"-->
-<!--         android:layout_centerInParent="true"-->
-<!--         android:layout_marginBottom="4dp"-->
-<!--         android:background="@drawable/watchnow_1"-->
-<!--         android:clickable="true"-->
-<!--         android:gravity="center">-->
+     <LinearLayout
+         android:id="@+id/plays"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/continues"
+         android:layout_centerInParent="true"
+         android:layout_marginBottom="4dp"
+         android:background="@drawable/watchnow_1"
+         android:clickable="true"
+         android:gravity="center">
 
-<!--         <ImageView-->
-<!--             android:layout_width="40dp"-->
-<!--             android:layout_height="40dp"-->
-<!--             android:layout_gravity="center_vertical"-->
-<!--             android:src="@drawable/play123"-->
-<!--             />-->
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_gravity="center_vertical"
+             android:src="@drawable/play123"
+             />
 
-<!--         <TextView-->
-<!--             android:id="@+id/textView2"-->
-<!--             android:layout_width="wrap_content"-->
-<!--             android:layout_height="wrap_content"-->
-<!--             android:layout_gravity="center_vertical"-->
-<!--             android:layout_marginRight="7dp"-->
-<!--             android:gravity="center"-->
-<!--             android:text="Play"-->
-<!--             android:textColor="@color/black"-->
-<!--             android:textSize="20dp"-->
-<!--             android:textStyle="bold" />-->
+         <TextView
+             android:id="@+id/textView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+             android:layout_marginRight="7dp"
+             android:gravity="center"
+             android:text="Play"
+             android:textColor="@color/black"
+             android:textSize="20dp"
+             android:textStyle="bold" />
 
-<!--     </LinearLayout>-->
+     </LinearLayout>
 
 
 

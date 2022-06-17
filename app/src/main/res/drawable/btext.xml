@@ -5,7 +5,7 @@
         />
     <size
         android:height="20dp"
-        android:width="60dp"
+        android:width="38dp"
 
         />
     <stroke
@@ -13,9 +13,9 @@
 
         />
     <solid
-        android:color="@color/information_background"
+        android:color="#FF0000"
         />
     <corners
-        android:radius="1dp"
+        android:radius="2dp"
         />
 </shape>
