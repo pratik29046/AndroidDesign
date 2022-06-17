@@ -1,7 +1,6 @@
 package com.example.project2;
 
 import  androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,18 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 //import com.CustomAdapter;
@@ -32,7 +26,9 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     LinearLayoutManager layoutManager;
     List<ModelClass>userList;
     List<ModelClass>userList1;
+    List<ModelClass4>userList4;
     Adapter adapter;
+    Adapters2 adapters;
     RelativeLayout popup;
 
     @Override
@@ -41,6 +37,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         setContentView(R.layout.activity_main2);
         recyclerView=findViewById(R.id.review);
         recyclerView1=findViewById(R.id.review1);
+        recyclerView2=findViewById(R.id.post);
         menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
         bro=findViewById(R.id.bro);
@@ -99,6 +96,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         data();
         adp();
         adp1();
+        adp2();
     }
 
     public void adp(){
@@ -119,6 +117,20 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         recyclerView1.setAdapter(adapter);
 
     }
+
+    public void adp2(){
+        recyclerView2=findViewById(R.id.post);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerView2.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+        recyclerView2.setItemAnimator(new DefaultItemAnimator() );
+        adapters= new Adapters2(userList4,this);
+        recyclerView2.setAdapter(adapters);
+
+    }
+
+
+
+
     public void data(){
         userList=new ArrayList<>();
         userList.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
@@ -139,6 +151,12 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
         userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
 
+        userList4=new ArrayList<>();
+        userList4.add(new ModelClass4(R.drawable.image2));
+        userList4.add(new ModelClass4(R.drawable.image));
+        userList4.add(new ModelClass4(R.drawable.p1));
+        userList4.add(new ModelClass4(R.drawable.image2));
+        userList4.add(new ModelClass4(R.drawable.image2));
     }
 
     @Override

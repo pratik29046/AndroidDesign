@@ -56,65 +56,96 @@
 
 <!--    </LinearLayout>-->
 
-     <RelativeLayout
+
+     <androidx.recyclerview.widget.RecyclerView
          android:id="@+id/post"
-         android:layout_width="wrap_content"
+         android:layout_width="match_parent"
          android:layout_height="502dp"
-         android:background="@drawable/image2"
-         android:orientation="horizontal">
-
-         <!--         <TextView-->
-         <!--             android:layout_width="wrap_content"-->
-         <!--             android:layout_height="wrap_content"-->
-         <!--             android:layout_marginTop="60dp"-->
-         <!--             android:layout_weight="7"-->
-         <!--             android:text=" GULLAR"-->
-         <!--             android:textColor="@color/white"-->
-         <!--             android:textFontWeight="@integer/material_motion_duration_long_2"-->
-         <!--             android:textSize="30dp" />-->
-
-         <ImageView
-             android:layout_width="40dp"
-             android:layout_height="40dp"
-             android:layout_alignParentRight="true"
-             android:layout_marginTop="39dp"
-             android:layout_marginEnd="22dp"
-             android:src="@drawable/ic_baseline_search_24" />
+         >
 
 
-     </RelativeLayout>
+     </androidx.recyclerview.widget.RecyclerView>
 
-     <LinearLayout
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_above="@+id/continues"
-         android:layout_centerInParent="true"
-         android:layout_marginBottom="4dp"
-         android:background="@drawable/watchnow_1"
-         android:clickable="true"
-         android:gravity="center">
 
-         <ImageView
-             android:layout_width="40dp"
-             android:layout_height="40dp"
-             android:layout_gravity="center_vertical"
-             android:src="@drawable/play123"
 
-             />
 
-         <TextView
-             android:id="@+id/textView2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_vertical"
-             android:layout_marginRight="7dp"
-             android:gravity="center"
-             android:text="Play"
-             android:textColor="@color/black"
-             android:textSize="20dp"
-             android:textStyle="bold" />
 
-     </LinearLayout>
+<!--     <RelativeLayout-->
+<!--         android:id="@+id/post"-->
+<!--         android:layout_width="wrap_content"-->
+<!--         android:layout_height="502dp"-->
+<!--         android:background="@drawable/image2"-->
+<!--         android:orientation="horizontal">-->
+
+<!--         &lt;!&ndash;         <TextView&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:layout_width="wrap_content"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:layout_height="wrap_content"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:layout_marginTop="60dp"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:layout_weight="7"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:text=" GULLAR"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:textColor="@color/white"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:textFontWeight="@integer/material_motion_duration_long_2"&ndash;&gt;-->
+<!--         &lt;!&ndash;             android:textSize="30dp" />&ndash;&gt;-->
+
+<!--         <ImageView-->
+<!--             android:layout_width="40dp"-->
+<!--             android:layout_height="40dp"-->
+<!--             android:layout_alignParentRight="true"-->
+<!--             android:layout_marginTop="39dp"-->
+<!--             android:layout_marginEnd="22dp"-->
+<!--             android:src="@drawable/ic_baseline_search_24" />-->
+
+
+<!--     </RelativeLayout>-->
+
+
+
+<!--     <ImageView-->
+<!--         android:layout_width="40dp"-->
+<!--         android:layout_height="40dp"-->
+<!--         android:layout_alignParentRight="true"-->
+<!--         android:layout_marginTop="39dp"-->
+<!--         android:layout_marginEnd="22dp"-->
+<!--         android:src="@drawable/ic_baseline_search_24"-->
+<!--         />-->
+
+
+<!--     <LinearLayout-->
+<!--         android:layout_width="wrap_content"-->
+<!--         android:layout_height="wrap_content"-->
+<!--         android:layout_above="@+id/continues"-->
+<!--         android:layout_centerInParent="true"-->
+<!--         android:layout_marginBottom="4dp"-->
+<!--         android:background="@drawable/watchnow_1"-->
+<!--         android:clickable="true"-->
+<!--         android:gravity="center">-->
+
+<!--         <ImageView-->
+<!--             android:layout_width="40dp"-->
+<!--             android:layout_height="40dp"-->
+<!--             android:layout_gravity="center_vertical"-->
+<!--             android:src="@drawable/play123"-->
+<!--             />-->
+
+<!--         <TextView-->
+<!--             android:id="@+id/textView2"-->
+<!--             android:layout_width="wrap_content"-->
+<!--             android:layout_height="wrap_content"-->
+<!--             android:layout_gravity="center_vertical"-->
+<!--             android:layout_marginRight="7dp"-->
+<!--             android:gravity="center"-->
+<!--             android:text="Play"-->
+<!--             android:textColor="@color/black"-->
+<!--             android:textSize="20dp"-->
+<!--             android:textStyle="bold" />-->
+
+<!--     </LinearLayout>-->
+
+
+
+
+
+
 
 
 <!--     <ImageView-->
@@ -150,6 +181,8 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="32dp">
+
+
 
          </androidx.recyclerview.widget.RecyclerView>
 

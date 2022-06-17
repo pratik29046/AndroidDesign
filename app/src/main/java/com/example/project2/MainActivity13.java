@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -44,12 +46,21 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
     SimpleExoPlayer simpleExoPlayer;
     Boolean isLock= false;
 
+
     private GestureDetectorCompat gestureDetectorCompat;
+    private int brightnesss=0;
+
+
+    ImageView close;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main13);
 
 
@@ -71,6 +82,9 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
         ImageView lock = playerView.findViewById(R.id.lock);
         RelativeLayout name=playerView.findViewById(R.id.names);
         Button button=playerView.findViewById(R.id.brightness);
+        ImageView close=playerView.findViewById(R.id.back);
+
+
 
 
 
@@ -80,10 +94,23 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
             public boolean onTouch(View v, MotionEvent event) {
                 gestureDetectorCompat.onTouchEvent(event);
                 Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
-                return false;
+                return true;
 
             }
         });
+
+
+
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });
+
+
+
 
 
 
@@ -154,6 +181,8 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
             }
         });
 
+
+
         lock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,14 +195,17 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
                 }
 //
                 if(isLock =!isLock) {
+                    
                     lockScreen(isLock);
 
                 }
 
             }
 
-
         });
+
+
+
         farwordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -202,31 +234,31 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
             }
         });
 
-        ImageView fullscreenButton = playerView.findViewById(R.id.fullscreen);
-        fullscreenButton.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SourceLockedOrientationActivity")
-            @Override
-            public void onClick(View view) {
-
-
-                int orientation = MainActivity13.this.getResources().getConfiguration().orientation;
-                if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-                    // code for portrait mode
-
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-
-                } else {
-                    // code for landscape mode
-
-                    Toast.makeText(MainActivity13.this, "Land", Toast.LENGTH_SHORT).show();
-                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-                }
-
-
-            }
-        });
+//        ImageView fullscreenButton = playerView.findViewById(R.id.fullscreen);
+//        fullscreenButton.setOnClickListener(new View.OnClickListener() {
+//            @SuppressLint("SourceLockedOrientationActivity")
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                int orientation = MainActivity13.this.getResources().getConfiguration().orientation;
+//                if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+//                    // code for portrait mode
+//
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//
+//
+//                } else {
+//                    // code for landscape mode
+//
+//                    Toast.makeText(MainActivity13.this, "Land", Toast.LENGTH_SHORT).show();
+//                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//
+//                }
+//
+//
+//            }
+//        });
 
 
         findViewById(R.id.exo_play).setOnClickListener(new View.OnClickListener() {
@@ -340,6 +372,8 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
 
 
 
+
+
     @Override
     public boolean onDown(MotionEvent e) {
         return false;
@@ -372,7 +406,20 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
         if(Math.abs(distanceX) <= Math.abs(distanceY)){
             if((e1.getXPrecision()) < (sWidth/2)){
                 button1.setVisibility(View.VISIBLE);
-                Toast.makeText(getApplicationContext(),"Hello hhddhdhdhhdhd",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"Hello hhddhdhdhhdhd",Toast.LENGTH_SHORT).show();
+                boolean inc=distanceY > 0;
+                int i;
+                if(inc) {
+                   i=brightnesss++;
+
+                    Toast.makeText(getApplicationContext(),"11111111",Toast.LENGTH_SHORT).show();
+                }else{
+                   i=brightnesss--;
+                    Toast.makeText(getApplicationContext(),"00000000",Toast.LENGTH_SHORT).show();
+                }
+                setbright(i);
+
+
             }else{
                 button1.setVisibility(View.GONE);
                 Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
@@ -383,4 +430,22 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
         }
         return true;
     }
+
+    private void setbright(int value){
+        float d=1.0f/30;
+        WindowManager.LayoutParams lp=this.getWindow().getAttributes();
+        lp.screenBrightness=d * value;
+        this.getWindow().setAttributes(lp);  // change the side
+//        Toast.makeText(getApplicationContext(),d,Toast.LENGTH_SHORT).show();
+
+
+    }
+
+
+
+    public void back(){
+        super.onBackPressed();
+    }
+
+
 }
