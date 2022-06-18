@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,6 +84,12 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
         RelativeLayout name=playerView.findViewById(R.id.names);
         Button button=playerView.findViewById(R.id.brightness);
         ImageView close=playerView.findViewById(R.id.back);
+        ProgressBar progressBar=playerView.findViewById(R.id.exo_progress_placeholder);
+
+
+
+
+
 
 
 
@@ -189,6 +196,7 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
                 if(!isLock){
                     lock.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_lock_24));
                     lockScreen(isLock);
+
                 }else{
                     lock.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_baseline_lock_open_24));
                     lockScreen(!isLock);

@@ -59,6 +59,8 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         slideModels.add(new SlideModel(R.drawable.extraction, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.war, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
+
 
         imageSlider.setImageList(slideModels);
 

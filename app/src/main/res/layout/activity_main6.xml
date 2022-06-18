@@ -111,16 +111,15 @@
             android:layout_marginStart="60dp"
             android:text="."
             android:textColor="#FF9800"
-            android:textStyle="bold"
             android:textSize="20dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="72dp"
             android:layout_marginTop="4dp"
             android:text="Action, Adventure"
             android:textColor="@color/white"
@@ -131,24 +130,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="200dp"
+            android:layout_marginStart="192dp"
             android:text="."
             android:textColor="#FF9800"
             android:textSize="20dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="215dp"
+            android:layout_marginStart="202dp"
             android:layout_marginTop="4dp"
             android:text="1h 35m 40s"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
 
 
@@ -255,9 +252,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
             android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
-            android:textColor="#E8D7DDD7"
-            android:textSize="16dp"
-             />
+            android:textColor="#E8D7DDD7" />
 
         <TextView
             android:id="@+id/text10"

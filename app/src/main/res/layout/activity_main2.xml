@@ -33,7 +33,6 @@
 <!--            android:background="@drawable/icon"-->
 <!--            android:src="@drawable/ic_baseline_play_circle_24" />-->
 
-
 <!--    </LinearLayout>-->
 
 <!--    <LinearLayout-->
@@ -53,47 +52,31 @@
 <!--            android:textSize="20dp"-->
 
 <!--            />-->
-
 <!--    </LinearLayout>-->
 
 
      <com.denzcoskun.imageslider.ImageSlider
          android:id="@+id/post"
          android:layout_width="wrap_content"
-         android:layout_height="405dp"
+         android:layout_height="505dp"
          app:iss_auto_cycle="true"
-         app:iss_period="2500"
          app:iss_delay="0"
+         app:iss_error_image="@drawable/error"
+         app:iss_period="2500"
+         app:iss_selected_dot="@drawable/default_selected_dot"
          app:iss_text_align="CENTER"
          app:iss_title_background="@drawable/gradient"
-         app:iss_error_image="@drawable/error"
-         app:iss_selected_dot="@drawable/default_selected_dot"
-         app:iss_unselected_dot="@drawable/default_unselected_dot"/>
-
-
-
-
-
-
-
-
+         app:iss_unselected_dot="@drawable/default_unselected_dot" />
 
 
 
 <!--     <androidx.recyclerview.widget.RecyclerView-->
+
 <!--         android:id="@+id/post"-->
 <!--         android:layout_width="match_parent"-->
 <!--         android:layout_height="505dp">-->
 
 <!--     </androidx.recyclerview.widget.RecyclerView>-->
-
-
-
-
-
-
-
-
 
 
 <!--     <RelativeLayout-->
@@ -120,7 +103,6 @@
 <!--             android:layout_marginTop="39dp"-->
 <!--             android:layout_marginEnd="22dp"-->
 <!--             android:src="@drawable/ic_baseline_search_24" />-->
-
 
 <!--     </RelativeLayout>-->
 
@@ -159,7 +141,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center_vertical"
-             android:layout_marginRight="7dp"
+             android:layout_marginRight="9dp"
              android:gravity="center"
              android:text="Play"
              android:textColor="@color/black"
@@ -168,20 +150,12 @@
 
      </LinearLayout>
 
-
-
-
-
-
-
-
 <!--     <ImageView-->
 <!--         android:layout_width="match_parent"-->
 <!--         android:layout_height="40dp"-->
 <!--         android:layout_above="@+id/continues"-->
 <!--         android:background="@drawable/gradint"-->
 <!--         />-->
-
 
      <RelativeLayout
          android:id="@+id/continues"
@@ -208,7 +182,6 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="32dp">
-
 
 
          </androidx.recyclerview.widget.RecyclerView>
@@ -254,7 +227,6 @@
     android:orientation="vertical"
     android:background="@color/black"
     >
-
 
     <LinearLayout
         android:id="@+id/home"
@@ -351,7 +323,6 @@
             />
 
     </LinearLayout>
-
 
 </LinearLayout>
 
