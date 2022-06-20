@@ -2,34 +2,33 @@ package com.example.project2;
 
 
 import android.content.Context;
-import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project2.POJO.Category;
+import com.example.project2.POJO.HomePOJO;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
-      Context context;
-    private List<ModelClass> userList;
-    private  Recycler recycler;
+    Context context;
+    List<Category> mainPOJOSlist;
 
-    public Adapter(List<ModelClass> userList,Recycler recycler,Context context){
-        this.userList=userList;
-        this.recycler=recycler;
-        this.context=context;
+    public Adapter(Context context, List<Category> mainPOJOSlist){
+        this.context = context;
+        this.mainPOJOSlist = mainPOJOSlist;
     }
-
-
 
     @NonNull
     @NotNull
@@ -41,61 +40,28 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull final Adapter.ViewHolder h, int position) {
-        final  ModelClass temp=userList.get(position);
-        int img =userList.get(position).getImg();
 
-
-        h.setData(img);
-        h.i1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context,MainActivity6.class);
-                intent.putExtra("img",temp.getImg());
-                intent.putExtra("title",temp.getTitle());
-                intent.putExtra("date",temp.getDate());
-                intent.putExtra("age",temp.getAge());
-                intent.putExtra("session",temp.getSession());
-                intent.putExtra("decs",temp.getDecs());
-                context.startActivity(intent);
-
-            }
-        });
-
-
+        h.rowtitle.setText(mainPOJOSlist.get(position).name);
+        categeriouschlidAdapter chailedAdapter = new categeriouschlidAdapter(mainPOJOSlist.get(position).content);
+        h.recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
+       h.recyclerView.setAdapter(chailedAdapter);
+//        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
     }
 
     @Override
     public int getItemCount() {
-        return userList.size();
+        return mainPOJOSlist.size();
     }
 
+
     public  class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView i1;
+        TextView rowtitle;
+        RecyclerView recyclerView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            i1 =itemView.findViewById(R.id.img);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    recycler.onItemClick(getAdapterPosition());
-
-//                    Intent intent=new Intent(context,MainActivity9.class);
-//                    intent.putExtra("img",getAdapterPosition());
-//                    context.startActivity(intent);
-                }
-            });
-
+            rowtitle=itemView.findViewById(R.id.names);
+            recyclerView=itemView.findViewById(R.id.review2);
         }
-
-        public void setData(int img) {
-            i1.setImageResource(img);
-
-
-        }
-
-
     }
 }

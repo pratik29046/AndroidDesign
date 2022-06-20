@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -25,11 +26,20 @@ import android.widget.TextView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.project2.Network.WebService;
+import com.example.project2.POJO.Category;
+import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.Root;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 //import com.CustomAdapter;
 
@@ -45,16 +55,17 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     Adapters2 adapters;
     RelativeLayout popup;
     LinearLayout linearLayoutplay;
-
+    List<SlideModel> slideModels=new ArrayList<SlideModel>();
     BottomNavigationView bottomNavigationView;
 
+    private String url="https://katto.in";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         recyclerView=findViewById(R.id.review);
-        recyclerView1=findViewById(R.id.review1);
+//        recyclerView1=findViewById(R.id.review1);  //*
 //        recyclerView2=findViewById(R.id.post);
 //        menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
@@ -62,14 +73,44 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         linearLayoutplay=findViewById(R.id.plays);
         ImageSlider imageSlider=findViewById(R.id.post);
 
-        List<SlideModel> slideModels=new ArrayList<>();
-        slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.extraction, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.war, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
-        imageSlider.setImageList(slideModels);
+        WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
+            @Override
+            public void onResponse(Call<Root> call, Response<Root> response) {
+                List<Category> categories=new ArrayList<>();
+                for (int i = 0 ; i < response.body().banners.size() ; i ++) {
+                    slideModels.add(new SlideModel(url+response.body().banners.get(i).poster, ScaleTypes.FIT));
+//                    response.body().getBanners().get(i).get();
 
+                }
+                adp(response.body().categories);
+                Log.d("TAG", "onResponse: "+response.body().toString());
+                imageSlider.setImageList(slideModels);
+
+            }
+
+            @Override
+            public void onFailure(Call<Root> call, Throwable t) {
+
+            }
+        });
+
+
+
+
+
+
+//        slideModels.add(new SlideModel(url+"/media/posters/episodes/444444_9FqpcRY.jpg", ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(url+"/media/posters/episodes/444444_9FqpcRY.jpg", ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
+//        imageSlider.setImageList(slideModels);
+
+//        for( SlideModel cat:slideModels) {
+//            imageSlider.setImageList(slideModels);
+//        }
+//        for(int i=0;i<= slideModels.size();i++) {
+//
+//            imageSlider.setImageList(slideModels);
+//        }
 
         bottomNavigationView=findViewById(R.id.boom);
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -164,9 +205,9 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 
 
 
-        data();
-        adp();
-        adp1();
+//        data();
+//        adp();
+//        adp1();
 
 //        adp2();
 
@@ -176,24 +217,23 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 
     }
 
-    public void adp(){
+    public void adp(List<Category> categories){
         recyclerView=findViewById(R.id.review);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList,this,this);
+        adapter=new Adapter(this.getApplicationContext(),categories);
         recyclerView.setAdapter(adapter);
     }
 
-    public void adp1(){
-        recyclerView1=findViewById(R.id.review1);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView1.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new Adapter(userList1,this,this);
-        recyclerView1.setAdapter(adapter);
-
-    }
+//    public void adp1(){
+//        recyclerView1=findViewById(R.id.review1);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity2.this,LinearLayoutManager.HORIZONTAL,false);
+//        recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+//        recyclerView1.setItemAnimator(new DefaultItemAnimator() );
+//        adapter=new Adapter(userList1,this,this);
+//        recyclerView1.setAdapter(adapter);
+//    }
 
     public void adp2(){
         recyclerView2=findViewById(R.id.post);
@@ -219,7 +259,6 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 
 
 
-
         userList1=new ArrayList<>();
         userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22+","season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
         userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
@@ -227,6 +266,8 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         userList1.add(new ModelClass(R.drawable.p3,"Titanic","2020","22","season 1","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
         userList1.add(new ModelClass(R.drawable.extraction,"War","2022","42","season 2","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
         userList1.add(new ModelClass(R.drawable.war,"Extraction","2025","82","season 5","hello ddh hdh jjdj jjdjj jdjd jjdj jdn jjdjdj jdjdj jdjdj jdjdj jdjdj jdjdddjj jdjd jdjd jdj jdjjd jdjd jdjdjdjdjdj djdjdj djjddj djd jdjjd jdjjdj jdjdj djdjj jddjjd"));
+
+
 
         userList4=new ArrayList<>();
         userList4.add(new ModelClass4(R.drawable.image2));
