@@ -239,17 +239,16 @@
         android:textColor="@color/play_background"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text14"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="EPISODES"
-        android:textColor="#FF9800"
-        android:textStyle="bold"
-        />
+        <TextView
+            android:id="@+id/text15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="EPISODES"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
     <TextView
         android:id="@+id/text16"
         android:layout_width="wrap_content"
@@ -283,6 +282,8 @@
 <!--        android:scaleX="4"-->
 <!--        android:src="@drawable/ic_baseline_linear_scale_24"-->
 <!--        android:textColor="#B61212" />-->
+
+
 
 
 

@@ -1,21 +1,31 @@
 package com.example.project2;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import  androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -36,7 +46,7 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
     RelativeLayout popup;
     LinearLayout linearLayoutplay;
 
-
+    BottomNavigationView bottomNavigationView;
 
 
     @Override
@@ -46,33 +56,52 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
         recyclerView=findViewById(R.id.review);
         recyclerView1=findViewById(R.id.review1);
 //        recyclerView2=findViewById(R.id.post);
-        menu=findViewById(R.id.menu);
+//        menu=findViewById(R.id.menu);
         popup=findViewById(R.id.continues);
-        bro=findViewById(R.id.bro);
+//        bro=findViewById(R.id.bro);
         linearLayoutplay=findViewById(R.id.plays);
         ImageSlider imageSlider=findViewById(R.id.post);
 
         List<SlideModel> slideModels=new ArrayList<>();
-
-
         slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.extraction, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.war, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.p3, ScaleTypes.FIT));
-
-
         imageSlider.setImageList(slideModels);
 
 
+        bottomNavigationView=findViewById(R.id.boom);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+                switch (item.getItemId()){
+                    case R.id.menu:
+                        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+                        overridePendingTransition(0,0);
+                        return true;
 
+                    case R.id.home:
+                        return true;
 
+                    case R.id.download:
+                        startActivity(new Intent(getApplicationContext(),MainActivity14.class));
+                        overridePendingTransition(0,0);
+                        return true;
 
+                    case R.id.upcomming:
+                        startActivity(new Intent(getApplicationContext(),MainActivity15.class));
+                        overridePendingTransition(0,0);
+                        return true;
 
+                }
 
-
+                return false;
+            }
+        });
 
 
 
@@ -100,11 +129,6 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 //        });
 
 
-
-
-
-
-
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
 //        r.setLayoutManager(linearLayoutManager);
 //        show();
@@ -119,28 +143,37 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
             }
         });  // go to play video
 
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent menu=new Intent(MainActivity2.this,MainActivity4.class);
-                startActivity(menu);
-            }
-        });
 
-        bro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent bro=new Intent(MainActivity2.this,MainActivity5.class);
-                startActivity(bro);
-            }
-        });
+
+
+//        menu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent menu=new Intent(MainActivity2.this,MainActivity4.class);
+//                startActivity(menu);
+//            }
+//        });
+
+//        bro.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent bro=new Intent(MainActivity2.this,MainActivity5.class);
+//                startActivity(bro);
+//            }
+//        });
 
 
 
         data();
         adp();
         adp1();
+
 //        adp2();
+
+
+
+
+
     }
 
     public void adp(){
@@ -223,5 +256,37 @@ public class MainActivity2 extends AppCompatActivity implements Recycler{
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(MainActivity2.this,R.style.BottomSheetDialogTheme);
+
+                View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
+                );
+
+                bottomSheetView.findViewById(R.id.b2).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+
+        bottomSheetView.findViewById(R.id.b1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAffinity();
+            }
+        });
+
+        bottomSheetView.findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        bottomSheetDialog.dismiss();
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+    }
 
 }

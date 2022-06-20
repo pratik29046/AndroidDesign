@@ -16,6 +16,17 @@
             android:background="@color/black"
             >
 
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/boom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@color/black"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/menu"
+                />
+
         <LinearLayout
             android:id="@+id/l1"
             android:layout_width="match_parent"

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/home" />
+
+    <item android:id="@+id/download"
+        android:title="@string/download"
+        android:icon="@drawable/downloadmenubar" />
+
+    <item android:id="@+id/action_navigation"
+        android:title="@string/upcomming"
+        android:icon="@drawable/ic_baseline_grid_view_24" />
+
+     <item
+    android:id="@+id/menu"
+    android:title="@string/menu"
+    android:icon="@drawable/ic_baseline_menu_24"
+    />
+</menu>

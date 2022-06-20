@@ -5,35 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.r0adkll.slidr.model.SlidrInterface;
 
-public class MainActivity4 extends AppCompatActivity {
-    TextView textView;
-    RelativeLayout relativeLayout;
+public class MainActivity15 extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-        textView=findViewById(R.id.sub);
-        relativeLayout=findViewById(R.id.back);
+        setContentView(R.layout.activity_main15);
 
         bottomNavigationView=findViewById(R.id.boom);
-        bottomNavigationView.setSelectedItemId(R.id.menu);
+        bottomNavigationView.setSelectedItemId(R.id.upcomming);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
+
                     case R.id.menu:
+                        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+                        overridePendingTransition(0,0);
                         return true;
 
 
@@ -42,14 +36,14 @@ public class MainActivity4 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
+
                     case R.id.download:
                         startActivity(new Intent(getApplicationContext(),MainActivity14.class));
                         overridePendingTransition(0,0);
                         return true;
 
+
                     case R.id.upcomming:
-                        startActivity(new Intent(getApplicationContext(),MainActivity15.class));
-                        overridePendingTransition(0,0);
                         return true;
 
                 }
@@ -59,19 +53,5 @@ public class MainActivity4 extends AppCompatActivity {
         });
 
 
-
-
-
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                back();
-            }
-        });
-    }
-
-
-    public void back(){
-        super.onBackPressed();
     }
 }

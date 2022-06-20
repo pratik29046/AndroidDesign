@@ -50,6 +50,9 @@
     <string name="buy">Buy</string>
     <string name="valid_for_30_days">Valid for 30 days.</string>
     <string name="O">0</string>
+    <string name="download">download</string>
+    <string name="upcomming">upcomming</string>
+    <string name="menu">menu</string>
 
 </resources>
 

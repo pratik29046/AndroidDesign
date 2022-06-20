@@ -130,8 +130,8 @@
          android:gravity="center">
 
          <ImageView
-             android:layout_width="40dp"
-             android:layout_height="40dp"
+             android:layout_width="35dp"
+             android:layout_height="30dp"
              android:layout_gravity="center_vertical"
              android:src="@drawable/play123"
              />
@@ -146,7 +146,8 @@
              android:text="Play"
              android:textColor="@color/black"
              android:textSize="20dp"
-             android:textStyle="bold" />
+             android:textStyle="bold"
+              />
 
      </LinearLayout>
 
@@ -220,111 +221,124 @@
 
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:orientation="vertical"
-    android:background="@color/black"
-    >
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_alignParentBottom="true"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="@color/black"-->
+<!--    >-->
 
-    <LinearLayout
-        android:id="@+id/home"
+<!--    <LinearLayout-->
+<!--        android:id="@+id/home"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+<!--        <ImageView-->
+<!--            android:id="@+id/homes"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/home"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/ic_baseline_arrow_circle_down_24"-->
+<!--            android:layout_weight="1"-->
+
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/bro"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/ic_baseline_grid_view_24"-->
+<!--            android:layout_weight="1"-->
+
+<!--            />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/menu"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/ic_baseline_menu_24"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/black"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Home"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="10dp"-->
+<!--            android:layout_below="@+id/home"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Download"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="10dp"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Upcomming"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="10dp"-->
+<!--            android:layout_marginStart="-8dp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Menu"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="10dp"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/boom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <ImageView
-            android:id="@+id/homes"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/home"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_arrow_circle_down_24"
-            android:layout_weight="1"
-
-            />
-        <ImageView
-            android:id="@+id/bro"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_grid_view_24"
-            android:layout_weight="1"
-
-            />
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_menu_24"
-            android:layout_weight="1"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
         android:layout_alignParentBottom="true"
-        android:background="@color/black"
-        >
+        app:menu="@menu/menus"
+        />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Home"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            android:layout_below="@+id/home"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Download"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            android:layout_marginStart="6dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:text="Upcomming"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            android:layout_marginStart="-8dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:text="Menu"
-            android:layout_marginEnd="8dp"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            />
-
-    </LinearLayout>
-
-</LinearLayout>
 
 
 </RelativeLayout>
