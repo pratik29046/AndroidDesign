@@ -22,6 +22,7 @@ public class MainActivity5 extends AppCompatActivity {
         Session=findViewById(R.id.text4);
         Dec=findViewById(R.id.text11);
 
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

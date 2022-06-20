@@ -1,12 +1,16 @@
 package com.example.project2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -57,8 +61,7 @@ public class MainActivity6 extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start=new Intent(MainActivity6.this,MainActivity13.class);
-                startActivity(start);
+                show();
             }
         });
 
@@ -113,5 +116,40 @@ public class MainActivity6 extends AppCompatActivity {
 
     public void back(){
         super.onBackPressed();
+    }
+
+
+    public void show(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
+        View mView = getLayoutInflater().inflate(R.layout.popups,null);
+        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        Window window = alertDialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+        wlp.gravity = Gravity.BOTTOM;
+        wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        window.setAttributes(wlp);
+
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start=new Intent(MainActivity6.this,MainActivity13.class);
+                startActivity(start);
+                alertDialog.dismiss();
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+
+        });
+        alertDialog.show();
     }
 }
