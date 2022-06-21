@@ -75,8 +75,6 @@ public class WebService {
                 .client(client)
                 .build();
 
-
-
         return retrofit;
     }
 

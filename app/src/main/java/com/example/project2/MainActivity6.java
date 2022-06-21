@@ -14,6 +14,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.project2.POJO.Content;
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,25 +71,22 @@ public class MainActivity6 extends AppCompatActivity {
 
 
         Intent intent=getIntent();
-        int img=intent.getIntExtra("img",0);
-        String title=intent.getStringExtra("title");
-        String date=intent.getStringExtra("date");
-        String age=intent.getStringExtra("age");
-        String session=intent.getStringExtra("session");
-        String desc=intent.getStringExtra("decs");
-
-        img1.setImageResource(img);
-        Title.setText(title);
-        Date.setText(date);
-        Age.setText(age);
-        Season.setText(session);
-        Dec.setText(desc);
+//        int img=intent.getIntExtra("img",0);
+//        String title=intent.getStringExtra("title");
+//        String date=intent.getStringExtra("date");
+        Content content=new Gson().fromJson(intent.getStringExtra("content"), Content.class);
+//        String session=intent.getStringExtra("session");
+//        String desc=intent.getStringExtra("decs");
+//
+//        img1.setImageResource(content.poster);
+        Title.setText(content.name);
+//        Date.setText(content.);
+         Age.setText(content.age_rating);
+//        Season.setText(content.);
+//        Dec.setText(content.);
 
         data1();
         adp4();
-
-
-
 
     }
     public void adp4(){
@@ -113,7 +113,7 @@ public class MainActivity6 extends AppCompatActivity {
         userList2.add(new ModelClass2(R.drawable.p3 ,"12. The pickup \n 34m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
 
     }
-
+    // back to last activity
     public void back(){
         super.onBackPressed();
     }
@@ -133,7 +133,6 @@ public class MainActivity6 extends AppCompatActivity {
         wlp.gravity = Gravity.BOTTOM;
         wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
         window.setAttributes(wlp);
-
 
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override

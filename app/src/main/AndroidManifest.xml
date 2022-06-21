@@ -10,7 +10,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo1"
-        android:label="Gullar"
+        android:label="Katto"
         android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2"
@@ -22,9 +22,6 @@
             android:name=".MainActivity14"
             android:exported="false" />
         <activity
-            android:name=".MainActivity10"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity13"
             android:exported="false"
             android:screenOrientation="landscape" />
@@ -32,17 +29,9 @@
             android:name=".MainActivity12"
             android:exported="false" />
         <activity
-            android:name=".MainActivity11"
-            android:configChanges="screenSize"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".TrackSelectionDialog"
             android:exported="false"
             tools:ignore="Instantiatable" />
-        <activity
-            android:name=".MainActivity9"
-            android:exported="false" />
         <activity
             android:name=".MainActivity8"
             android:exported="false" />
@@ -51,9 +40,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity6"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity5"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"

@@ -24,7 +24,6 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         textView=findViewById(R.id.sub);
         relativeLayout=findViewById(R.id.back);
-
         bottomNavigationView=findViewById(R.id.boom);
         bottomNavigationView.setSelectedItemId(R.id.menu);
 
@@ -35,7 +34,6 @@ public class MainActivity4 extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.menu:
                         return true;
-
 
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity2.class));
@@ -57,11 +55,7 @@ public class MainActivity4 extends AppCompatActivity {
                 return false;
             }
         });
-
-
-
-
-
+        //call the method back
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +63,7 @@ public class MainActivity4 extends AppCompatActivity {
             }
         });
     }
-
-
+    //method of backpress
     public void back(){
         super.onBackPressed();
     }

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent send = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(send);
             }
-        },5000);
+        },3000);
 
     }
 }

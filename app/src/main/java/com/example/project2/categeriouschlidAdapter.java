@@ -4,6 +4,7 @@ package com.example.project2;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.HomePOJO;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,8 +28,9 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
     Context context;
     List<Content> memberList;
 
-    public categeriouschlidAdapter(List<Content> members){
-       memberList=members;
+    public categeriouschlidAdapter(Context context,List<Content> members){
+        this.context=context;
+       this.memberList=members;
     }
 
     @NonNull
@@ -44,6 +47,17 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
 
         Picasso.get().load("https://katto.in"+memberList.get(position).v_poster).into( h.img);
 //        Log.d("TAG", "onBindViewHolder: "+"https://katto.in"+memberList.get(position).poster);
+
+        final Content temp=memberList.get(position);
+        h.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent =new Intent(context,MainActivity6.class);
+                intent.putExtra("content", new Gson().toJson(temp));
+               context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

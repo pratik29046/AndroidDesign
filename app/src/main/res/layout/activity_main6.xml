@@ -150,15 +150,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
         <!--    <TextView-->
         <!--        android:id="@+id/text5"-->
         <!--        android:layout_width="wrap_content"-->
@@ -380,13 +371,6 @@
         <!--        android:text="Season number"-->
         <!--        android:textColor="@color/white"-->
         <!--        android:textSize="20dp" />-->
-
-
-
-
-
-
-
 
 
         <RelativeLayout

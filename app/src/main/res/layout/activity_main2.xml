@@ -10,50 +10,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
- <RelativeLayout
+     <RelativeLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent"
      tools:context=".MainActivity2"
      android:background="@color/black">
-
-
-     <!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@+id/information"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:layout_marginTop="251dp"-->
-<!--        android:background="#00000000"-->
-<!--        android:orientation="horizontal"-->
-<!--        >-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:background="@drawable/icon"-->
-<!--            android:src="@drawable/ic_baseline_play_circle_24" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/information"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@+id/continues"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        android:background="#00000000"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Watch Now"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20dp"-->
-
-<!--            />-->
-<!--    </LinearLayout>-->
-
 
      <com.denzcoskun.imageslider.ImageSlider
          android:id="@+id/post"
@@ -66,47 +27,8 @@
          app:iss_selected_dot="@drawable/default_selected_dot"
          app:iss_text_align="CENTER"
          app:iss_title_background="@drawable/gradient"
-         app:iss_unselected_dot="@drawable/default_unselected_dot" />
-
-
-
-<!--     <androidx.recyclerview.widget.RecyclerView-->
-
-<!--         android:id="@+id/post"-->
-<!--         android:layout_width="match_parent"-->
-<!--         android:layout_height="505dp">-->
-
-<!--     </androidx.recyclerview.widget.RecyclerView>-->
-
-
-<!--     <RelativeLayout-->
-<!--         android:id="@+id/post"-->
-<!--         android:layout_width="wrap_content"-->
-<!--         android:layout_height="502dp"-->
-<!--         android:background="@drawable/image2"-->
-<!--         android:orientation="horizontal">-->
-
-<!--         &lt;!&ndash;         <TextView&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:layout_width="wrap_content"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:layout_height="wrap_content"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:layout_marginTop="60dp"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:layout_weight="7"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:text=" GULLAR"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:textColor="@color/white"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:textFontWeight="@integer/material_motion_duration_long_2"&ndash;&gt;-->
-<!--         &lt;!&ndash;             android:textSize="30dp" />&ndash;&gt;-->
-
-<!--         <ImageView-->
-<!--             android:layout_width="40dp"-->
-<!--             android:layout_height="40dp"-->
-<!--             android:layout_alignParentRight="true"-->
-<!--             android:layout_marginTop="39dp"-->
-<!--             android:layout_marginEnd="22dp"-->
-<!--             android:src="@drawable/ic_baseline_search_24" />-->
-
-<!--     </RelativeLayout>-->
-
-
+         app:iss_unselected_dot="@drawable/default_unselected_dot"
+         />
 
      <ImageView
          android:layout_width="40dp"
@@ -116,7 +38,6 @@
          android:layout_marginEnd="22dp"
          android:src="@drawable/ic_baseline_search_24"
          />
-
 
      <LinearLayout
          android:id="@+id/plays"
@@ -151,13 +72,6 @@
 
      </LinearLayout>
 
-<!--     <ImageView-->
-<!--         android:layout_width="match_parent"-->
-<!--         android:layout_height="40dp"-->
-<!--         android:layout_above="@+id/continues"-->
-<!--         android:background="@drawable/gradint"-->
-<!--         />-->
-
      <RelativeLayout
          android:id="@+id/continues"
          android:layout_width="wrap_content"
@@ -166,167 +80,18 @@
          android:layout_marginBottom="60dp"
          android:background="@color/black">
 
-         <TextView
-             android:visibility="gone"
-             android:id="@+id/texts"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="4dp"
-             android:layout_marginTop="9dp"
-             android:text="Continue Watching"
-             android:textColor="@color/white"
-             android:textSize="15dp"
-             android:textStyle="bold" />
-
-
          <androidx.recyclerview.widget.RecyclerView
              android:id="@+id/review"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_marginTop="32dp">
+             android:layout_marginTop="5dp">
 
          </androidx.recyclerview.widget.RecyclerView>
 
-
-<!--         <TextView-->
-<!--             android:id="@+id/texts1"-->
-<!--             android:layout_width="match_parent"-->
-<!--             android:layout_height="wrap_content"-->
-<!--             android:layout_below="@+id/review"-->
-<!--             android:layout_marginStart="4dp"-->
-<!--             android:layout_marginTop="15dp"-->
-<!--             android:text="Award Winning Movies"-->
-<!--             android:textColor="@color/white"-->
-<!--             android:textSize="15dp"-->
-<!--             android:textStyle="bold" />-->
-
-<!--         <androidx.recyclerview.widget.RecyclerView-->
-<!--             android:id="@+id/review1"-->
-<!--             android:layout_width="wrap_content"-->
-<!--             android:layout_height="wrap_content"-->
-<!--             android:layout_below="@+id/texts1"-->
-<!--             android:layout_marginTop="4dp"-->
-<!--             android:background="@color/black">-->
-
-<!--         </androidx.recyclerview.widget.RecyclerView>-->
-
-
      </RelativeLayout>
 
-
- </RelativeLayout>
-
-
+    </RelativeLayout>
     </ScrollView>
-
-
-
-<!--<LinearLayout-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_alignParentBottom="true"-->
-<!--    android:orientation="vertical"-->
-<!--    android:background="@color/black"-->
-<!--    >-->
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/home"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        >-->
-<!--        <ImageView-->
-<!--            android:id="@+id/homes"-->
-<!--            android:layout_width="30dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:src="@drawable/home"-->
-<!--            android:layout_weight="1"-->
-<!--            />-->
-<!--        <ImageView-->
-<!--            android:layout_width="30dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:src="@drawable/ic_baseline_arrow_circle_down_24"-->
-<!--            android:layout_weight="1"-->
-
-<!--            />-->
-<!--        <ImageView-->
-<!--            android:id="@+id/bro"-->
-<!--            android:layout_width="30dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:src="@drawable/ic_baseline_grid_view_24"-->
-<!--            android:layout_weight="1"-->
-
-<!--            />-->
-<!--        <ImageView-->
-<!--            android:id="@+id/menu"-->
-<!--            android:layout_width="30dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:src="@drawable/ic_baseline_menu_24"-->
-<!--            android:layout_weight="1"-->
-<!--            />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:background="@color/black"-->
-<!--        >-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Home"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="10dp"-->
-<!--            android:layout_below="@+id/home"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Download"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="10dp"-->
-<!--            android:layout_marginStart="6dp"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:gravity="center"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="Upcomming"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="10dp"-->
-<!--            android:layout_marginStart="-8dp"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="Menu"-->
-<!--            android:layout_marginEnd="8dp"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="10dp"-->
-<!--            />-->
-
-<!--    </LinearLayout>-->
-
-<!--</LinearLayout>-->
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/boom"
@@ -338,7 +103,5 @@
         android:layout_alignParentBottom="true"
         app:menu="@menu/menus"
         />
-
-
 
 </RelativeLayout>

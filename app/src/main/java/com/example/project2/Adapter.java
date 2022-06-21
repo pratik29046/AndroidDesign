@@ -2,6 +2,7 @@ package com.example.project2;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Category;
+import com.example.project2.POJO.Content;
 import com.example.project2.POJO.HomePOJO;
 
 
@@ -29,6 +31,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         this.context = context;
         this.mainPOJOSlist = mainPOJOSlist;
     }
+
+
 
     @NonNull
     @NotNull
@@ -42,10 +46,21 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull @NotNull final Adapter.ViewHolder h, int position) {
 
         h.rowtitle.setText(mainPOJOSlist.get(position).name);
-        categeriouschlidAdapter chailedAdapter = new categeriouschlidAdapter(mainPOJOSlist.get(position).content);
+        categeriouschlidAdapter chailedAdapter = new categeriouschlidAdapter(context,mainPOJOSlist.get(position).content);
         h.recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
        h.recyclerView.setAdapter(chailedAdapter);
-//        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
+
+        final Category temp=mainPOJOSlist.get(position);
+//        h.rowtitle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(context,MainActivity6.class);
+//                context.startActivity(intent);
+//            }
+//        });
+
+
+        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
     }
 
     @Override
