@@ -3,6 +3,8 @@ package com.example.project2.Network;
 import com.example.project2.POJO.Episode;
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MovieRootnames;
+import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
@@ -10,6 +12,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MultipartBody;
@@ -23,10 +26,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 import retrofit2.http.Url;
 
 public class WebService {
@@ -117,11 +122,21 @@ public class WebService {
         })
         Call<MoviesRoot> get_MovieData();
 
+
+        @GET("movies/{moviename}")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+        })
+        Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
+
+
         @GET("movie/moiveroot")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
         })
         Call<MoviesRoot> get_MovierootData();
 

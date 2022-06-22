@@ -21,13 +21,11 @@
          android:layout_width="wrap_content"
          android:layout_height="505dp"
          app:iss_auto_cycle="true"
-         app:iss_delay="0"
-         app:iss_error_image="@drawable/error"
-         app:iss_period="2500"
-         app:iss_selected_dot="@drawable/default_selected_dot"
+         app:iss_delay="200"
+         app:iss_error_image="@drawable/ic_baseline_running_with_errors_24"
+         app:iss_period="30000"
          app:iss_text_align="CENTER"
          app:iss_title_background="@drawable/gradient"
-         app:iss_unselected_dot="@drawable/default_unselected_dot"
          />
 
      <ImageView

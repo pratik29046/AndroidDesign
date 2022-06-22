@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.HomePOJO;
-import com.example.project2.POJO.MovieRootRoot;
+import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.Series;
 import com.example.project2.POJO.Watchnext;

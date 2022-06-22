@@ -100,11 +100,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
             android:text="Hindi"
             android:textColor="@color/white"
-            android:layout_marginTop="4dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text21"
