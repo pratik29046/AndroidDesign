@@ -21,18 +21,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MovieRootRoot;
+import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.Series;
+import com.example.project2.POJO.Watchnext;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     Context context;
     List<Category> mainPOJOSlist;
-
     public Adapter(Context context, List<Category> mainPOJOSlist){
         this.context = context;
         this.mainPOJOSlist = mainPOJOSlist;
+
     }
-
-
 
     @NonNull
     @NotNull
@@ -50,17 +52,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         h.recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
        h.recyclerView.setAdapter(chailedAdapter);
 
-        final Category temp=mainPOJOSlist.get(position);
-//        h.rowtitle.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(context,MainActivity6.class);
-//                context.startActivity(intent);
-//            }
-//        });
-
-
-        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
+//        final Category temp=mainPOJOSlist.get(position);
+//        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
     }
 
     @Override

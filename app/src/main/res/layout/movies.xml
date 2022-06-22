@@ -18,7 +18,8 @@
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="37dp"
-            android:src="@drawable/arrowleft" />
+            android:src="@drawable/arrowleft"
+            />
 
 
         <ImageView
@@ -54,17 +55,17 @@
 
             />
 
-<!--            <TextView-->
-<!--                android:id="@+id/text3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/text2"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:text="New"-->
-<!--                android:textColor="#F8A005"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:textSize="20dp"-->
-<!--                />-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/text3"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@id/text2"-->
+        <!--                android:layout_marginStart="20dp"-->
+        <!--                android:text="New"-->
+        <!--                android:textColor="#F8A005"-->
+        <!--                android:layout_marginTop="8dp"-->
+        <!--                android:textSize="20dp"-->
+        <!--                />-->
 
         <TextView
             android:id="@+id/text4"
@@ -127,27 +128,27 @@
             android:textColor="@color/white"
             android:textStyle="bold" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/text23"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/text5"-->
-<!--            android:layout_marginStart="192dp"-->
-<!--            android:text="."-->
-<!--            android:textColor="#FF9800"-->
-<!--            android:textSize="20dp"-->
-<!--            android:textStyle="bold" />-->
+        <TextView
+            android:id="@+id/text23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text5"
+            android:layout_marginStart="192dp"
+            android:text="."
+            android:textColor="#FF9800"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/text24"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/text5"-->
-<!--            android:layout_marginStart="202dp"-->
-<!--            android:layout_marginTop="4dp"-->
-<!--            android:text="1h 35m 40s"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textStyle="bold" />-->
+        <TextView
+            android:id="@+id/text24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text5"
+            android:layout_marginStart="202dp"
+            android:layout_marginTop="4dp"
+            android:text="1h 35m 40s"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
 
 
@@ -165,17 +166,20 @@
         <!--        android:textScaleX="2"-->
         <!--        android:layout_marginTop="2dp"-->
         <!--        />-->
-        <TextView
-            android:id="@+id/text6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text2"
-            android:layout_alignLeft="@+id/text5"
-            android:layout_marginStart="122dp"
-            android:layout_marginTop="11dp"
-            android:text="Season"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/text6"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/text2"-->
+<!--            android:layout_alignLeft="@+id/text5"-->
+<!--            android:layout_marginStart="122dp"-->
+<!--            android:layout_marginTop="11dp"-->
+<!--            android:text="Season"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="15dp" />-->
+
 
         <ImageView
             android:id="@+id/img4"
@@ -188,18 +192,18 @@
             android:scaleType="center"
             android:src="@drawable/ic_baseline_hd_24" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/text7"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:background="#E10F0F"-->
-<!--                    android:text="TOP10"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="15dp" -->
-<!--                    -->
-<!--                    />-->
+        <!--                <TextView-->
+        <!--                    android:id="@+id/text7"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_marginStart="20dp"-->
+        <!--                    android:layout_marginTop="8dp"-->
+        <!--                    android:background="#E10F0F"-->
+        <!--                    android:text="TOP10"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="15dp" -->
+        <!--                    -->
+        <!--                    />-->
 
         <!--        <TextView-->
         <!--            android:id="@+id/text8"-->
@@ -295,17 +299,17 @@
             android:layout_marginTop="4dp"
             android:text="Imtiaz Ali" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/img7"-->
-<!--            android:layout_width="25dp"-->
-<!--            android:layout_height="25dp"-->
-<!--            android:layout_below="@+id/text2"-->
-<!--            android:layout_alignLeft="@+id/img4"-->
-<!--            android:layout_marginTop="11dp"-->
-<!--            android:scaleType="fitCenter"-->
-<!--            android:src="@drawable/shareicon"-->
-<!--            android:layout_marginStart="30dp"-->
-<!--            />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/img7"-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_below="@+id/text2"-->
+        <!--            android:layout_alignLeft="@+id/img4"-->
+        <!--            android:layout_marginTop="11dp"-->
+        <!--            android:scaleType="fitCenter"-->
+        <!--            android:src="@drawable/shareicon"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            />-->
 
 
         <TextView
@@ -320,24 +324,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text14"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="EPISODES"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            />
-        <TextView
             android:id="@+id/text16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text14"
             android:text="TRAILERS &amp; MORE"
-            android:layout_alignLeft="@+id/text15"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="20dp"
             android:textColor="@color/white"
             android:layout_marginTop="5dp"
             android:textStyle="bold"
@@ -355,25 +347,6 @@
             android:textStyle="bold"
             />
 
-<!--        <ImageView-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/text14"-->
-<!--            android:layout_marginTop="-14dp"-->
-<!--            android:scaleX="4"-->
-<!--            android:src="@drawable/ic_baseline_linear_scale_24"-->
-<!--            android:textColor="#B61212" />-->
-
-        <!--    <TextView-->
-        <!--        android:id="@+id/text18"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_below="@id/text17"-->
-        <!--        android:layout_marginStart="20dp"-->
-        <!--        android:text="Season number"-->
-        <!--        android:textColor="@color/white"-->
-        <!--        android:textSize="20dp" />-->
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -383,14 +356,6 @@
             android:layout_marginBottom="10dp"
             android:descendantFocusability="blocksDescendants"
             >
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/seasons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
 
         </RelativeLayout>
 

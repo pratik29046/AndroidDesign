@@ -10,12 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MovieRootRoot;
+import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.Series;
+import com.example.project2.POJO.Watchnext;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -28,9 +33,12 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
     Context context;
     List<Content> memberList;
 
-    public categeriouschlidAdapter(Context context,List<Content> members){
+
+    public categeriouschlidAdapter(Context context, List<Content> members){
         this.context=context;
-       this.memberList=members;
+        this.memberList=members;
+
+
     }
 
     @NonNull
@@ -48,16 +56,33 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
         Picasso.get().load("https://katto.in"+memberList.get(position).v_poster).into( h.img);
 //        Log.d("TAG", "onBindViewHolder: "+"https://katto.in"+memberList.get(position).poster);
 
-        final Content temp=memberList.get(position);
-        h.img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               Intent intent =new Intent(context,MainActivity6.class);
-                intent.putExtra("content", new Gson().toJson(temp));
-               context.startActivity(intent);
+//        Picasso.get().load("https://katto.in"+seriesList.get(position).v_poster).into( h.img); //for series
 
-            }
-        });
+        final Content temp=memberList.get(position);
+
+         if(memberList.get(position).url.contains("movie")){
+             h.img.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     Intent intent =new Intent(context,Movies.class);
+                     intent.putExtra("content",new Gson().toJson(temp) ); //for series
+                     context.startActivity(intent);
+                 }
+             });
+         }else if(memberList.get(position).url.contains("series")){
+             h.img.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     Intent intent =new Intent(context,MainActivity6.class);
+                     intent.putExtra("content", new Gson().toJson(temp));
+                     context.startActivity(intent);
+
+                 }
+             });
+
+         }
+
+
     }
 
     @Override

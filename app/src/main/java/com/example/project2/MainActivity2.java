@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.HomePOJO;
 import com.example.project2.POJO.Root;
+import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.Series;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 

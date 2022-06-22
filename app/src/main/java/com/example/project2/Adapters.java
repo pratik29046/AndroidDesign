@@ -12,13 +12,19 @@ import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project2.POJO.Episode;
+import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.Series;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
-    private List<ModelClass2> userList2;
+    private List<Episode> userList2;
     Context context1;
 
-    public Adapters(List<ModelClass2> userList2,Context context1){
+
+    public Adapters(List<Episode> userList2,Context context1){
         this.userList2=userList2;
         this.context1=context1;
     }
@@ -31,22 +37,23 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final Adapters.ViewHolder holder, int position) {
-        final  ModelClass2 temp1=userList2.get(position);
+        Picasso.get().load("https://katto.in"+userList2.get(position).poster).into( holder.vs);
+        holder.n.setText(userList2.get(position).name);
+        holder.d.setText(userList2.get(position).content_link);
+        holder.no.setText(userList2.get(position).number);
+        holder.time.setText(userList2.get(position).number);
 
-        int img1=userList2.get(position).getVid();
-        String name=userList2.get(position).getName();
-        int img =userList2.get(position).getImg();
-        String desc=userList2.get(position).getDesc();
-        holder.setData(img1,name,img,desc);
+
+//        final  ModelClass2 temp1=userList2.get(position);
 
         holder.n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context1,MainActivity7.class);
-                intent.putExtra("vid",temp1.getVid());
-//                intent.putExtra("name",temp.getVid());
-//                intent.putExtra("img",temp.getVid());
-//                intent.putExtra("desc",temp.getVid());
+//                intent.putExtra("vid",temp1.getVid());
+////                intent.putExtra("name",temp.getVid());
+////                intent.putExtra("img",temp.getVid());
+////                intent.putExtra("desc",temp.getVid());
                 context1.startActivity(intent);
             }
         });
@@ -61,22 +68,22 @@ public class Adapters extends RecyclerView.Adapter<Adapters.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView vs;
         private TextView n;
-        private  ImageView i;
         private  TextView d;
+        private TextView no,time;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             vs=itemView.findViewById(R.id.video1);
             n=itemView.findViewById(R.id.name);
-            i=itemView.findViewById(R.id.img);
             d=itemView.findViewById(R.id.desc);
+            no=itemView.findViewById(R.id.number);
+            time=itemView.findViewById(R.id.time);
         }
 
-        public void setData(int img1, String name, int img, String desc) {
-            vs.setImageResource(img1);
-            n.setText(name);
-            i.setImageResource(img);
-            d.setText(desc);
-        }
+//        public void setData(int img1, String name, int img, String desc) {
+//            vs.setImageResource(img1);
+//            n.setText(name);
+//            d.setText(desc);
+//        }
     }
 }

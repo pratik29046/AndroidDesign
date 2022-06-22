@@ -7,18 +7,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
+import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Content;
+import com.example.project2.POJO.Episode;
+import com.example.project2.POJO.EpisodeRoot;
+import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.Series;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity6 extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -27,24 +40,26 @@ public class MainActivity6 extends AppCompatActivity {
     Adapters adapter;
     ImageView imageView;
     TextView textView;
-    TextView Title,Dec,Date,Age,Season;
-    ImageView img1,img2;
+    TextView Title, Dec, Date, Age, Season;
+    ImageView img1, img2;
+
+    private String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
-        recyclerView=findViewById(R.id.seasons);
-        imageView=findViewById(R.id.img1);
-        textView=findViewById(R.id.text14);
-        img2=findViewById(R.id.img5);
+        recyclerView = findViewById(R.id.seasons);
+        imageView = findViewById(R.id.img1);
+        textView = findViewById(R.id.text14);
+        img2 = findViewById(R.id.img5);
 
-        img1=findViewById(R.id.img3);
-        Title=findViewById(R.id.text2);
-        Date=findViewById(R.id.text4);
-        Age=findViewById(R.id.text5);
-        Season=findViewById(R.id.text6);
-        Dec=findViewById(R.id.text11);
+        img1 = findViewById(R.id.img3);
+        Title = findViewById(R.id.text2);
+        Date = findViewById(R.id.text4);
+        Age = findViewById(R.id.text5);
+        Season = findViewById(R.id.text6);
+        Dec = findViewById(R.id.text11);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +71,7 @@ public class MainActivity6 extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start=new Intent(MainActivity6.this,MainActivity7.class);
+                Intent start = new Intent(MainActivity6.this, MainActivity7.class);
                 startActivity(start);
             }
         });
@@ -69,34 +84,62 @@ public class MainActivity6 extends AppCompatActivity {
         });
 
 
+//        WebService.getClient().get_EpisodeData().enqueue(new Callback<EpisodeRoot>() {
+//            @Override
+//            public void onResponse(Call<EpisodeRoot> call, Response<EpisodeRoot> response) {
+//               adp4(response.body().episodes);
+//
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<EpisodeRoot> call, Throwable t) {
+//
+//            }
+//        });
 
-        Intent intent=getIntent();
+
+        Intent intent = getIntent();
 //        int img=intent.getIntExtra("img",0);
 //        String title=intent.getStringExtra("title");
 //        String date=intent.getStringExtra("date");
-        Content content=new Gson().fromJson(intent.getStringExtra("content"), Content.class);
-//        String session=intent.getStringExtra("session");
-//        String desc=intent.getStringExtra("decs");
-//
+        Content content = new Gson().fromJson(intent.getStringExtra("content"), Content.class);
+//        Series series = new Gson().fromJson(intent.getStringExtra("series"), Series.class);
+
 //        img1.setImageResource(content.poster);
         Title.setText(content.name);
-//        Date.setText(content.);
-         Age.setText(content.age_rating);
+////        Date.setText(content.);
+        Age.setText(content.age_rating);
 //        Season.setText(content.);
 //        Dec.setText(content.);
 
-        data1();
-        adp4();
+//        Title.setText(series.name);
+//        Age.setText(series.name);
 
-    }
-    public void adp4(){
-        recyclerView=findViewById(R.id.seasons);
-        layoutManager=new LinearLayoutManager(this);
+
+//        if(Objects.equals(content.url, "/api/content/movies/nitesh")){
+//            Toast.makeText(getApplicationContext(),"hshhshshsh",Toast.LENGTH_SHORT).show();
+//        }else{
+//
+//        }
+
+
+//        data1();
+
+
+
+
+
+}
+
+    public void adp4(List<Episode>episode) {
+        recyclerView = findViewById(R.id.seasons);
+        layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter=new Adapters(userList2,this);
+        adapter = new Adapters(episode, this);
         recyclerView.setAdapter(adapter);
-
     }
+
     public void data1(){
         userList2=new ArrayList<ModelClass2>();
         userList2.add(new ModelClass2(R.drawable.p3 ,"1. The pratik \n 33m",R.drawable.download_recy,"Video is an electronic medium for the recording,hdhhdh dhdh dd jd jdj hfh jjfj fjfj jfjfjb jfj pratik "));

@@ -7,6 +7,7 @@ public class Root{
     @SerializedName("banners")
     @Expose
     public List<Banner> banners;
+
     @SerializedName("categories")
     @Expose
     public List<Category> categories;

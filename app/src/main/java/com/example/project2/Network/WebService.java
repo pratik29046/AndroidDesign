@@ -1,7 +1,11 @@
 package com.example.project2.Network;
 
+import com.example.project2.POJO.Episode;
+import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.Root;
+import com.example.project2.POJO.RootSeries;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -87,6 +91,39 @@ public class WebService {
                 "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
         })
         Call<Root> get_HomeData();
+
+        @GET("series")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+        })
+        Call<RootSeries> get_SerisData();
+
+
+        @GET("episode")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+        })
+        Call<Episode> get_EpisodeData();
+
+        @GET("movie")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+        })
+        Call<MoviesRoot> get_MovieData();
+
+        @GET("movie/moiveroot")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+        })
+        Call<MoviesRoot> get_MovierootData();
 
       /*  @POST("insertData.php")
         @FormUrlEncoded

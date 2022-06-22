@@ -10,11 +10,13 @@
 
     <item android:id="@+id/action_navigation"
         android:title="@string/upcomming"
-        android:icon="@drawable/ic_baseline_grid_view_24" />
+        android:icon="@drawable/ic_baseline_grid_view_24"
+        />
 
      <item
     android:id="@+id/menu"
     android:title="@string/menu"
     android:icon="@drawable/ic_baseline_menu_24"
+
     />
 </menu>
