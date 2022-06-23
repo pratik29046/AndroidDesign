@@ -1,12 +1,9 @@
 package com.example.project2.Network;
 
-import com.example.project2.POJO.Episode;
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
 import com.example.project2.POJO.MoviesRoot;
-import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
-import com.example.project2.POJO.Watchnext;
 
 import java.util.List;
 

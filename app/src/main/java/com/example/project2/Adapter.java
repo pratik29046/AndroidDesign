@@ -2,8 +2,6 @@ package com.example.project2;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +9,6 @@ import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -19,12 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Category;
-import com.example.project2.POJO.Content;
-import com.example.project2.POJO.HomePOJO;
-import com.example.project2.POJO.MovieRootnames;
-import com.example.project2.POJO.RootSeries;
-import com.example.project2.POJO.Series;
-import com.example.project2.POJO.Watchnext;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {

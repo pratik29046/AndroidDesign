@@ -12,21 +12,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Watchnext {
+public class Watchnextmovies {
     @SerializedName("name")
     @Expose
-        public String name;
+    public String name;
     @SerializedName("url")
     @Expose
-        public String url;
+    public String url;
     @SerializedName("poster")
     @Expose
-        public String poster;
+    public String poster;
     @SerializedName("v_poster")
     @Expose
-        public String v_poster;
+    public String v_poster;
     @SerializedName("age_rating")
     @Expose
-        public String age_rating;
+    public String age_rating;
 
 }
