@@ -1,24 +1,32 @@
 package com.example.project2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.project2.Network.WebService;
+import com.example.project2.POJO.Category;
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
+import com.example.project2.POJO.Watchnextmovies;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -31,11 +39,15 @@ public class Movies extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<ModelClass2> userList2;
-    Adapters adapter;
+    AdapterWatchnext adapter;
     ImageView imageView;
-    TextView textView;
+    TextView textView,textView1,textView2;
     TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors;
     ImageView img1,back;
+
+    List<SlideModel> slideModels=new ArrayList<SlideModel>();
+    ImageSlider imageSlider;
+    private String url="https://katto.in";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +66,32 @@ public class Movies extends AppCompatActivity {
         starring=findViewById(R.id.text11);
         genres=findViewById(R.id.text22);
         directors=findViewById(R.id.text13);
+        imageSlider=findViewById(R.id.post);
+        textView1=findViewById(R.id.text17);
+        textView2=findViewById(R.id.text16);
+        textView=findViewById(R.id.moretrailers);
+        recyclerView=findViewById(R.id.watchnext);
+
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView1.setTextColor(Color.parseColor("#FF0000"));
+                textView2.setTextColor(Color.parseColor("#FFFFFF"));
+               textView.setVisibility(View.GONE);
+               recyclerView.setVisibility(View.VISIBLE);
+            }
+        });
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView1.setTextColor(Color.parseColor("#FFFFFF"));
+                textView2.setTextColor(Color.parseColor("#FF0000"));
+                recyclerView.setVisibility(View.GONE);
+                textView.setVisibility(View.VISIBLE);
+            }
+        });
+
+
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +106,8 @@ public class Movies extends AppCompatActivity {
 //        Title.setText(content.name);
 //        Age.setText(content.age_rating);
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT));
+
+
         WebService.getClient().getMoviePage(content.name.toLowerCase(Locale.ROOT)).enqueue(new Callback<MovieRootnames>() {
             @Override
             public void onResponse(Call<MovieRootnames> call, Response<MovieRootnames> response) {
@@ -84,6 +124,16 @@ public class Movies extends AppCompatActivity {
                 genres.setText(data.genres);
                 directors.setText(data.directors);
 
+//                for (int i = 0 ; i < data.watch_next.size() ; i ++) {
+//                    slideModels.add(new SlideModel(url+data.watch_next.get(i).poster, ScaleTypes.FIT));
+////                    response.body().getBanners().get(i).get();
+//
+//                }
+//                imageSlider.setImageList(slideModels);
+
+                adp(data.watch_next);
+                Log.d("TAG", "sirsss: "+data.watch_next);
+
             }
             @Override
             public void onFailure(Call<MovieRootnames> call, Throwable t) {
@@ -92,6 +142,17 @@ public class Movies extends AppCompatActivity {
         });
 
 
+    }
+
+
+
+    public void adp(List<Watchnextmovies> watchnextmovies){
+        recyclerView=findViewById(R.id.watchnext);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Movies.this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+        recyclerView.setItemAnimator(new DefaultItemAnimator() );
+        adapter=new AdapterWatchnext(this,watchnextmovies);
+        recyclerView.setAdapter(adapter);
     }
 
     public void back(){

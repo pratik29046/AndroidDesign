@@ -43,7 +43,7 @@ public class MainActivity6 extends AppCompatActivity {
     Adapters adapter;
     ImageView imageView;
     TextView textView;
-    TextView Title, Dec, Date, Age, Season;
+    TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors;
     ImageView img1, img2;
 
     private String s;
@@ -58,10 +58,12 @@ public class MainActivity6 extends AppCompatActivity {
         img2 = findViewById(R.id.img5);
         img1 = findViewById(R.id.img3);
         Title = findViewById(R.id.text2);
-        Date = findViewById(R.id.text4);
         Age = findViewById(R.id.text5);
-        Season = findViewById(R.id.text6);
-        Dec = findViewById(R.id.text11);
+        language=findViewById(R.id.text20);
+        genres=findViewById(R.id.text22);
+        Dec=findViewById(R.id.text9);
+        starring=findViewById(R.id.text11);
+        directors=findViewById(R.id.text13);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +100,7 @@ public class MainActivity6 extends AppCompatActivity {
 //        data1();
 
 
-        Log.d("TAG", "onCreate: "+content.name.replace(" ","-"));
+        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
         WebService.getClient().getSeriesPage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<SeriesRootnames>() {
             @Override
             public void onResponse(Call<SeriesRootnames> call, Response<SeriesRootnames> response) {
@@ -106,7 +108,12 @@ public class MainActivity6 extends AppCompatActivity {
                 SeriesRootnames data=response.body();
                 Picasso.get().load("https://katto.in"+data.poster).into(img1);
                 Title.setText(data.name);
-
+                Age.setText(data.age_rating);
+                language.setText(data.language);
+                genres.setText(data.genres);
+                Dec.setText(data.description);
+                starring.setText(data.starring);
+                directors.setText(data.directors);
 
             }
 

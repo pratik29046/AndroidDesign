@@ -10,29 +10,27 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:layout_gravity="center"
         android:scaleX="1.2"
         android:scaleY="2.2"
-        android:src="@drawable/logo1"
+        android:src="@drawable/movie"
+        android:adjustViewBounds="true"
         />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="KATTO"
+        android:text="Login"
         android:textSize="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="250dp"
         android:textColor="#FF9800"
         android:layout_gravity="center"
         android:layout_below="@+id/img"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:layout_centerVertical="true"
         android:textScaleX="1.2"
         android:focusable="true"
         />

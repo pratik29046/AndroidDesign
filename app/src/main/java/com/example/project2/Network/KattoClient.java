@@ -26,8 +26,8 @@ public interface KattoClient {
     @GET("/content/movies/{moviename}")
     Call<List<MoviesRoot>> getMoviePage(@Path("moviename") String moviename, @Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
 
-    @GET("/content/series/{age_rating}")
-    Call<List<SeriesRootnames>> getSeriesPage(@Path("age_rating") String age_rating, @Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
+    @GET("/content/series/{seriesname}")
+    Call<List<SeriesRootnames>> getSeriesPage(@Path("seriesname") String seriesname, @Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
 
 
 }

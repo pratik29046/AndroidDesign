@@ -133,13 +133,13 @@ public class WebService {
         Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
 
 
-        @GET("series/{age_rating}")
+        @GET("series/{seriesname}")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
                 "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
         })
-        Call<SeriesRootnames>getSeriesPage(@Path("age_rating") String age_rating);
+        Call<SeriesRootnames>getSeriesPage(@Path("seriesname") String seriesname);
 
 
 
