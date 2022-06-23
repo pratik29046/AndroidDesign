@@ -18,8 +18,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="37dp"
-            android:src="@drawable/arrowleft"
-            />
+            android:src="@drawable/arrowleft" />
 
 
         <ImageView
@@ -110,7 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="60dp"
+            android:layout_alignRight="@+id/text20"
+            android:layout_marginEnd="-12dp"
             android:text="."
             android:textColor="#FF9800"
             android:textSize="20dp"
@@ -121,7 +121,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="72dp"
+            android:layout_alignLeft="@id/text21"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="4dp"
             android:text="Action, Adventure"
             android:textColor="@color/white"
@@ -132,7 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="192dp"
+            android:layout_alignRight="@+id/text22"
+            android:layout_marginEnd="-12dp"
             android:text="."
             android:textColor="#FF9800"
             android:textSize="20dp"
@@ -143,11 +145,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
-            android:layout_marginStart="202dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignLeft="@+id/text23"
             android:layout_marginTop="4dp"
             android:text="1h 35m 40s"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
 
 

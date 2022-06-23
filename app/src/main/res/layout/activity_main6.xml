@@ -99,21 +99,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/text5"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
             android:text="Hindi"
             android:textColor="@color/white"
-            android:layout_marginTop="4dp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:id="@+id/text21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text5"
-            android:layout_marginStart="60dp"
-            android:text="."
-            android:textColor="#FF9800"
-            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView

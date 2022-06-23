@@ -113,17 +113,6 @@ public class MainActivity6 extends AppCompatActivity {
 //        Season.setText(content.);
 //        Dec.setText(content.);
 
-//        Title.setText(series.name);
-//        Age.setText(series.name);
-
-
-//        if(Objects.equals(content.url, "/api/content/movies/nitesh")){
-//            Toast.makeText(getApplicationContext(),"hshhshshsh",Toast.LENGTH_SHORT).show();
-//        }else{
-//
-//        }
-
-
 //        data1();
 
 
