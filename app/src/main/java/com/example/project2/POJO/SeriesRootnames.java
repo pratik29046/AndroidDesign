@@ -59,7 +59,7 @@ public class SeriesRootnames {
 
     @SerializedName("created_at")
     @Expose
-    public Date created_at;
+    public String  created_at;
 
     @SerializedName("trailer_link")
     @Expose
@@ -67,7 +67,7 @@ public class SeriesRootnames {
 
     @SerializedName("membership")
     @Expose
-    public boolean membership;
+    public String membership;
 
     @SerializedName("episodes")
     @Expose

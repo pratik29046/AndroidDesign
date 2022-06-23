@@ -23,10 +23,13 @@ import com.example.project2.POJO.Episode;
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.Series;
+import com.example.project2.POJO.SeriesRootnames;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import retrofit2.Call;
@@ -53,7 +56,6 @@ public class MainActivity6 extends AppCompatActivity {
         imageView = findViewById(R.id.img1);
         textView = findViewById(R.id.text14);
         img2 = findViewById(R.id.img5);
-
         img1 = findViewById(R.id.img3);
         Title = findViewById(R.id.text2);
         Date = findViewById(R.id.text4);
@@ -84,36 +86,35 @@ public class MainActivity6 extends AppCompatActivity {
         });
 
 
-//        WebService.getClient().get_EpisodeData().enqueue(new Callback<EpisodeRoot>() {
-//            @Override
-//            public void onResponse(Call<EpisodeRoot> call, Response<EpisodeRoot> response) {
-//               adp4(response.body().episodes);
-//
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<EpisodeRoot> call, Throwable t) {
-//
-//            }
-//        });
-
-
         Intent intent = getIntent();
 //        int img=intent.getIntExtra("img",0);
 //        String title=intent.getStringExtra("title");
 //        String date=intent.getStringExtra("date");
         Content content = new Gson().fromJson(intent.getStringExtra("content"), Content.class);
 //        Series series = new Gson().fromJson(intent.getStringExtra("series"), Series.class);
-
 //        img1.setImageResource(content.poster);
-        Title.setText(content.name);
-////        Date.setText(content.);
-        Age.setText(content.age_rating);
-//        Season.setText(content.);
-//        Dec.setText(content.);
+
 
 //        data1();
+
+
+        Log.d("TAG", "onCreate: "+content.name.replace(" ","-"));
+        WebService.getClient().getSeriesPage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<SeriesRootnames>() {
+            @Override
+            public void onResponse(Call<SeriesRootnames> call, Response<SeriesRootnames> response) {
+                Log.d("TAG", "onResponse: "+response.body());
+                SeriesRootnames data=response.body();
+                Picasso.get().load("https://katto.in"+data.poster).into(img1);
+                Title.setText(data.name);
+
+
+            }
+
+            @Override
+            public void onFailure(Call<SeriesRootnames> call, Throwable t) {
+
+            }
+        });
 
 
 

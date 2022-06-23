@@ -4,6 +4,7 @@ import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
 import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.SeriesRootnames;
 
 import java.util.List;
 
@@ -24,5 +25,9 @@ public interface KattoClient {
 
     @GET("/content/movies/{moviename}")
     Call<List<MoviesRoot>> getMoviePage(@Path("moviename") String moviename, @Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
+
+    @GET("/content/series/{age_rating}")
+    Call<List<SeriesRootnames>> getSeriesPage(@Path("age_rating") String age_rating, @Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
+
 
 }

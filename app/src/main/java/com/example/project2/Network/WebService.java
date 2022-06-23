@@ -8,6 +8,7 @@ import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
+import com.example.project2.POJO.SeriesRootnames;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -130,6 +131,17 @@ public class WebService {
                 "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
         })
         Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
+
+
+        @GET("series/{age_rating}")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+        })
+        Call<SeriesRootnames>getSeriesPage(@Path("age_rating") String age_rating);
+
+
 
 
         @GET("movie/moiveroot")
