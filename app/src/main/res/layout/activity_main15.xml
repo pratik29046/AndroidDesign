@@ -6,25 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity15">
 
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="upcoming" -->
+<!--        />    -->
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="upcomming soon may be"
-        android:textSize="25dp"
-        />
+    <RelativeLayout
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/boom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/black"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
-        app:menu="@menu/menu" />
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomming"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            >
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
 
 
 
