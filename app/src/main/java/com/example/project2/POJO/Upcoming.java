@@ -4,19 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
-import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SeriesRootnames {
+public class Upcoming {
+
     @SerializedName("name")
     @Expose
     public String name;
@@ -24,18 +23,6 @@ public class SeriesRootnames {
     @SerializedName("description")
     @Expose
     public String description;
-
-    @SerializedName("content_rating")
-    @Expose
-    public int content_rating;
-
-    @SerializedName("age_rating")
-    @Expose
-    public String age_rating;
-
-    @SerializedName("language")
-    @Expose
-    public String language;
 
     @SerializedName("directors")
     @Expose
@@ -45,10 +32,6 @@ public class SeriesRootnames {
     @Expose
     public String starring;
 
-    @SerializedName("genres")
-    @Expose
-    public String genres;
-
     @SerializedName("poster")
     @Expose
     public String poster;
@@ -57,23 +40,27 @@ public class SeriesRootnames {
     @Expose
     public String v_poster;
 
-    @SerializedName("created_at")
+    @SerializedName("language")
     @Expose
-    public String  created_at;
+    public String language;
+
+    @SerializedName("content_type")
+    @Expose
+    public String content_type;
+
+    @SerializedName("age_rating")
+    @Expose
+    public String age_rating;
+
+    @SerializedName("genres")
+    @Expose
+    public String genres;
 
     @SerializedName("trailer_link")
     @Expose
     public String trailer_link;
 
-    @SerializedName("membership")
+    @SerializedName("release_date")
     @Expose
-    public String membership;
-
-    @SerializedName("episodes")
-    @Expose
-    public List<Episode> episodes;
-
-    @SerializedName("watch_next")
-    @Expose
-    public List<Watchnextseries> watch_next;
+    public String release_date;
 }

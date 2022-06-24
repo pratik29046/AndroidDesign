@@ -2,10 +2,12 @@ package com.example.project2;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,6 +26,8 @@ import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.Series;
 import com.example.project2.POJO.SeriesRootnames;
+import com.example.project2.POJO.Watchnextmovies;
+import com.example.project2.POJO.Watchnextseries;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -37,12 +41,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity6 extends AppCompatActivity {
-    RecyclerView recyclerView;
+    RecyclerView recyclerView,recyclerView1;
     LinearLayoutManager layoutManager;
-    List<ModelClass2> userList2;
-    Adapters adapter;
+    AdapterEpisodes adapter;
+    AdapterWachnextSeries adapterWachnextSeries;
     ImageView imageView;
-    TextView textView;
+    TextView textView,text15,text17;
     TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors;
     ImageView img1, img2;
 
@@ -53,6 +57,7 @@ public class MainActivity6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
         recyclerView = findViewById(R.id.seasons);
+        recyclerView1=findViewById(R.id.seriesnextss);
         imageView = findViewById(R.id.img1);
         textView = findViewById(R.id.text14);
         img2 = findViewById(R.id.img5);
@@ -64,6 +69,31 @@ public class MainActivity6 extends AppCompatActivity {
         Dec=findViewById(R.id.text9);
         starring=findViewById(R.id.text11);
         directors=findViewById(R.id.text13);
+        text15=findViewById(R.id.text15);
+        text17=findViewById(R.id.text17);
+
+
+        text15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                text15.setTextColor(Color.parseColor("#FF0000"));
+                text17.setTextColor(Color.parseColor("#FFFFFF"));
+                recyclerView.setVisibility(View.VISIBLE);
+                recyclerView1.setVisibility(View.GONE);
+            }
+        });
+        text17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                text15.setTextColor(Color.parseColor("#FFFFFF"));
+                text17.setTextColor(Color.parseColor("#FF0000"));
+                recyclerView.setVisibility(View.GONE);
+                recyclerView1.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,50 +144,43 @@ public class MainActivity6 extends AppCompatActivity {
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);
+                adp1(data.watch_next);
+                adp(data.episodes);
+//                Log.d("TAG", "sirsss: "+data.episodes);
 
             }
-
             @Override
             public void onFailure(Call<SeriesRootnames> call, Throwable t) {
 
             }
         });
 
-
-
-
-
 }
 
-    public void adp4(List<Episode>episode) {
-        recyclerView = findViewById(R.id.seasons);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        adapter = new Adapters(episode, this);
+
+    public void adp(List<Episode> episodes){
+        recyclerView=findViewById(R.id.seasons);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this,LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+        recyclerView.setItemAnimator(new DefaultItemAnimator() );
+        adapter=new AdapterEpisodes(episodes,this);
         recyclerView.setAdapter(adapter);
     }
 
-    public void data1(){
-        userList2=new ArrayList<ModelClass2>();
-        userList2.add(new ModelClass2(R.drawable.p3 ,"1. The pratik \n 33m",R.drawable.download_recy,"Video is an electronic medium for the recording,hdhhdh dhdh dd jd jdj hfh jjfj fjfj jfjfjb jfj pratik "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"2. She \n 38m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"3. The pickup \n 34m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"4. The pickup \n 27m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"5. The pickup \n 3m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"6. The pickup \n 43m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"7. The pickup \n 83m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"8. The pickup \n 43m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"9. The pickup \n 39m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"10. The pickup \n 31m",R.drawable.download_recy,"Video is an electronic medium for the recording, "));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"11. The pickup \n 32m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
-        userList2.add(new ModelClass2(R.drawable.p3 ,"12. The pickup \n 34m",R.drawable.download_recy,"Video is an electronic medium for the recording,"));
 
+    public void adp1(List<Watchnextseries> watchnextseries){
+        recyclerView1=findViewById(R.id.seriesnextss);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+        recyclerView1.setItemAnimator(new DefaultItemAnimator() );
+        adapterWachnextSeries=new AdapterWachnextSeries(this,watchnextseries);
+        recyclerView1.setAdapter(adapterWachnextSeries);
     }
+
     // back to last activity
     public void back(){
         super.onBackPressed();
     }
-
 
     public void show(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);

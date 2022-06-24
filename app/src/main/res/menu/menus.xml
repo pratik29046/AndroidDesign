@@ -8,7 +8,7 @@
         android:title="@string/download"
         android:icon="@drawable/downloadmenubar" />
 
-    <item android:id="@+id/action_navigation"
+    <item android:id="@+id/upcomes"
         android:title="@string/upcomming"
         android:icon="@drawable/ic_baseline_grid_view_24"
         />

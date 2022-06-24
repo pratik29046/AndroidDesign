@@ -1,9 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".UpcommingNext">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        >
+
+        <ImageView
+            android:id="@+id/img11"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginTop="2dp"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:src="@drawable/she" />
+
+        <ImageView
+            android:id="@+id/img22"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/img11"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/she" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/ic_baseline_play_circle_outline_24" />
+
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img11"
+            android:layout_alignLeft="@+id/img22"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="13dp"
+            android:text="Releasing on"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text444"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text3"
+            android:layout_alignLeft="@+id/img22"
+            android:layout_marginStart="200dp"
+            android:text="2022-06-25T12:30:00Z"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img22"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/btext"
+            android:gravity="center"
+            android:text="18+"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/text20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text5"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="English"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text5"
+            android:layout_alignLeft="@+id/text23"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="4dp"
+            android:text="Drama sex romance comed"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text5"
+            android:layout_alignRight="@+id/text20"
+            android:layout_marginEnd="-11dp"
+            android:text="."
+            android:textColor="#FF9800"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text20"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
+                    android:textColor="#E8D7DDD7" />
+
+                <TextView
+                    android:id="@+id/text13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Starring :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_alignLeft="@+id/text13"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="6dp"
+            android:text="Hi hello my dear frineds how are your and what are your doing in your life "
+            app:colorClickableText="@color/white"
+            app:trimCollapsedText="@string/read_more"
+            app:trimExpandedText="@string/read_less"
+            app:trimLength="20"
+            app:trimMode="trimModeLength" />
+
+                <TextView
+                    android:id="@+id/text15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text14"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Creator  :"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text14"
+                    android:layout_alignLeft="@+id/text5"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Imtiaz Ali" />
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_below="@+id/img11"-->
+<!--            android:layout_alignLeft="@+id/img3"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:src="@drawable/logo1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/contenttype"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/img11"-->
+<!--            android:layout_alignLeft="@+id/logo"-->
+<!--            android:layout_marginStart="60dp"-->
+<!--            android:layout_marginTop="9dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Series"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold" />-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -45,8 +45,8 @@ public class MainActivity4 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.upcomming:
-                        startActivity(new Intent(getApplicationContext(),MainActivity15.class));
+                    case R.id.upcomes:
+                        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
                         overridePendingTransition(0,0);
                         return true;
 

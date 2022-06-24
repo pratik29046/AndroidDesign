@@ -50,9 +50,6 @@ import retrofit2.Response;
 public class MainActivity2 extends AppCompatActivity {
     RecyclerView recyclerView,recyclerView1,recyclerView2;
     LinearLayoutManager layoutManager;
-    List<ModelClass>userList;
-    List<ModelClass>userList1;
-    List<ModelClass4>userList4;
     Adapter adapter;
     RelativeLayout popup;
     LinearLayout linearLayoutplay;
@@ -113,8 +110,8 @@ public class MainActivity2 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-                    case R.id.upcomming:
-                        startActivity(new Intent(getApplicationContext(),MainActivity15.class));
+                    case R.id.upcomes:
+                        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
                         overridePendingTransition(0,0);
                         return true;
 

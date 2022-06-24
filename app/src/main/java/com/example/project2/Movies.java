@@ -38,7 +38,6 @@ public class Movies extends AppCompatActivity {
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
-    List<ModelClass2> userList2;
     AdapterWatchnext adapter;
     ImageView imageView;
     TextView textView,textView1,textView2;

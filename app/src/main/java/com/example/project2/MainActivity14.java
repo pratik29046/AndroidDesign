@@ -39,8 +39,8 @@ public class MainActivity14 extends AppCompatActivity {
                     case R.id.download:
                         return true;
 
-                    case R.id.upcomming:
-                        startActivity(new Intent(getApplicationContext(),MainActivity15.class));
+                    case R.id.upcomes:
+                        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
                         overridePendingTransition(0,0);
                         return true;
 
