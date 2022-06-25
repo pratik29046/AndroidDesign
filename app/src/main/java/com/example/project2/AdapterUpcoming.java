@@ -37,6 +37,13 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img1);
         Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img2);
+        holder.age.setText(upcomings1.get(position).age_rating);
+        holder.date.setText(upcomings1.get(position).release_date);
+        holder.lang.setText(upcomings1.get(position).language);
+        holder.genres.setText(upcomings1.get(position).genres);
+        holder.description.setText(upcomings1.get(position).description);
+        holder.starring.setText(upcomings1.get(position).starring);
+        holder.directors.setText(upcomings1.get(position).directors);
     }
 
     @Override
@@ -47,12 +54,18 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView img1,img2;
-        TextView date;
+        TextView date,age,lang,genres,description,starring,directors;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             img1=itemView.findViewById(R.id.img11);
             img2=itemView.findViewById(R.id.img22);
             date=itemView.findViewById(R.id.text444);
+            age=itemView.findViewById(R.id.text5);
+            lang=itemView.findViewById(R.id.text20);
+            genres=itemView.findViewById(R.id.text22);
+            description=itemView.findViewById(R.id.text2);
+            starring=itemView.findViewById(R.id.text14);
+            directors=itemView.findViewById(R.id.text6);
         }
     }
 }

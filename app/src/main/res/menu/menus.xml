@@ -5,17 +5,17 @@
         android:icon="@drawable/home" />
 
     <item android:id="@+id/download"
-        android:title="@string/download"
+        android:title="@string/Download"
         android:icon="@drawable/downloadmenubar" />
 
     <item android:id="@+id/upcomes"
-        android:title="@string/upcomming"
+        android:title="@string/Upcomming"
         android:icon="@drawable/ic_baseline_grid_view_24"
         />
 
      <item
     android:id="@+id/menu"
-    android:title="@string/menu"
+    android:title="@string/Menu"
     android:icon="@drawable/ic_baseline_menu_24"
 
     />

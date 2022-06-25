@@ -17,7 +17,9 @@
           <androidx.recyclerview.widget.RecyclerView
               android:id="@+id/upData"
               android:layout_width="wrap_content"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="60dp"
+              >
 
           </androidx.recyclerview.widget.RecyclerView>
 

@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".UpcommingNext">
+    tools:context=".UpcommingNext"
+    android:background="@color/black"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
+        android:layout_marginBottom="10dp"
         >
 
         <ImageView
@@ -83,9 +86,9 @@
             android:id="@+id/text20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text5"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="4dp"
+            android:layout_below="@+id/img22"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="13dp"
             android:text="English"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -94,10 +97,10 @@
             android:id="@+id/text22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text5"
+            android:layout_below="@+id/img22"
             android:layout_alignLeft="@+id/text23"
             android:layout_marginStart="11dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="13dp"
             android:text="Drama sex romance comed"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -115,16 +118,16 @@
             android:textStyle="bold" />
 
 
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text20"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
-                    android:textColor="#E8D7DDD7" />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text20"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
+            android:textColor="#E8D7DDD7" />
 
                 <TextView
                     android:id="@+id/text13"
@@ -164,15 +167,15 @@
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/text6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text14"
-                    android:layout_alignLeft="@+id/text5"
-                    android:layout_marginStart="64dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Imtiaz Ali" />
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_alignLeft="@+id/text5"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="4dp"
+            android:text="Imtiaz Ali" />
 
 
 <!--        <ImageView-->

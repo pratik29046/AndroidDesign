@@ -53,6 +53,9 @@
     <string name="download">download</string>
     <string name="upcomming">upcomming</string>
     <string name="menu">menu</string>
+    <string name="Download">Download</string>
+    <string name="Upcomming">Upcomming</string>
+    <string name="Menu">Menu</string>
 
 </resources>
 
