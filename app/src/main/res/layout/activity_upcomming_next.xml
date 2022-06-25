@@ -101,7 +101,7 @@
             android:layout_alignLeft="@+id/text23"
             android:layout_marginStart="11dp"
             android:layout_marginTop="13dp"
-            android:text="Drama sex romance comed"
+            android:text="Drama sex romance comedh"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -109,11 +109,12 @@
             android:id="@+id/text23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text5"
+            android:layout_below="@+id/img22"
             android:layout_alignRight="@+id/text20"
             android:layout_marginEnd="-11dp"
             android:text="."
             android:textColor="#FF9800"
+            android:layout_marginTop="10dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
