@@ -7,6 +7,7 @@ import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.SeriesRootnames;
 import com.example.project2.POJO.Upcoming;
 import com.example.project2.POJO.UpcomingRoot;
+import com.example.project2.POJO.WelcomeRoot;
 
 import java.util.List;
 
@@ -33,5 +34,8 @@ public interface KattoClient {
 
     @GET("/content/Upcoming")
     Call<List<UpcomingRoot>> getUpcomingPage(@Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
+
+    @GET("/content/welcome")
+    Call<List<WelcomeRoot>> getwelcomePage(@Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
 
 }

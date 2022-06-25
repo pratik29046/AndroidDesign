@@ -11,6 +11,7 @@ import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.SeriesRootnames;
 import com.example.project2.POJO.Upcoming;
 import com.example.project2.POJO.UpcomingRoot;
+import com.example.project2.POJO.WelcomeRoot;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -162,6 +163,15 @@ public class WebService {
                 "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
         })
         Call<UpcomingRoot> get_upcomingData();
+
+        @GET("welcome")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+        })
+        Call<WelcomeRoot> get_welcomeData();
+
 
 
 

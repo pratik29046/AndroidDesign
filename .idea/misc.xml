@@ -46,6 +46,7 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/thumb_image.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/watchlist.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/watchnow_1.xml" value="0.1235" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/font/dancing_script.xml" value="0.26666666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/Bottomsheet.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/activity_main10.xml" value="0.15520833333333334" />
@@ -72,11 +73,13 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/popups.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/track_selection_dialog.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/ustom_controls.xml" value="0.23645833333333333" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/welcomepage.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/menu/menu.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/menu/menus.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/menu/nav.xml" value="0.22239583333333332" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.156" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/mipmap-anydpi-v26/information_round.xml" value="0.156" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/mipmap-anydpi-v26/play.xml" value="0.1345" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/xml/custom_style.xml" value="0.14074074074074075" />
       </map>
     </option>
