@@ -1,6 +1,7 @@
 package com.example.project2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,10 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project2.POJO.Content;
 import com.example.project2.POJO.Watchnextmovies;
 import com.example.project2.POJO.Watchnextseries;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -33,6 +36,20 @@ public class AdapterWachnextSeries extends RecyclerView.Adapter<AdapterWachnextS
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+watchnextseries.get(position).v_poster).into(holder.img);
+
+
+//        final Watchnextseries temp=watchnextseries.get(position);
+//        holder.img.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent =new Intent(context,MainActivity2.class);
+////                intent.putExtra("content",new Gson().toJson(temp) ); //for series
+//                context.startActivity(intent);
+//            }
+//        });
+
+
+
     }
 
     @Override

@@ -24,7 +24,7 @@
                 app:itemBackground="@color/black"
                 app:itemIconTint="@drawable/selector"
                 app:itemTextColor="@drawable/selector"
-                app:menu="@menu/menu"
+                app:menu="@menu/menus"
                 />
 
         <LinearLayout
