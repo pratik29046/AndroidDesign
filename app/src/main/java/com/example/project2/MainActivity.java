@@ -56,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
         signInButton=findViewById(R.id.login);
 
 
-         time=new Timer();
-        time.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Intent send = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(send);
-            }
-        },8000);
+//         time=new Timer();
+//        time.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                Intent send = new Intent(MainActivity.this, MainActivity2.class);
+//                startActivity(send);
+//            }
+//        },8000);
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

@@ -20,26 +20,30 @@ import com.example.project2.POJO.Category;
 import com.example.project2.POJO.MembershipPlan;
 import com.example.project2.POJO.MembershipPlanRoot;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.r0adkll.slidr.model.SlidrInterface;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity4 extends AppCompatActivity {
-    TextView textView,logout;
+    TextView textView,logout,names,emailid;
     RelativeLayout relativeLayout;
     BottomNavigationView bottomNavigationView;
     GoogleSignInClient mGoogleSignInClient;
     AdapterPlans adapterPlans;
     RecyclerView recyclerView;
+    CircleImageView circleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +54,9 @@ public class MainActivity4 extends AppCompatActivity {
         bottomNavigationView=findViewById(R.id.boom);
         bottomNavigationView.setSelectedItemId(R.id.menu);
         logout=findViewById(R.id.logout);
-
-
+        names=findViewById(R.id.names);
+        emailid=findViewById(R.id.emailId);
+        circleImageView=findViewById(R.id.profilePic);
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -87,6 +92,19 @@ public class MainActivity4 extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+
+        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+        if(account!=null){
+            String name=account.getDisplayName();
+            String email=account.getEmail();
+
+           names.setText(name);
+           emailid.setText(email);
+            Picasso.get().load(account.getPhotoUrl()).placeholder(R.drawable.ic_baseline_person_24).into(circleImageView);
+
+        }
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
