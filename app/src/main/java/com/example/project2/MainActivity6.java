@@ -151,12 +151,11 @@ public class MainActivity6 extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<SeriesRootnames> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: "+t.getLocalizedMessage());
             }
         });
 
 }
-
 
     public void adp(List<Episode> episodes){
         recyclerView=findViewById(R.id.seasons);

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_cornor_border_plans"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Months"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/ruppes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹"
+            android:layout_below="@+id/month"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="149.00"
+            android:textSize="25dp"
+            android:layout_below="@+id/month"
+            android:layout_alignLeft="@+id/ruppes"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            />
+
+        <View
+            android:id="@+id/views"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_below="@+id/ruppes"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_below="@+id/views"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            />
+
+        <TextView
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All content access"
+            android:layout_below="@+id/views"
+            android:layout_marginStart="40dp"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_below="@+id/img1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            />
+
+        <TextView
+            android:id="@+id/valid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valid for "
+            android:layout_below="@+id/all"
+            android:layout_marginStart="40dp"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/numberOfDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="180"
+            android:layout_below="@+id/all"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/valid"
+            android:layout_marginStart="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="days"
+            android:layout_below="@+id/all"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@+id/numberOfDays"
+            android:layout_marginEnd="-38dp"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id="@+id/buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_cornor_yellow"
+            android:layout_below="@+id/days"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Buy"
+                android:layout_weight="14"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginStart="22dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_arrow_right_alt_24"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:layout_marginStart="55dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -16,7 +16,7 @@
         >
     </androidx.recyclerview.widget.RecyclerView>
 
-    <TextView
+    <com.google.android.gms.common.SignInButton
         android:id="@+id/login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -25,8 +25,8 @@
         android:layout_marginBottom="20dp"
         android:background="@color/white"
         android:gravity="center"
-        android:text="Login"
         android:textColor="@color/black"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 </RelativeLayout>

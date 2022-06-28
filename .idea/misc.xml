@@ -15,6 +15,8 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/downloadmenubar.xml" value="0.151" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/downloadvideo.xml" value="0.196" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/home.xml" value="0.2225" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.137" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.137" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_crop_3_2_24.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_forward_10_24.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ic_baseline_fullscreen_24.xml" value="0.1875" />
@@ -36,6 +38,8 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/ract.xml" value="0.1045" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/rect_2.xml" value="0.161" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/roundbg.xml" value="0.198" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/rounded_cornor_border_plans.xml" value="0.137" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/rounded_cornor_yellow.xml" value="0.137" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/roundview.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/seekbar_progress.xml" value="0.198" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.198" />
@@ -70,7 +74,9 @@
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/chlidcategoies_row.xml" value="0.23125" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/exo_track_selection_dialog1.xml" value="0.15520833333333334" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/movies.xml" value="0.23229166666666667" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/plans_subscription.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/popups.xml" value="0.23645833333333333" />
+        <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/sign_in_google.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/track_selection_dialog.xml" value="0.23541666666666666" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/ustom_controls.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/layout/welcomepage.xml" value="0.23541666666666666" />

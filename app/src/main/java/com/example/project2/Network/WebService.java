@@ -63,7 +63,7 @@ public class WebService {
             // Post post = gson.fromJson(reader, Post.class);
 
             Retrofit client = new Retrofit.Builder()
-                    .baseUrl("https://katto.in/api/content/")
+                    .baseUrl("https://katto.in/api/")
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(okclient)
                     .build();
@@ -93,7 +93,7 @@ public class WebService {
 
     public interface WebServiceInterface {
 
-        @GET("home")
+        @GET("content/home")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -101,7 +101,7 @@ public class WebService {
         })
         Call<Root> get_HomeData();
 
-        @GET("series")
+        @GET("content/series")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -110,7 +110,7 @@ public class WebService {
         Call<RootSeries> get_SerisData();
 
 
-        @GET("episode")
+        @GET("content/episode")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -118,7 +118,7 @@ public class WebService {
         })
         Call<Episode> get_EpisodeData();
 
-        @GET("movie")
+        @GET("content/movie")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -127,7 +127,7 @@ public class WebService {
         Call<MoviesRoot> get_MovieData();
 
 
-        @GET("movies/{moviename}")
+        @GET("content/movies/{moviename}")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -136,7 +136,7 @@ public class WebService {
         Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
 
 
-        @GET("series/{seriesname}")
+        @GET("content/series/{seriesname}")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -147,7 +147,7 @@ public class WebService {
 
 
 
-        @GET("movie/moiveroot")
+        @GET("content/movie/moiveroot")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -156,7 +156,7 @@ public class WebService {
         Call<MoviesRoot> get_MovierootData();
 
 
-        @GET("upcoming")
+        @GET("content/upcoming")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -164,7 +164,7 @@ public class WebService {
         })
         Call<UpcomingRoot> get_upcomingData();
 
-        @GET("welcome")
+        @GET("content/welcome")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",

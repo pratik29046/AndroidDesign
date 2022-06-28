@@ -11,13 +11,20 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.r0adkll.slidr.model.SlidrInterface;
 
 public class MainActivity4 extends AppCompatActivity {
-    TextView textView;
+    TextView textView,logout;
     RelativeLayout relativeLayout;
     BottomNavigationView bottomNavigationView;
+    GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +33,10 @@ public class MainActivity4 extends AppCompatActivity {
         relativeLayout=findViewById(R.id.back);
         bottomNavigationView=findViewById(R.id.boom);
         bottomNavigationView.setSelectedItemId(R.id.menu);
+        logout=findViewById(R.id.logout);
+
+
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -55,14 +66,46 @@ public class MainActivity4 extends AppCompatActivity {
                 return false;
             }
         });
-        //call the method back
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                back();
+                signOut();
             }
         });
+
+
+
+        //call the method back
+//        relativeLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                back();
+//            }
+//        });
+
+
+
+
     }
+
+
+    void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        finish();
+                        startActivity(new Intent(MainActivity4.this,MainActivity.class));
+                    }
+                });
+    }
+
     //method of backpress
     public void back(){
         super.onBackPressed();

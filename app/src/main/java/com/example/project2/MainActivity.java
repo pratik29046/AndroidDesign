@@ -8,15 +8,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.WelcomeBanner;
 import com.example.project2.POJO.WelcomeRoot;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.sql.Time;
 import java.util.List;
@@ -32,22 +43,20 @@ public class MainActivity extends AppCompatActivity {
     Timer time;
     AdapterWelcome adapterWelcome;
     RecyclerView recyclerView;
-//    TextView text;
+
+    SignInButton signInButton;
+    GoogleSignInClient mGoogleSignInClient;
+    static final int RC_SIGN_IN =1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.information_background));
         setContentView(R.layout.activity_main);
-         time=new Timer();
-//        text=findViewById(R.id.text);
-//        text.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent send = new Intent(MainActivity.this, MainActivity2.class);
-//                startActivity(send);
-//            }
-//        });
+        signInButton=findViewById(R.id.login);
 
+
+         time=new Timer();
         time.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -55,6 +64,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(send);
             }
         },8000);
+
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+        if(account!=null){
+            navigateToSecodeActivity();
+        }
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signIn();
+            }
+        });
 
 
         WebService.getClient().get_welcomeData().enqueue(new Callback<WelcomeRoot>() {
@@ -71,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void adp(List<WelcomeBanner> welcomeBanners){
         recyclerView=findViewById(R.id.Welcome);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
@@ -78,6 +106,34 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
         adapterWelcome=new AdapterWelcome(this,welcomeBanners);
         recyclerView.setAdapter(adapterWelcome);
+    }
+
+
+
+    void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                task.getResult(ApiException.class);
+                navigateToSecodeActivity();
+
+            } catch (ApiException e) {
+                Toast.makeText(getApplicationContext(),"wrong",Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    void navigateToSecodeActivity() {
+        finish();
+        Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+        startActivity(intent);
     }
 
 
