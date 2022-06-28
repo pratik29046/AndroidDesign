@@ -3,6 +3,7 @@ package com.example.project2.Network;
 import com.example.project2.POJO.Episode;
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MembershipPlanRoot;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
@@ -171,6 +172,14 @@ public class WebService {
                 "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
         })
         Call<WelcomeRoot> get_welcomeData();
+
+        @GET("memberships/plans")
+        @Headers({
+                "Accept: application/json; version=1",
+                "User-Agent: Thunder Client (https://www.thunderclient.com)",
+                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+        })
+        Call<MembershipPlanRoot> get_planData();
 
 
 

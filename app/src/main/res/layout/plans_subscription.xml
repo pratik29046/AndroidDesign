@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
@@ -12,16 +12,16 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         >
+
         <TextView
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
             android:text="3 Months"
             android:textColor="@color/white"
-            android:layout_marginTop="2dp"
-            android:layout_marginStart="4dp"
-            android:textSize="20dp"
-            />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/ruppes"
@@ -39,14 +39,13 @@
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="149.00"
-            android:textSize="25dp"
             android:layout_below="@+id/month"
             android:layout_alignLeft="@+id/ruppes"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
+            android:text="149.00"
             android:textColor="@color/white"
-            />
+            android:textSize="25dp" />
 
         <View
             android:id="@+id/views"
@@ -107,15 +106,14 @@
             android:id="@+id/numberOfDays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="180"
             android:layout_below="@+id/all"
-            android:layout_marginTop="10dp"
             android:layout_alignLeft="@+id/valid"
             android:layout_marginStart="60dp"
-            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="180"
             android:textColor="@color/white"
             android:textSize="15dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/days"

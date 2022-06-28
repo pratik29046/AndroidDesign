@@ -2,15 +2,23 @@ package com.example.project2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.project2.Network.WebService;
+import com.example.project2.POJO.Category;
+import com.example.project2.POJO.MembershipPlan;
+import com.example.project2.POJO.MembershipPlanRoot;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -19,11 +27,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.r0adkll.slidr.model.SlidrInterface;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity4 extends AppCompatActivity {
     TextView textView,logout;
     RelativeLayout relativeLayout;
     BottomNavigationView bottomNavigationView;
     GoogleSignInClient mGoogleSignInClient;
+    AdapterPlans adapterPlans;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,10 +106,32 @@ public class MainActivity4 extends AppCompatActivity {
 //        });
 
 
+        WebService.getClient().get_planData().enqueue(new Callback<MembershipPlanRoot>() {
+            @Override
+            public void onResponse(Call<MembershipPlanRoot> call, Response<MembershipPlanRoot> response) {
+
+                Log.d("TAG", "onResponse: "+response.body());
+                adp(response.body().membership_plans);
+            }
+
+            @Override
+            public void onFailure(Call<MembershipPlanRoot> call, Throwable t) {
+
+            }
+        });
+
 
 
     }
 
+    public void adp(List<MembershipPlan> membershipPlans){
+        recyclerView=findViewById(R.id.plans);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+        recyclerView.setItemAnimator(new DefaultItemAnimator() );
+        adapterPlans=new AdapterPlans(this,membershipPlans);
+        recyclerView.setAdapter(adapterPlans);
+    }
 
     void signOut() {
         mGoogleSignInClient.signOut()

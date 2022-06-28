@@ -2,6 +2,7 @@ package com.example.project2.Network;
 
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.MembershipPlanRoot;
 import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.SeriesRootnames;
@@ -37,5 +38,8 @@ public interface KattoClient {
 
     @GET("/content/welcome")
     Call<List<WelcomeRoot>> getwelcomePage(@Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
+
+    @GET("memberships/plans")
+    Call<List<MembershipPlanRoot>> getplanPage(@Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
 
 }
