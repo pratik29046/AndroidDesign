@@ -98,13 +98,14 @@ public class MainActivity4 extends AppCompatActivity {
         if(account!=null){
             String name=account.getDisplayName();
             String email=account.getEmail();
-
            names.setText(name);
            emailid.setText(email);
             Picasso.get().load(account.getPhotoUrl()).placeholder(R.drawable.ic_baseline_person_24).into(circleImageView);
 
         }
 
+//        Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
+//                account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,20 +116,19 @@ public class MainActivity4 extends AppCompatActivity {
 
 
 
-        //call the method back
-//        relativeLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                back();
-//            }
-//        });
+//        call the method back
+        /*relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });*/
 
 
         WebService.getClient().get_planData().enqueue(new Callback<MembershipPlanRoot>() {
             @Override
             public void onResponse(Call<MembershipPlanRoot> call, Response<MembershipPlanRoot> response) {
 
-                Log.d("TAG", "onResponse: "+response.body());
                 adp(response.body().membership_plans);
             }
 
@@ -141,6 +141,8 @@ public class MainActivity4 extends AppCompatActivity {
 
 
     }
+
+
 
     public void adp(List<MembershipPlan> membershipPlans){
         recyclerView=findViewById(R.id.plans);
@@ -161,6 +163,7 @@ public class MainActivity4 extends AppCompatActivity {
                     }
                 });
     }
+
 
     //method of backpress
     public void back(){

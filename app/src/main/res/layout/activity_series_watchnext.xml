@@ -16,8 +16,9 @@
             android:id="@+id/serieswatchnexts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/p1"
+            android:src="@drawable/she"
             android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             />
 
     </LinearLayout>

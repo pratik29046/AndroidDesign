@@ -98,7 +98,9 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
+
+
         })
         Call<Root> get_HomeData();
 
@@ -106,7 +108,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
         })
         Call<RootSeries> get_SerisData();
 
@@ -115,7 +117,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
         })
         Call<Episode> get_EpisodeData();
 
@@ -123,7 +125,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700 "
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
         })
         Call<MoviesRoot> get_MovieData();
 
@@ -132,7 +134,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1"
         })
         Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
 
@@ -141,7 +143,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1"
         })
         Call<SeriesRootnames>getSeriesPage(@Path("seriesname") String seriesname);
 
@@ -152,7 +154,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1"
         })
         Call<MoviesRoot> get_MovierootData();
 
@@ -161,7 +163,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
         })
         Call<UpcomingRoot> get_upcomingData();
 
@@ -169,7 +171,7 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1"
         })
         Call<WelcomeRoot> get_welcomeData();
 
@@ -177,7 +179,8 @@ public class WebService {
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
-                "Authorization: Token 7708605ec0bdd64e1cc1fcfcc84179595b874700"
+                "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1"
+
         })
         Call<MembershipPlanRoot> get_planData();
 

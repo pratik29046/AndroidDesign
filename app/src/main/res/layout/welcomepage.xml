@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        android:src="@drawable/img_1"
+        android:src="@drawable/she"
         android:layout_above="@+id/text1"
         android:scaleType="fitXY"
         />

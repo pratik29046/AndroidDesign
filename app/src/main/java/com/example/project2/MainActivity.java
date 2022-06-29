@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
         if(account!=null){
             navigateToSecodeActivity();
+
         }
 
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +137,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
         startActivity(intent);
     }
-
 
 }
