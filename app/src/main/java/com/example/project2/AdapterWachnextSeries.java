@@ -38,15 +38,16 @@ public class AdapterWachnextSeries extends RecyclerView.Adapter<AdapterWachnextS
         Picasso.get().load("https://katto.in"+watchnextseries.get(position).v_poster).into(holder.img);
 
 
-//        final Watchnextseries temp=watchnextseries.get(position);
-//        holder.img.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent =new Intent(context,MainActivity6.class);
-//                intent.putExtra("watchnext",new Gson().toJson(temp));
-//                context.startActivity(intent);
-//            }
-//        });
+        final Watchnextseries temp=watchnextseries.get(position);
+
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(context,MainActivity6.class);
+                intent.putExtra("watchnext",new Gson().toJson(temp));
+                context.startActivity(intent);
+            }
+        });
 
 
 

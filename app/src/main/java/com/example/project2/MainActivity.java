@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken("7654007831-971a1qee7lcgrt19ph2cbsd413qjdkik.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
         if(account!=null){
             navigateToSecodeActivity();
+
 
         }
 

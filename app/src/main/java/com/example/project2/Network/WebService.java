@@ -1,5 +1,6 @@
 package com.example.project2.Network;
 
+import com.example.project2.POJO.Banner;
 import com.example.project2.POJO.Episode;
 import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.HomePOJO;
@@ -10,6 +11,7 @@ import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.SeriesRootnames;
+import com.example.project2.POJO.TokenID;
 import com.example.project2.POJO.Upcoming;
 import com.example.project2.POJO.UpcomingRoot;
 import com.example.project2.POJO.WelcomeRoot;
@@ -28,6 +30,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -37,6 +40,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 public class WebService {
@@ -185,6 +189,8 @@ public class WebService {
         Call<MembershipPlanRoot> get_planData();
 
 
+        @POST("dj-rest-auth/google")
+        Call<TokenID> get_idData();
 
 
       /*  @POST("insertData.php")

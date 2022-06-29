@@ -19,6 +19,7 @@ import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.MembershipPlan;
 import com.example.project2.POJO.MembershipPlanRoot;
+import com.example.project2.POJO.TokenID;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -95,6 +96,21 @@ public class MainActivity4 extends AppCompatActivity {
 
 
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+
+
+         WebService.getClient().get_idData().enqueue(new Callback<TokenID>() {
+             @Override
+             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
+                 response.body().key=account.getIdToken();
+             }
+
+             @Override
+             public void onFailure(Call<TokenID> call, Throwable t) {
+
+             }
+         });
+
+
         if(account!=null){
             String name=account.getDisplayName();
             String email=account.getEmail();
@@ -104,8 +120,14 @@ public class MainActivity4 extends AppCompatActivity {
 
         }
 
-//        Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
-//                account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
+        Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
+                account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
+
+
+
+
+
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,6 +159,8 @@ public class MainActivity4 extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
