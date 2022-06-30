@@ -97,7 +97,6 @@ public class MainActivity4 extends AppCompatActivity {
 
 
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
-
         String id=account.getIdToken();
         Log.d("TAG", "onCreate: "+id);
         WebService.getClient().post_idData(new RawData_POJO( id, "", ""
@@ -105,15 +104,8 @@ public class MainActivity4 extends AppCompatActivity {
              @Override
              public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 
-                /* if(account!=null){
-                     response.body().key=account.getIdToken();
-                     Log.d("TAG", "onResponse: "+response.body().key);
-                 }*/
-
                  Log.d("TAG", "onResponse: "+response.body().key);
-
              }
-
              @Override
              public void onFailure(Call<TokenID> call, Throwable t) {
 
@@ -132,7 +124,6 @@ public class MainActivity4 extends AppCompatActivity {
 
         Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
                 account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
-
 
 
         logout.setOnClickListener(new View.OnClickListener() {
@@ -156,10 +147,8 @@ public class MainActivity4 extends AppCompatActivity {
         WebService.getClient().get_planData().enqueue(new Callback<MembershipPlanRoot>() {
             @Override
             public void onResponse(Call<MembershipPlanRoot> call, Response<MembershipPlanRoot> response) {
-
                 adp(response.body().membership_plans);
             }
-
             @Override
             public void onFailure(Call<MembershipPlanRoot> call, Throwable t) {
 
@@ -167,11 +156,7 @@ public class MainActivity4 extends AppCompatActivity {
         });
 
 
-
-
-
     }
-
 
 
     public void adp(List<MembershipPlan> membershipPlans){

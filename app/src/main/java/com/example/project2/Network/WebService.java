@@ -189,13 +189,10 @@ public class WebService {
         })
         Call<MembershipPlanRoot> get_planData();
 
-
         @POST("dj-rest-auth/google/")
         Call<TokenID> post_idData(
                 @Body RawData_POJO body
         );
-
-
 
 
       /*  @POST("insertData.php")
