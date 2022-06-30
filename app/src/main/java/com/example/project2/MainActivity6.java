@@ -166,7 +166,7 @@ public class MainActivity6 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 //                show();
-                        if(data.membership=="true"){
+                        if(data.membership=="false"){
                             show();
                         }else{
                             shows();

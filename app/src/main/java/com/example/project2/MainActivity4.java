@@ -104,7 +104,7 @@ public class MainActivity4 extends AppCompatActivity {
              @Override
              public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 
-                 Log.d("TAG", "onResponse: "+response.body().key);
+//                 Log.d("TAG", "onResponse: "+response.body());
              }
              @Override
              public void onFailure(Call<TokenID> call, Throwable t) {

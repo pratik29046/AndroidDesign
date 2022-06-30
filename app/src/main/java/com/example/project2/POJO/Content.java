@@ -16,6 +16,7 @@ public class Content{
     @SerializedName("name")
     @Expose
     public String name;
+
     @SerializedName("url")
     @Expose
     public String url;

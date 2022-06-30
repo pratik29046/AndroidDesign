@@ -1,5 +1,6 @@
 package com.example.project2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -43,8 +44,16 @@ public class AdapterWachnextSeries extends RecyclerView.Adapter<AdapterWachnextS
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intents=new Intent(context,MainActivity6.class);
-                context.startActivity(intents);
+                Intent intent =new Intent(context,MainActivity6.class);
+                Content content=new Content();
+                content.name=temp.name;
+                content.url=temp.url;
+                content.poster=temp.poster;
+                content.v_poster=temp.v_poster;
+                content.age_rating= temp.age_rating;
+                intent.putExtra("content", new Gson().toJson(content));
+                context.startActivity(intent);
+                ((Activity)context).finish(); //back
             }
         });
 
