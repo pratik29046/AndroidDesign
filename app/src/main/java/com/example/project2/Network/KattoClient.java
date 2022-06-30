@@ -45,7 +45,6 @@ public interface KattoClient {
     @GET("api/memberships/plans")
     Call<List<MembershipPlanRoot>> getplanPage(@Header("Authorization") String authoriztion, @Header("User-Agent") String useragent, @Header("Accept") String accept);
 
-    /*@POST("dj-rest-auth/google")
-    Call<TokenID> getidData(@Body("accesstoken") String access, @Body("code") String code, @Body("id_Token") String idToken);*/
+
 
 }

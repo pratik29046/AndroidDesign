@@ -63,7 +63,7 @@ public class MovieRootnames{
     public String content_link;
     @SerializedName("membership")
     @Expose
-    public Boolean membership;
+    public String membership;
     @SerializedName("watch_next")
     @Expose
     public List<Watchnextmovies> watch_next;

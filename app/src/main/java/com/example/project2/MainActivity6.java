@@ -111,12 +111,12 @@ public class MainActivity6 extends AppCompatActivity {
             }
         });
 
-//        img2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                show();
-//            }
-//        });
+      /*  img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                show();
+            }
+        });*/
 
 
         Intent intent = getIntent();
@@ -130,7 +130,7 @@ public class MainActivity6 extends AppCompatActivity {
         SeriesRootnames seriesRootnames = new Gson().fromJson(intent.getStringExtra("names"), SeriesRootnames.class);
 //        data1();\
 
-        img2.setOnClickListener(new View.OnClickListener() {
+        /*img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                show();
@@ -140,7 +140,7 @@ public class MainActivity6 extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"hello false",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
 
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
@@ -160,6 +160,19 @@ public class MainActivity6 extends AppCompatActivity {
                 adp1(data.watch_next);
                 adp(data.episodes);
 //                Log.d("TAG", "sirsss: "+data.episodes);
+
+
+                img2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                show();
+                        if(data.membership=="true"){
+                            show();
+                        }else{
+                            shows();
+                        }
+                    }
+                });
 
             }
             @Override
@@ -215,6 +228,38 @@ public class MainActivity6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent start=new Intent(MainActivity6.this,MainActivity13.class);
+                startActivity(start);
+                alertDialog.dismiss();
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+
+        });
+        alertDialog.show();
+    }
+
+    public void shows(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
+        View mView = getLayoutInflater().inflate(R.layout.popups_subscribe,null);
+        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        Window window = alertDialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+        wlp.gravity = Gravity.BOTTOM;
+        wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
+        window.setAttributes(wlp);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start=new Intent(MainActivity6.this,MainActivity4.class);
                 startActivity(start);
                 alertDialog.dismiss();
             }

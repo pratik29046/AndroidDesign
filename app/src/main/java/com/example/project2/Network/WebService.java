@@ -8,6 +8,7 @@ import com.example.project2.POJO.MembershipPlanRoot;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
+import com.example.project2.POJO.RawData_POJO;
 import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.SeriesRootnames;
@@ -189,13 +190,12 @@ public class WebService {
         Call<MembershipPlanRoot> get_planData();
 
 
-//        @POST("dj-rest-auth/google")
-//        @Body({
-//                "access_token":"",
-//                "code": "",
-//                "id_token": ""
-//                })
-//        Call<TokenID> post_idData();
+        @POST("dj-rest-auth/google/")
+        Call<TokenID> post_idData(
+                @Body RawData_POJO body
+        );
+
+
 
 
       /*  @POST("insertData.php")

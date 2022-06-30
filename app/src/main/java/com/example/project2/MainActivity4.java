@@ -19,6 +19,7 @@ import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.MembershipPlan;
 import com.example.project2.POJO.MembershipPlanRoot;
+import com.example.project2.POJO.RawData_POJO;
 import com.example.project2.POJO.TokenID;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -97,21 +98,27 @@ public class MainActivity4 extends AppCompatActivity {
 
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
 
+        String id=account.getIdToken();
+        Log.d("TAG", "onCreate: "+id);
+        WebService.getClient().post_idData(new RawData_POJO( id, "", ""
+         )).enqueue(new Callback<TokenID>() {
+             @Override
+             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 
-//         WebService.getClient().post_idData().enqueue(new Callback<TokenID>() {
-//             @Override
-//             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
-//                 if(account!=null){
-//                     response.body().key=account.getIdToken();
-//                     Log.d("TAG", "onResponse: "+response.body().key);
-//                 }
-//             }
-//
-//             @Override
-//             public void onFailure(Call<TokenID> call, Throwable t) {
-//
-//             }
-//         });
+                /* if(account!=null){
+                     response.body().key=account.getIdToken();
+                     Log.d("TAG", "onResponse: "+response.body().key);
+                 }*/
+
+                 Log.d("TAG", "onResponse: "+response.body().key);
+
+             }
+
+             @Override
+             public void onFailure(Call<TokenID> call, Throwable t) {
+
+             }
+         });
 
 
         if(account!=null){
