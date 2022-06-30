@@ -98,17 +98,20 @@ public class MainActivity4 extends AppCompatActivity {
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
 
 
-         WebService.getClient().get_idData().enqueue(new Callback<TokenID>() {
-             @Override
-             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
-                 response.body().key=account.getIdToken();
-             }
-
-             @Override
-             public void onFailure(Call<TokenID> call, Throwable t) {
-
-             }
-         });
+//         WebService.getClient().get_idData().enqueue(new Callback<TokenID>() {
+//             @Override
+//             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
+//                 if(account!=null){
+//                     response.body().key=account.getIdToken();
+//                     Log.d("TAG", "onResponse: "+response.body().key);
+//                 }
+//             }
+//
+//             @Override
+//             public void onFailure(Call<TokenID> call, Throwable t) {
+//
+//             }
+//         });
 
 
         if(account!=null){

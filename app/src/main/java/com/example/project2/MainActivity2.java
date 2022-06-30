@@ -173,6 +173,7 @@ public class MainActivity2 extends AppCompatActivity {
                     }
                 });
                 bottomSheetDialog.setContentView(bottomSheetView);
+
                 bottomSheetDialog.show();
     }
 

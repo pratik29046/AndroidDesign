@@ -43,12 +43,10 @@ public class AdapterWachnextSeries extends RecyclerView.Adapter<AdapterWachnextS
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(context,MainActivity6.class);
-                intent.putExtra("watchnext",new Gson().toJson(temp));
-                context.startActivity(intent);
+                Intent intents=new Intent(context,MainActivity6.class);
+                context.startActivity(intents);
             }
         });
-
 
 
     }

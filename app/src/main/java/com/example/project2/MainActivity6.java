@@ -130,7 +130,7 @@ public class MainActivity6 extends AppCompatActivity {
 //        data1();
 
 
-        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
+//        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
         WebService.getClient().getSeriesPage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<SeriesRootnames>() {
             @Override
             public void onResponse(Call<SeriesRootnames> call, Response<SeriesRootnames> response) {

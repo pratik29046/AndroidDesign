@@ -68,7 +68,7 @@ public class WebService {
             // Post post = gson.fromJson(reader, Post.class);
 
             Retrofit client = new Retrofit.Builder()
-                    .baseUrl("https://katto.in/api/")
+                    .baseUrl("https://katto.in/")
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(okclient)
                     .build();
@@ -88,7 +88,7 @@ public class WebService {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://katto.in/api/")
+                .baseUrl("https://katto.in/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
@@ -98,7 +98,7 @@ public class WebService {
 
     public interface WebServiceInterface {
 
-        @GET("content/home")
+        @GET("api/content/home")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -108,7 +108,7 @@ public class WebService {
         })
         Call<Root> get_HomeData();
 
-        @GET("content/series")
+        @GET("api/content/series")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -117,7 +117,7 @@ public class WebService {
         Call<RootSeries> get_SerisData();
 
 
-        @GET("content/episode")
+        @GET("api/content/episode")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -125,7 +125,7 @@ public class WebService {
         })
         Call<Episode> get_EpisodeData();
 
-        @GET("content/movie")
+        @GET("api/content/movie")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -134,7 +134,7 @@ public class WebService {
         Call<MoviesRoot> get_MovieData();
 
 
-        @GET("content/movies/{moviename}")
+        @GET("api/content/movies/{moviename}")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -143,7 +143,7 @@ public class WebService {
         Call<MovieRootnames>getMoviePage(@Path("moviename") String moviename);
 
 
-        @GET("content/series/{seriesname}")
+        @GET("api/content/series/{seriesname}")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -154,7 +154,7 @@ public class WebService {
 
 
 
-        @GET("content/movie/moiveroot")
+        @GET("api/content/movie/moiveroot")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -163,7 +163,7 @@ public class WebService {
         Call<MoviesRoot> get_MovierootData();
 
 
-        @GET("content/upcoming")
+        @GET("api/content/upcoming")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -171,7 +171,7 @@ public class WebService {
         })
         Call<UpcomingRoot> get_upcomingData();
 
-        @GET("content/welcome")
+        @GET("api/content/welcome")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -179,7 +179,7 @@ public class WebService {
         })
         Call<WelcomeRoot> get_welcomeData();
 
-        @GET("memberships/plans")
+        @GET("api/memberships/plans")
         @Headers({
                 "Accept: application/json; version=1",
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
@@ -190,6 +190,11 @@ public class WebService {
 
 
         @POST("dj-rest-auth/google")
+//        @Body({
+//                "access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJiMDllNzQ0ZDU4Yzk5NTVkNGYyNDBiNmE5MmY3YjM3ZmVhZDJmZjgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDk3NjQwMzQ5NDIyNDY2ODE3MDMiLCJlbWFpbCI6InByYXRpa3Bhd2FkZTI5MDQ2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiZEJwOE50cVp5QzF1Q1hRUk9pckt6dyIsIm5hbWUiOiJQcmF0aWsgUGF3YWRlIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSno4VVIzYzB5NkZ6RWxJeWNEMDRvcy12eS1ZTDNQc2txbnI1SEh2PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlByYXRpayIsImZhbWlseV9uYW1lIjoiUGF3YWRlIiwibG9jYWxlIjoiZW4iLCJpYXQiOjE2NTY1MTE5NzQsImV4cCI6MTY1NjUxNTU3NH0.YbLTsfIDJGRVhroYBbGxlZy0zo8prngvpMrvTheAXjeVGIiy9ZUUUs5ejhAuP6yOa4nXn5jOnUFbIIgKGzp2OFqgBEB4KUFKXscpkHrScXiOGhJCV2Up4QSd5IFD9mv1aGEUb35dKGoo09iEQVWsDED7A3-7va7_Jc95a6k7xaZ7WgIgWTEw1orjUA3xmX6i2i4Q4HeEOQUypaT8ydms8Fr4FMIfrhFwYkB66Rb9Ix6824Fn4NorpHwH3hG6QZMJTgZgqrpMfEYMYZwFaatzHOah-PtpgRqTnYgwceZyYEa7QOZoXZYlyB69P3S2EuslIxoJIjDBPwdaqa9FkKtN9w",
+//                "code": "",
+//                "id_token": ""
+//                })
         Call<TokenID> get_idData();
 
 
