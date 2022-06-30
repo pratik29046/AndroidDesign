@@ -151,29 +151,28 @@ public class MainActivity2 extends AppCompatActivity {
                 View bottomSheetView= LayoutInflater.from(getApplicationContext()).inflate(
                         R.layout.bottomsheet,(RelativeLayout)findViewById(R.id.hello)
                 );
-
                 bottomSheetView.findViewById(R.id.b2).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         bottomSheetDialog.dismiss();
                     }
                 });
-
-        bottomSheetView.findViewById(R.id.b1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                bottomSheetView.findViewById(R.id.b1).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                 finishAffinity();
             }
-        });
+                });
 
-        bottomSheetView.findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
+                bottomSheetView.findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         bottomSheetDialog.dismiss();
                     }
                 });
-                bottomSheetDialog.setContentView(bottomSheetView);
 
+
+                bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
     }
 

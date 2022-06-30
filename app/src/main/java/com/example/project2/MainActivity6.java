@@ -26,6 +26,7 @@ import com.example.project2.POJO.EpisodeRoot;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.Series;
 import com.example.project2.POJO.SeriesRootnames;
+import com.example.project2.POJO.TokenID;
 import com.example.project2.POJO.Watchnextmovies;
 import com.example.project2.POJO.Watchnextseries;
 import com.google.gson.Gson;
@@ -110,12 +111,12 @@ public class MainActivity6 extends AppCompatActivity {
             }
         });
 
-        img2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                show();
-            }
-        });
+//        img2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                show();
+//            }
+//        });
 
 
         Intent intent = getIntent();
@@ -126,8 +127,20 @@ public class MainActivity6 extends AppCompatActivity {
 //        Series series = new Gson().fromJson(intent.getStringExtra("series"), Series.class);
 //        img1.setImageResource(content.poster);
 
+        SeriesRootnames seriesRootnames = new Gson().fromJson(intent.getStringExtra("names"), SeriesRootnames.class);
+//        data1();\
 
-//        data1();
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                show();
+                if(seriesRootnames.membership.equals("true") ){
+                    show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"hello false",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
 
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
@@ -154,6 +167,8 @@ public class MainActivity6 extends AppCompatActivity {
                 Log.d("TAG", "onFailure: "+t.getLocalizedMessage());
             }
         });
+
+
 
 }
 

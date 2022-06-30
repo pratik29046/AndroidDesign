@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Category;
+import com.example.project2.POJO.Series;
+import com.example.project2.POJO.SeriesRootnames;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {

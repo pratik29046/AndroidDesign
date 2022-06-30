@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Content;
+import com.example.project2.POJO.SeriesRootnames;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -28,6 +29,7 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
     public categeriouschlidAdapter(Context context, List<Content> members){
         this.context=context;
         this.memberList=members;
+
 
 
     }

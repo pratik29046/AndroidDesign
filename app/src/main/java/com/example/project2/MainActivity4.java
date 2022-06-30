@@ -98,7 +98,7 @@ public class MainActivity4 extends AppCompatActivity {
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
 
 
-//         WebService.getClient().get_idData().enqueue(new Callback<TokenID>() {
+//         WebService.getClient().post_idData().enqueue(new Callback<TokenID>() {
 //             @Override
 //             public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 //                 if(account!=null){
@@ -125,10 +125,6 @@ public class MainActivity4 extends AppCompatActivity {
 
         Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
                 account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
-
-
-
-
 
 
 

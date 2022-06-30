@@ -1,6 +1,7 @@
 package com.example.project2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,15 @@ public class AdapterWatchnext extends RecyclerView.Adapter<AdapterWatchnext.View
     @Override
     public void onBindViewHolder(@NonNull AdapterWatchnext.ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+watchnextmovies.get(position).v_poster).into(holder.img);
+
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(context,Movies.class);
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
