@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="158dp"
             android:layout_marginTop="10dp"
-            android:text="122"
+            android:text="12"
             android:textColor="@color/white"
             android:textStyle="bold" />
         <TextView
@@ -44,7 +44,7 @@
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_alignRight="@id/number"
-            android:layout_marginEnd="-30dp"
+            android:layout_marginEnd="-23dp"
             />
 
 
@@ -66,21 +66,19 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name"
             android:layout_marginStart="158dp"
-            android:text="3355555"
-            android:textStyle="bold"
             android:layout_marginTop="3dp"
-            />
+            android:text="3355555"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="min"
-            android:textStyle="bold"
             android:layout_below="@+id/name"
             android:layout_alignRight="@id/time"
-            android:layout_marginEnd="-30dp"
             android:layout_marginTop="3dp"
-            />
+            android:layout_marginEnd="-27dp"
+            android:text="min"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/img"

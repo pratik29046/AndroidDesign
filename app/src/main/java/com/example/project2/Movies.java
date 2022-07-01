@@ -1,5 +1,6 @@
 package com.example.project2;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,7 +10,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,7 +46,7 @@ public class Movies extends AppCompatActivity {
     ImageView imageView;
     TextView textView,textView1,textView2;
     TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors;
-    ImageView img1,back;
+    ImageView img1,back,play;
 
     List<SlideModel> slideModels=new ArrayList<SlideModel>();
     ImageSlider imageSlider;
@@ -53,6 +57,7 @@ public class Movies extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movies);
 
+        play=findViewById(R.id.img5);
         back=findViewById(R.id.img1);
         img1=findViewById(R.id.img3);
         Title=findViewById(R.id.text2);
@@ -90,9 +95,6 @@ public class Movies extends AppCompatActivity {
             }
         });
 
-
-
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +107,6 @@ public class Movies extends AppCompatActivity {
 //        Title.setText(content.name);
 //        Age.setText(content.age_rating);
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT));
-
 
         WebService.getClient().getMoviePage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<MovieRootnames>() {
             @Override
@@ -132,6 +133,18 @@ public class Movies extends AppCompatActivity {
                 adp(data.watch_next);
                 Log.d("TAG", "sirsss: "+data.watch_next);
 
+                play.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                show();
+                        if(data.membership=="true"){
+                            show();
+                        }else{
+                            shows();
+                        }
+                    }
+                });
+
             }
             @Override
             public void onFailure(Call<MovieRootnames> call, Throwable t) {
@@ -155,6 +168,71 @@ public class Movies extends AppCompatActivity {
 
     public void back(){
         super.onBackPressed();
+    }
+
+    public void show(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
+        View mView = getLayoutInflater().inflate(R.layout.popups,null);
+        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        Window window = alertDialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+        wlp.gravity = Gravity.BOTTOM;
+        wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        window.setAttributes(wlp);
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start=new Intent(Movies.this,MainActivity13.class);
+                startActivity(start);
+                alertDialog.dismiss();
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+
+        });
+        alertDialog.show();
+    }
+
+    public void shows(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
+        View mView = getLayoutInflater().inflate(R.layout.popups_subscribe,null);
+        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        Window window = alertDialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+        wlp.gravity = Gravity.BOTTOM;
+        wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
+        window.setAttributes(wlp);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start=new Intent(Movies.this,MainActivity4.class);
+                startActivity(start);
+                alertDialog.dismiss();
+            }
+        });
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+
+        });
+        alertDialog.show();
     }
 
 }
