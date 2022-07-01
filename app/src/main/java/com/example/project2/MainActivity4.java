@@ -60,7 +60,6 @@ public class MainActivity4 extends AppCompatActivity {
         emailid=findViewById(R.id.emailId);
         circleImageView=findViewById(R.id.profilePic);
 
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -95,7 +94,6 @@ public class MainActivity4 extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-
         GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
         String id=account.getIdToken();
         Log.d("TAG", "onCreate: "+id);
@@ -104,7 +102,6 @@ public class MainActivity4 extends AppCompatActivity {
              @Override
              public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 
-//                 Log.d("TAG", "onResponse: "+response.body());
              }
              @Override
              public void onFailure(Call<TokenID> call, Throwable t) {
@@ -112,8 +109,7 @@ public class MainActivity4 extends AppCompatActivity {
              }
          });
 
-
-        if(account!=null){
+        if(account != null){
             String name=account.getDisplayName();
             String email=account.getEmail();
            names.setText(name);
@@ -125,23 +121,12 @@ public class MainActivity4 extends AppCompatActivity {
         Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
                 account.getPhotoUrl()+ "  id "+account.getId() +" tokenId "+account.getIdToken());
 
-
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signOut();
             }
         });
-
-
-
-//        call the method back
-        /*relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                back();
-            }
-        });*/
 
 
         WebService.getClient().get_planData().enqueue(new Callback<MembershipPlanRoot>() {
@@ -168,6 +153,7 @@ public class MainActivity4 extends AppCompatActivity {
         recyclerView.setAdapter(adapterPlans);
     }
 
+
     void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -178,7 +164,6 @@ public class MainActivity4 extends AppCompatActivity {
                     }
                 });
     }
-
 
     //method of backpress
     public void back(){

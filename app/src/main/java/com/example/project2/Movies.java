@@ -107,10 +107,9 @@ public class Movies extends AppCompatActivity {
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT));
 
 
-        WebService.getClient().getMoviePage(content.name.toLowerCase(Locale.ROOT)).enqueue(new Callback<MovieRootnames>() {
+        WebService.getClient().getMoviePage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<MovieRootnames>() {
             @Override
             public void onResponse(Call<MovieRootnames> call, Response<MovieRootnames> response) {
-
 //                Log.d("TAG", "onResponse: "+response.body());
                 MovieRootnames data=response.body();
                 Picasso.get().load("https://katto.in"+data.v_poster).into(img1);

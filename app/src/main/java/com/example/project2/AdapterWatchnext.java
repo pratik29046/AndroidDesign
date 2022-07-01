@@ -1,5 +1,6 @@
 package com.example.project2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,7 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Category;
+import com.example.project2.POJO.Content;
 import com.example.project2.POJO.Watchnextmovies;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -26,7 +29,6 @@ public class AdapterWatchnext extends RecyclerView.Adapter<AdapterWatchnext.View
 
     }
 
-
     @NonNull
     @Override
     public AdapterWatchnext.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,11 +40,20 @@ public class AdapterWatchnext extends RecyclerView.Adapter<AdapterWatchnext.View
     public void onBindViewHolder(@NonNull AdapterWatchnext.ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+watchnextmovies.get(position).v_poster).into(holder.img);
 
+       final Watchnextmovies temp = watchnextmovies.get(position);
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(context,Movies.class);
+                Intent intent= new Intent(context,MainActivity6.class);
+                Content content= new Content();
+                 content.name=temp.name;
+                 content.age_rating=temp.age_rating;
+                 content.url=temp.url;
+                 content.poster=temp.poster;
+                 content.v_poster=temp.v_poster;
+                 intent.putExtra("content", new Gson().toJson(content));
                 context.startActivity(intent);
+                ((Activity)context).finish();
 
             }
         });

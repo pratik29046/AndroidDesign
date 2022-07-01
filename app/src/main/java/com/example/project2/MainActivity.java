@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
+import com.example.project2.POJO.RawData_POJO;
+import com.example.project2.POJO.TokenID;
 import com.example.project2.POJO.WelcomeBanner;
 import com.example.project2.POJO.WelcomeRoot;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.information_background));
         setContentView(R.layout.activity_main);
-        signInButton=findViewById(R.id.login);
+        signInButton = findViewById(R.id.login);
 
 
 //         time=new Timer();
@@ -70,16 +73,15 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("7654007831-971a1qee7lcgrt19ph2cbsd413qjdkik.apps.googleusercontent.com")
                 .requestEmail()
+                .requestIdToken("7654007831-971a1qee7lcgrt19ph2cbsd413qjdkik.apps.googleusercontent.com")
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
-        if(account!=null){
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        if (account != null) {
             navigateToSecodeActivity();
 
-
         }
-
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,4 +142,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+//        ((Activity)getApplicationContext()).finish();
+    }
 }
