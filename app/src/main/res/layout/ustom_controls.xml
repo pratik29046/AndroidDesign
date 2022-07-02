@@ -39,10 +39,10 @@
                 android:id="@+id/back"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginHorizontal="160dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="19dp"
                 android:src="@drawable/playerback"
-                app:layout_constraintEnd_toStartOf="@id/rew"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
             </ImageView>
@@ -52,11 +52,11 @@
                 android:id="@+id/exo_playback_speed"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_marginStart="205dp"
-                android:layout_marginEnd="90dp"
+                android:layout_marginStart="280dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/speedvideoplayer"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:tint="@color/white"
 
@@ -68,15 +68,15 @@
                 android:id="@+id/speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="27dp"
                 android:text="1X"
                 android:textColor="@color/white"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/exo_playback_speed"
-                android:layout_marginBottom="27dp"
-                android:textSize="20dp"
-                android:layout_marginEnd="8dp"
 
                 >
 
@@ -86,11 +86,12 @@
                 android:id="@+id/exo_track_selection_view"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="205dp"
+                android:layout_marginEnd="280dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/exo_ic_settings"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:tint="@color/white">
 
             </ImageView>
@@ -140,12 +141,13 @@
                 android:id="@+id/fwd"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginEnd="200dp"
+                android:layout_marginStart="280dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_baseline_forward_10_24"
-                app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/exo_play"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/white">
 
             </ImageView>
@@ -155,11 +157,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginBottom="85dp"
+                android:layout_marginBottom="50dp"
                 android:text="00:0"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                >
 
             </TextView>
 
@@ -178,15 +183,18 @@
 
             <TextView
                 android:id="@+id/exo_position"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:textSize="20dp"
                 android:text="00"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/exo_duration"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintVertical_bias="0.0"
+                android:textStyle="bold"
+                >
 
             </TextView>
 
@@ -194,12 +202,13 @@
                 android:id="@+id/rew"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginStart="200dp"
+                android:layout_marginEnd="280dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_baseline_replay_10_24"
-                app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/exo_play"
+                app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/white">
 
             </ImageView>
@@ -229,16 +238,17 @@
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/exo_progress_placeholder"
-                android:layout_width="550dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="80dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:indeterminate="false"
-                app:trackThickness="20dp"
+                android:layout_marginEnd="-40dp"
+                android:layout_marginStart="-40dp"
+                android:indeterminate="true"
                 android:progress="45"
-                >
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/exo_position"
+                app:layout_constraintStart_toStartOf="@id/exo_duration"
+                app:trackThickness="80dp">
 
 
             </com.google.android.material.progressindicator.LinearProgressIndicator>

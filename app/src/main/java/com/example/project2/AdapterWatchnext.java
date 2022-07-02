@@ -41,22 +41,44 @@ public class AdapterWatchnext extends RecyclerView.Adapter<AdapterWatchnext.View
         Picasso.get().load("https://katto.in"+watchnextmovies.get(position).v_poster).into(holder.img);
 
        final Watchnextmovies temp = watchnextmovies.get(position);
-        holder.img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(context,MainActivity6.class);
-                Content content= new Content();
-                 content.name=temp.name;
-                 content.age_rating=temp.age_rating;
-                 content.url=temp.url;
-                 content.poster=temp.poster;
-                 content.v_poster=temp.v_poster;
-                 intent.putExtra("content", new Gson().toJson(content));
-                context.startActivity(intent);
-                ((Activity)context).finish();
 
-            }
-        });
+       if(watchnextmovies.get(position).url.contains("series")) {
+           holder.img.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent = new Intent(context, MainActivity6.class);
+                   Content content = new Content();
+                   content.name = temp.name;
+                   content.age_rating = temp.age_rating;
+                   content.url = temp.url;
+                   content.poster = temp.poster;
+                   content.v_poster = temp.v_poster;
+                   intent.putExtra("content", new Gson().toJson(content));
+                   context.startActivity(intent);
+                   ((Activity) context).finish();
+
+               }
+           });
+       }else if(watchnextmovies.get(position).url.contains("movies")){
+           holder.img.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent = new Intent(context, Movies.class);
+                   Content content = new Content();
+                   content.name = temp.name;
+                   content.age_rating = temp.age_rating;
+                   content.url = temp.url;
+                   content.poster = temp.poster;
+                   content.v_poster = temp.v_poster;
+                   intent.putExtra("content", new Gson().toJson(content));
+                   context.startActivity(intent);
+                   ((Activity) context).finish();
+
+               }
+           });
+       }
+
+
     }
 
     @Override

@@ -145,6 +145,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-//        ((Activity)getApplicationContext()).finish();
+        ((Activity)getApplicationContext()).finish();
     }
 }

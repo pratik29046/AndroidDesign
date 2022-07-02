@@ -38,9 +38,6 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".MainActivity12"
-            android:exported="false" />
-        <activity
             android:name=".TrackSelectionDialog"
             android:exported="false"
             tools:ignore="Instantiatable" />

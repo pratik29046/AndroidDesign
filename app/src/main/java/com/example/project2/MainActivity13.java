@@ -352,18 +352,14 @@ public class MainActivity13 extends AppCompatActivity implements GestureDetector
 //            two.setVisibility(View.GONE);
 //            three.setVisibility(View.GONE);
             four.setVisibility(View.GONE);
-//            five.setVisibility(View.GONE);
-//            six.setVisibility(View.GONE);
-//            seven.setVisibility(View.GONE);
+
+
         }else
         {
 //            one.setVisibility(View.VISIBLE);
 //            two.setVisibility(View.VISIBLE);
 //            three.setVisibility(View.VISIBLE);
             four.setVisibility(View.VISIBLE);
-//            five.setVisibility(View.GONE);
-//            six.setVisibility(View.GONE);
-//            seven.setVisibility(View.GONE);
 
         }
 

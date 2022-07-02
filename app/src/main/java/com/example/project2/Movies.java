@@ -27,6 +27,8 @@ import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MovieRootnames;
 import com.example.project2.POJO.MoviesRoot;
 import com.example.project2.POJO.Watchnextmovies;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -47,7 +49,8 @@ public class Movies extends AppCompatActivity {
     TextView textView,textView1,textView2;
     TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors;
     ImageView img1,back,play;
-
+    TabLayout tab;
+    TabItem t1,t2;
     List<SlideModel> slideModels=new ArrayList<SlideModel>();
     ImageSlider imageSlider;
     private String url="https://katto.in";
@@ -71,12 +74,15 @@ public class Movies extends AppCompatActivity {
         genres=findViewById(R.id.text22);
         directors=findViewById(R.id.text13);
         imageSlider=findViewById(R.id.post);
-        textView1=findViewById(R.id.text17);
-        textView2=findViewById(R.id.text16);
+//        textView1=findViewById(R.id.text17);
+//        textView2=findViewById(R.id.text16);
         textView=findViewById(R.id.moretrailers);
         recyclerView=findViewById(R.id.watchnext);
+        t1=findViewById(R.id.b1);
+        t2=findViewById(R.id.b2);
+        tab=findViewById(R.id.text17);
 
-        textView1.setOnClickListener(new View.OnClickListener() {
+       /* textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView1.setTextColor(Color.parseColor("#FF0000"));
@@ -93,7 +99,29 @@ public class Movies extends AppCompatActivity {
                 recyclerView.setVisibility(View.GONE);
                 textView.setVisibility(View.VISIBLE);
             }
+        });*/
+
+        tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if(tab.getPosition()==0){
+                    recyclerView.setVisibility(View.GONE);
+                    textView.setVisibility(View.VISIBLE);
+                }else if(tab.getPosition()==1){
+                    textView.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                }
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
         });
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

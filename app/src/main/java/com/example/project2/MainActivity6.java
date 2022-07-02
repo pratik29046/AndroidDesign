@@ -29,6 +29,8 @@ import com.example.project2.POJO.SeriesRootnames;
 import com.example.project2.POJO.TokenID;
 import com.example.project2.POJO.Watchnextmovies;
 import com.example.project2.POJO.Watchnextseries;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
@@ -50,7 +52,8 @@ public class MainActivity6 extends AppCompatActivity {
     TextView textView,text15,text17;
     TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors;
     ImageView img1, img2;
-
+    TabLayout tab;
+    TabItem t1,t2;
     private String s;
 
     @Override
@@ -70,28 +73,57 @@ public class MainActivity6 extends AppCompatActivity {
         Dec=findViewById(R.id.text9);
         starring=findViewById(R.id.text11);
         directors=findViewById(R.id.text13);
-        text15=findViewById(R.id.text15);
-        text17=findViewById(R.id.text17);
+//        text15=findViewById(R.id.text15);
+//        text17=findViewById(R.id.text17);
+        t1=findViewById(R.id.b1);
+        t2=findViewById(R.id.b2);
+        tab=findViewById(R.id.text17);
 
 
-        text15.setOnClickListener(new View.OnClickListener() {
+//        text15.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                text15.setTextColor(Color.parseColor("#FF0000"));
+//                text17.setTextColor(Color.parseColor("#FFFFFF"));
+//                recyclerView.setVisibility(View.VISIBLE);
+//                recyclerView1.setVisibility(View.GONE);
+//            }
+//        });
+//        text17.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                text15.setTextColor(Color.parseColor("#FFFFFF"));
+//                text17.setTextColor(Color.parseColor("#FF0000"));
+//                recyclerView.setVisibility(View.GONE);
+//                recyclerView1.setVisibility(View.VISIBLE);
+//            }
+//        });
+
+
+        tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View v) {
-                text15.setTextColor(Color.parseColor("#FF0000"));
-                text17.setTextColor(Color.parseColor("#FFFFFF"));
-                recyclerView.setVisibility(View.VISIBLE);
-                recyclerView1.setVisibility(View.GONE);
+            public void onTabSelected(TabLayout.Tab tab) {
+                if(tab.getPosition()==0){
+                    recyclerView.setVisibility(View.VISIBLE);
+                    recyclerView1.setVisibility(View.GONE);
+                }else if(tab.getPosition()==1){
+                    recyclerView.setVisibility(View.GONE);
+                    recyclerView1.setVisibility(View.VISIBLE);
+                }
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
-        text17.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                text15.setTextColor(Color.parseColor("#FFFFFF"));
-                text17.setTextColor(Color.parseColor("#FF0000"));
-                recyclerView.setVisibility(View.GONE);
-                recyclerView1.setVisibility(View.VISIBLE);
-            }
-        });
+
+
+
+
 
 
 

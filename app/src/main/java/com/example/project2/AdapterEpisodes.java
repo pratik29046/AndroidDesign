@@ -39,6 +39,7 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
         holder.d.setText(userList2.get(position).content_link);
         holder.no.setText(userList2.get(position).number);
         holder.time.setText(userList2.get(position).number);
+
     }
 
     @Override
