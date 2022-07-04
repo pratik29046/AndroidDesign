@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/back"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#220C0303">
 
-    <RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rele1"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/boom"
         android:layout_alignParentEnd="true"
-        android:background="@color/black">
+        android:background="@drawable/kattobgw">
+
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profilePic"
@@ -57,17 +54,6 @@
             android:layout_marginBottom="10dp"
             />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_above="@+id/sub"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="80dp"
-            android:src="@drawable/katto11"
-            android:text="KATTO"
-            android:textColor="#FFC107"
-            android:textSize="25dp" />
-
         <TextView
             android:id="@+id/sub"
             android:layout_width="wrap_content"
@@ -100,7 +86,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="25dp"
             android:layout_above="@+id/p2"
             />
 
@@ -109,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Unlimited Documentaries"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="60dp"
             android:textSize="15dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
@@ -125,7 +111,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="25dp"
             android:layout_above="@+id/p3"
             />
 
@@ -134,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/v3"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="10dp"
             android:text="Full HD"
             android:textColor="@color/white"
@@ -150,7 +136,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="25dp"
             android:layout_above="@+id/p4"
             />
 
@@ -159,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Web Series &amp; Blockbuster Movies"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="60dp"
             android:textSize="15dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
@@ -173,32 +159,30 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="25dp"
             android:layout_above="@+id/plans"
             android:layout_marginBottom="6dp"
             />
 
-        <TextView
-            android:id="@+id/v4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/plans"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Watch on Mobile, Laptop"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="6dp"
-            />
+    <TextView
+        android:id="@+id/v4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/plans"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:text="Watch on Mobile, Laptop"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/plans"
-            android:layout_width="wrap_content"
-            android:layout_height="280dp"
-            android:layout_above="@+id/l5"
-            />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plans"
+        android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        android:layout_above="@+id/l5" />
 
         <LinearLayout
             android:id="@+id/l5"
@@ -283,7 +267,7 @@
             android:id="@+id/l7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/boom"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="8dp"
@@ -313,9 +297,6 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
-
-    </RelativeLayout>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/boom"
         android:layout_width="match_parent"
@@ -329,3 +310,5 @@
         />
 
 </RelativeLayout>
+
+

@@ -132,7 +132,7 @@ public class Movies extends AppCompatActivity {
                 genres.setText(data.genres);
                 directors.setText(data.directors);
                 trailerNames.setText(data.name);
-                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
+                Picasso.get().load("https://katto.in"+data.v_poster).into(moretrailers);
 
                 adp(data.watch_next);
 

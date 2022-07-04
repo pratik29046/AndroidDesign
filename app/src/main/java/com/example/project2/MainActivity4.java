@@ -52,7 +52,7 @@ public class MainActivity4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         textView=findViewById(R.id.sub);
-        relativeLayout=findViewById(R.id.back);
+//        relativeLayout=findViewById(R.id.back);
         bottomNavigationView=findViewById(R.id.boom);
         bottomNavigationView.setSelectedItemId(R.id.menu);
         logout=findViewById(R.id.logout);
@@ -146,7 +146,7 @@ public class MainActivity4 extends AppCompatActivity {
 
     public void adp(List<MembershipPlan> membershipPlans){
         recyclerView=findViewById(R.id.plans);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
         adapterPlans=new AdapterPlans(this,membershipPlans);

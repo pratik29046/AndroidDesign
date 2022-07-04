@@ -4,283 +4,79 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/rounded_cornor_border_plans"
-        android:padding="10dp">
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/card_plan"
+        android:padding="15dp"
+        android:foregroundGravity="center"
+        android:foreground="#CD1D1D"
+        >
 
         <TextView
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="Plan Name"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
-            android:text="3 Months"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/month"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:text="₹ 1499.00"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold"
 
             />
 
-        <ImageView
-            android:id="@+id/p1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            android:layout_below="@+id/month"
-            />
-
-        <TextView
-            android:id="@+id/v1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Unlimited Documentaries"
-            android:layout_marginStart="40dp"
-            android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_below="@+id/month"
-            />
-
-
-
-        <ImageView
-            android:id="@+id/p2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            android:layout_below="@+id/p1"
-            />
-
-        <TextView
-            android:id="@+id/v2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/v1"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Full HD"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-
-
-
-        <ImageView
-            android:id="@+id/p3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            android:layout_below="@+id/p2"
-            />
-
-        <TextView
-            android:id="@+id/v3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/v2"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Web Series &amp; Blockbuster Movies"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/p4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            android:layout_below="@+id/p3"
-            android:layout_marginBottom="6dp"
-            />
-
-        <TextView
-            android:id="@+id/v4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/v3"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Watch on Mobile, Laptop"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <!--<TextView
-            android:id="@+id/ruppes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="₹"
-            android:layout_below="@+id/month"
-            android:textColor="@color/white"
-            android:textSize="25dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            />-->
-
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/v4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="149.00"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold"
-
-            />
-
-        <!--<View
-            android:id="@+id/views"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/ruppes"
-            android:layout_marginTop="5dp"
-            android:background="#FFC107" />-->
-
-        <!-- <ImageView
-            android:id="@+id/img1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_check_circle_24"
-            android:layout_below="@+id/views"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="4dp"
-            />
-
-        <TextView
-            android:id="@+id/all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/views"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="5dp"
-            android:text="All content access"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/img2"-->
-        <!--            android:layout_width="25dp"-->
-        <!--            android:layout_height="25dp"-->
-        <!--            android:layout_below="@+id/month"-->
-        <!--            android:layout_alignRight="@+id/price"-->
-        <!--            android:layout_marginTop="7dp"-->
-        <!--            android:layout_marginEnd="-120dp"-->
-        <!--            android:src="@drawable/ic_baseline_check_circle_24"-->
-        <!--            />-->
-
-        <!--
-        <TextView
-            android:id="@+id/valid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/month"
-            android:layout_alignRight="@id/price"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="-80dp"
-            android:text="Valid for "
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />
--->
-
         <TextView
             android:id="@+id/numberOfDays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/price"
+            android:layout_marginStart="25dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:text="Valid for 180 days Plan"
+            android:text="Valid for 18000 days Plan"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="italic" />
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/days"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_below="@+id/month"-->
-        <!--            android:layout_alignRight="@+id/numberOfDays"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:layout_marginEnd="-35dp"-->
-        <!--            android:text="days"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="15dp"-->
-        <!--            android:textStyle="bold" />-->
-
-        <!--        <LinearLayout-->
-        <!--            android:id="@+id/buy"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_below="@+id/numberOfDays"-->
-        <!--            android:layout_centerHorizontal="true"-->
-        <!--            android:layout_marginStart="5dp"-->
-        <!--            android:layout_marginTop="12dp"-->
-        <!--            android:layout_marginEnd="5dp"-->
-        <!--            android:layout_marginBottom="10dp"-->
-        <!--            android:background="@drawable/rounded_cornor_yellow"-->
-        <!--            android:orientation="horizontal">-->
-
-        <!--            <TextView-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="30dp"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:layout_marginStart="22dp"-->
-        <!--                android:layout_marginLeft="12dp"-->
-        <!--                android:layout_weight="14"-->
-        <!--                android:text="Buy"-->
-        <!--                android:textSize="20dp"-->
-        <!--                android:textStyle="bold" />-->
-
-        <!--            <ImageView-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="30dp"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:layout_marginStart="55dp"-->
-        <!--                android:layout_weight="5"-->
-        <!--                android:src="@drawable/ic_baseline_arrow_right_alt_24" />-->
-
 
         <TextView
             android:id="@+id/buy"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@+id/numberOfDays"
+            android:layout_below="@id/numberOfDays"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
-            android:background="@color/white"
             android:gravity="center"
             android:text="Continue with 999"
+            android:background="@drawable/card_plan"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
-        <!--        </LinearLayout>-->
+
 
     </RelativeLayout>
 
 </RelativeLayout>
+
