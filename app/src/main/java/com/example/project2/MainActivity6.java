@@ -259,8 +259,8 @@ public class MainActivity6 extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent start=new Intent(MainActivity6.this,MainActivity13.class);
-//                startActivity(start);
+                Intent start=new Intent(MainActivity6.this,MainPlayerActivity.class);
+                startActivity(start);
                 alertDialog.dismiss();
             }
         });
