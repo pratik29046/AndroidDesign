@@ -25,11 +25,11 @@ public class MembershipPlan {
 
     @SerializedName("price")
     @Expose
-    public String price;
+    public float price;
 
     @SerializedName("validity")
     @Expose
-    public String validity;
+    public int validity;
 
     @SerializedName("purchase_url")
     @Expose

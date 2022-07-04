@@ -146,7 +146,7 @@ public class MainActivity4 extends AppCompatActivity {
 
     public void adp(List<MembershipPlan> membershipPlans){
         recyclerView=findViewById(R.id.plans);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.VERTICAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
         adapterPlans=new AdapterPlans(this,membershipPlans);

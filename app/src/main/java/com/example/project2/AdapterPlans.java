@@ -39,8 +39,11 @@ public class AdapterPlans extends RecyclerView.Adapter<AdapterPlans.View_Holder>
     @Override
     public void onBindViewHolder(@NonNull View_Holder holder, int position) {
         holder.name.setText(membershipPlans.get(position).name);
-        holder.price.setText(membershipPlans.get(position).price);
-        holder.validity.setText(membershipPlans.get(position).validity);
+//        holder.price.setText(membershipPlans.get(position).price);
+//        holder.validity.setText(membershipPlans.get(position).validity);
+        holder.price.setText(String.format("%s %s", context.getResources().getString(R.string.rupee), membershipPlans.get(position).price));
+        holder.validity.setText(String.format("Valid for %d days Plan", membershipPlans.get(position).validity));
+        holder.buy.setText(String.format("Continue with %s %s", context.getResources().getString(R.string.rupee), membershipPlans.get(position).price));
     }
 
     @Override
@@ -49,13 +52,14 @@ public class AdapterPlans extends RecyclerView.Adapter<AdapterPlans.View_Holder>
     }
 
     public class View_Holder extends RecyclerView.ViewHolder {
-        TextView name,price,validity;
+        TextView name,price,validity,buy;
         public View_Holder(@NonNull View itemView) {
             super(itemView);
 
             name=itemView.findViewById(R.id.month);
             price=itemView.findViewById(R.id.price);
             validity=itemView.findViewById(R.id.numberOfDays);
+            buy=itemView.findViewById(R.id.buy);
         }
     }
 }

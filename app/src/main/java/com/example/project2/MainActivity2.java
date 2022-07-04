@@ -125,8 +125,8 @@ public class MainActivity2 extends AppCompatActivity {
         linearLayoutplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),MainActivity13.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getApplicationContext(),MainActivity13.class);
+//                startActivity(intent);
             }
         });  // go to play video
 

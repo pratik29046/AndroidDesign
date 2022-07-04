@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="#220C0303">
 
-
     <RelativeLayout
         android:id="@+id/rele1"
         android:layout_width="340dp"
@@ -29,21 +28,21 @@
             android:src="@drawable/ic_baseline_person_24"
             app:civ_border_color="@color/white"
             app:civ_border_width="1dp"
-            app:civ_circle_background_color="#FFC107"
+            app:civ_circle_background_color="@color/information_background"
             tools:ignore="RtlHardcoded"
             android:layout_above="@+id/sub"
             />
-                <TextView
-                    android:id="@+id/names"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="name"
-                    android:textSize="15dp"
-                    android:textColor="@color/white"
-                    android:layout_alignLeft="@+id/profilePic"
-                    android:layout_marginStart="60dp"
-                    android:layout_above="@+id/emailId"
-                    />
+        <TextView
+            android:id="@+id/names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_alignLeft="@+id/profilePic"
+            android:layout_marginStart="60dp"
+            android:layout_above="@+id/emailId"
+            />
 
         <TextView
             android:id="@+id/emailId"
@@ -58,20 +57,16 @@
             android:layout_marginBottom="10dp"
             />
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="80dp"
-                android:src="@drawable/logo1"
-                android:text="KATTO"
-                android:textColor="#FFC107"
-                android:layout_alignParentRight="true"
-                android:textSize="25dp"
-                android:layout_above="@+id/sub"
-                />
-
-
-
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/sub"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="80dp"
+            android:src="@drawable/katto11"
+            android:text="KATTO"
+            android:textColor="#FFC107"
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/sub"
@@ -88,19 +83,122 @@
             android:id="@+id/rec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/plans"
+            android:layout_above="@+id/p1"
             android:layout_marginStart="8dp"
             android:layout_marginTop="-5dp"
             android:text="Recommended"
             android:textColor="@color/white"
             android:textSize="18dp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            android:layout_marginBottom="5dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_above="@+id/p2"
+            />
+
+        <TextView
+            android:id="@+id/v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlimited Documentaries"
+            android:layout_marginStart="40dp"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_above="@+id/v2"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_above="@+id/p3"
+            />
+
+        <TextView
+            android:id="@+id/v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/v3"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Full HD"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+
+
+        <ImageView
+            android:id="@+id/p3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_above="@+id/p4"
+            />
+
+        <TextView
+            android:id="@+id/v3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Web Series &amp; Blockbuster Movies"
+            android:layout_marginStart="40dp"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_above="@+id/v4"
+            />
+
+        <ImageView
+            android:id="@+id/p4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_above="@+id/plans"
+            android:layout_marginBottom="6dp"
+            />
+
+        <TextView
+            android:id="@+id/v4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/plans"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Watch on Mobile, Laptop"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/plans"
             android:layout_width="wrap_content"
-            android:layout_height="350dp"
-            android:layout_above="@+id/l5" />
+            android:layout_height="280dp"
+            android:layout_above="@+id/l5"
+            />
 
         <LinearLayout
             android:id="@+id/l5"
@@ -113,98 +211,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/cri"
-                    android:src="@drawable/ic_baseline_favorite_border_24" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="33dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/cri"
-                    android:src="@drawable/watchlist" />
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="33dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/cri"
-                    android:src="@drawable/plans"
-
-                    />
-
-                <!--                <ImageView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="30dp"-->
-                <!--                    android:layout_marginStart="33dp"-->
-                <!--                    android:layout_marginEnd="30dp"-->
-                <!--                    android:layout_weight="1"-->
-                <!--                    android:background="@drawable/cri"-->
-                <!--                    android:src="@drawable/ic_baseline_person_24" />-->
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:weightSum="3">
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginLeft="-9dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Favorite"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Watchlist"
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="-14dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Plans"
-                    android:textColor="@color/white" />
-
-
-                <!--                <TextView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginEnd="21dp"-->
-                <!--                    android:layout_weight="1"-->
-                <!--                    android:gravity="center"-->
-                <!--                    android:text=" Profile"-->
-                <!--                    android:textColor="@color/white" />-->
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -215,41 +221,49 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="-8dp"
                     android:text="____________________________________________________"
-                    android:textColor="#FF9800"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:text="Account"
-                    android:textColor="@color/white"
-                    android:textSize="17dp" />
+                    android:text="Invite a Friend"
+                    android:textColor="@color/information_background"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:text="App Setting"
-                    android:textColor="@color/white"
-                    android:textSize="17dp" />
+                    android:text="Parental Control"
+                    android:textColor="@color/information_background"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:text="Help"
-                    android:textColor="@color/white"
-                    android:textSize="17dp" />
+                    android:textColor="@color/information_background"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:id="@+id/logout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
-                    android:text="Sign Up/Log Out"
-                    android:textColor="@color/white"
-                    android:textSize="17dp" />
+                    android:text="Log Out"
+                    android:textColor="@color/information_background"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -258,7 +272,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="-8dp"
                     android:text="____________________________________________________"
-                    android:textColor="#FF9800"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -280,7 +294,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Terms Of Use"
-                android:textColor="#FF9800" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -288,7 +302,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:text="Version 1.1.20"
-                android:textColor="#FF9800" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -296,7 +310,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:text="Privacy Policy"
-                android:textColor="#FF9800" />
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

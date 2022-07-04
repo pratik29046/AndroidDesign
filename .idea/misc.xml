@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2285" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rounded_cornor_border_plans.xml" value="0.2285" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main13.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main2.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main4.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/bottomsheet.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/plans_subscription.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/popups_subscribe.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar_items.xml" value="0.1" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/track_selection_dialog.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/ustom_controls.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/background_movies.xml" value="0.1" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/backpressicon.xml" value="0.197" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/bottomsheetbackground.xml" value="0.113" />
