@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -42,16 +43,13 @@ import retrofit2.Response;
 
 public class Movies extends AppCompatActivity {
 
+    RelativeLayout relativeLayout1;
     RecyclerView recyclerView;
-    LinearLayoutManager layoutManager;
     AdapterWatchnext adapter;
-    ImageView imageView;
-    TextView textView,textView1,textView2;
-    TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors;
-    ImageView img1,back,play;
+    TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors,trailerNames;
+    ImageView img1,back,play,trailer,moretrailers,trailersPlay;
     TabLayout tab;
     TabItem t1,t2;
-    List<SlideModel> slideModels=new ArrayList<SlideModel>();
     ImageSlider imageSlider;
     private String url="https://katto.in";
 
@@ -60,6 +58,8 @@ public class Movies extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movies);
 
+        relativeLayout1=findViewById(R.id.tra1);
+        trailer=findViewById(R.id.img6);
         play=findViewById(R.id.img5);
         back=findViewById(R.id.img1);
         img1=findViewById(R.id.img3);
@@ -74,41 +74,22 @@ public class Movies extends AppCompatActivity {
         genres=findViewById(R.id.text22);
         directors=findViewById(R.id.text13);
         imageSlider=findViewById(R.id.post);
-//        textView1=findViewById(R.id.text17);
-//        textView2=findViewById(R.id.text16);
-        textView=findViewById(R.id.moretrailers);
+        moretrailers=findViewById(R.id.moretrailers);
         recyclerView=findViewById(R.id.watchnext);
         t1=findViewById(R.id.b1);
         t2=findViewById(R.id.b2);
         tab=findViewById(R.id.text17);
-
-       /* textView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView1.setTextColor(Color.parseColor("#FF0000"));
-                textView2.setTextColor(Color.parseColor("#FFFFFF"));
-               textView.setVisibility(View.GONE);
-               recyclerView.setVisibility(View.VISIBLE);
-            }
-        });
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView1.setTextColor(Color.parseColor("#FFFFFF"));
-                textView2.setTextColor(Color.parseColor("#FF0000"));
-                recyclerView.setVisibility(View.GONE);
-                textView.setVisibility(View.VISIBLE);
-            }
-        });*/
+        trailerNames=findViewById(R.id.textTr);
+        trailersPlay=findViewById(R.id.trailersPlay);
 
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 if(tab.getPosition()==0){
                     recyclerView.setVisibility(View.GONE);
-                    textView.setVisibility(View.VISIBLE);
+                    relativeLayout1.setVisibility(View.VISIBLE);
                 }else if(tab.getPosition()==1){
-                    textView.setVisibility(View.GONE);
+                    relativeLayout1.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
                 }
             }
@@ -141,7 +122,7 @@ public class Movies extends AppCompatActivity {
             public void onResponse(Call<MovieRootnames> call, Response<MovieRootnames> response) {
 //                Log.d("TAG", "onResponse: "+response.body());
                 MovieRootnames data=response.body();
-                Picasso.get().load("https://katto.in"+data.v_poster).into(img1);
+                Picasso.get().load("https://katto.in"+data.poster).into(img1);
                 Title.setText(data.name);
                 Age.setText(data.age_rating);
                 Dec.setText(data.description);
@@ -150,26 +131,63 @@ public class Movies extends AppCompatActivity {
                 starring.setText(data.starring);
                 genres.setText(data.genres);
                 directors.setText(data.directors);
-
-//                for (int i = 0 ; i < data.watch_next.size() ; i ++) {
-//                    slideModels.add(new SlideModel(url+data.watch_next.get(i).poster, ScaleTypes.FIT));
-////                    response.body().getBanners().get(i).get();
-//
-//                }
-//                imageSlider.setImageList(slideModels);
+                trailerNames.setText(data.name);
+                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
 
                 adp(data.watch_next);
-                Log.d("TAG", "sirsss: "+data.watch_next);
 
                 play.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                show();
-                        if(data.membership=="true"){
-                            show();
+
+                        if(data.membership=="false"){
+
+                            final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
+                            View mView = getLayoutInflater().inflate(R.layout.popups,null);
+                            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+                            TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+                            alert.setView(mView);
+                            final AlertDialog alertDialog = alert.create();
+                            alertDialog.setCanceledOnTouchOutside(false);
+                            Window window = alertDialog.getWindow();
+                            WindowManager.LayoutParams wlp = window.getAttributes();
+                            wlp.gravity = Gravity.BOTTOM;
+                            wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+                            window.setAttributes(wlp);
+
+                            btn_cancel.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent start=new Intent(Movies.this,MainPlayerActivity.class);
+                                    start.putExtra("link",data.content_link);
+                                    start.putExtra("name",data.name);
+                                    startActivity(start);
+                                    alertDialog.dismiss();
+                                }
+                            });
+                            btn_okay.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    alertDialog.dismiss();
+                                }
+
+                            });
+                            alertDialog.show();
+
                         }else{
                             shows();
                         }
+                    }
+                });
+
+
+                trailersPlay.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
+                        intent1.putExtra("link",data.trailer_link);
+                        startActivity(intent1);
                     }
                 });
 
@@ -198,7 +216,7 @@ public class Movies extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void show(){
+  /*  public void show(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
         View mView = getLayoutInflater().inflate(R.layout.popups,null);
         TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
@@ -216,7 +234,7 @@ public class Movies extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent start=new Intent(Movies.this,MainActivity13.class);
+//                Intent start=new Intent(Movies.this,MainPlayerActivity.class);
 //                startActivity(start);
                 alertDialog.dismiss();
             }
@@ -229,7 +247,7 @@ public class Movies extends AppCompatActivity {
 
         });
         alertDialog.show();
-    }
+    }*/
 
     public void shows(){
         final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);

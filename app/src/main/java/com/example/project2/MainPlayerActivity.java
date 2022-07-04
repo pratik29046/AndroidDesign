@@ -2,6 +2,7 @@ package com.example.project2;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.database.Cursor;
@@ -97,22 +98,27 @@ public class MainPlayerActivity extends AppCompatActivity {
 
     //    private ArrayList<VideoModel> videoModels = new ArrayList<>();
 //String url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-    String url = "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8";
-//    String url1 = "https://play.dyntube.io/videos/E9nTksPigkCzsfSBsrJP4w"; //Kempe Gowda
+//    String url = "https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/master.m3u8";
+////    String url1 = "https://play.dyntube.io/videos/E9nTksPigkCzsfSBsrJP4w"; //Kempe Gowda
+
+    String url = "http://devimages.apple.com/samplecode/adDemo/ad.m3u8";
+    String url1 = "https://play.dyntube.io/videos/E9nTksPigkCzsfSBsrJP4w"; //Kempe Gowda
 
     private final String[] aspectmode = {
             "FIT",
             "FILL",
             "ZOOM",
             "FIXED HEIGHT",
-            "FIXED WIDTH"};
+            "FIXED WIDTH"
+    };
 
     private final int[] resource = {
             R.drawable.ic_zoom_stretch,
             R.drawable.ic_baseline_crop_3_2_24,
             R.drawable.ic_crop_white_24dp,
             R.drawable.ic_zoom_inside,
-            R.drawable.ic_zoom_original};
+            R.drawable.ic_zoom_original
+    };
 
     protected PowerManager.WakeLock mWakeLock;
 
@@ -131,8 +137,8 @@ public class MainPlayerActivity extends AppCompatActivity {
             this.mWakeLock.acquire();
 
             Log.d("Player oncreate", "oncreate");
-//            url = getIntent().getStringExtra("PATH");
-//            name = getIntent().getStringExtra("MOVIE_NAME");
+            url = getIntent().getStringExtra("link");
+//            name = getIntent().getStringExtra("name");
             Log.d("PlayerPATH :", "App :" + url + ":" + name);
 
             scaleFactor = 1.0f;
@@ -768,6 +774,8 @@ public class MainPlayerActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+
 
     public void intializePlayer() {
         try {

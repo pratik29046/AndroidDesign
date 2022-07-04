@@ -5,11 +5,15 @@
       <map>
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2285" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rounded_cornor_border_plans.xml" value="0.2285" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.192" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main13.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main2.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main4.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main7.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/bottomsheet.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/chlidcategoies_row.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/main_player_activity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/movies.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/plans_subscription.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/popups_subscribe.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar.xml" value="0.23645833333333333" />

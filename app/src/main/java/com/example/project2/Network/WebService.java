@@ -124,7 +124,7 @@ public class WebService {
                 "User-Agent: Thunder Client (https://www.thunderclient.com)",
                 "Authorization: Token 49d25226c7c1359cfe00fea419d93ce27f324fc1 "
         })
-        Call<Episode> get_EpisodeData();
+        Call<Episode>get_EpisodeData();
 
         @GET("api/content/movie")
         @Headers({

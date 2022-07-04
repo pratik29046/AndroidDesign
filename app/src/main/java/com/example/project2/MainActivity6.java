@@ -158,8 +158,8 @@ public class MainActivity6 extends AppCompatActivity {
         Content content = new Gson().fromJson(intent.getStringExtra("content"), Content.class);
 //        Series series = new Gson().fromJson(intent.getStringExtra("series"), Series.class);
 //        img1.setImageResource(content.poster);
-
-        SeriesRootnames seriesRootnames = new Gson().fromJson(intent.getStringExtra("names"), SeriesRootnames.class);
+//        Episode episode=new Gson().fromJson(intent.getStringExtra("episodes"),Episode.class);
+//        SeriesRootnames seriesRootnames = new Gson().fromJson(intent.getStringExtra("names"), SeriesRootnames.class);
 //        data1();\
 
         /*img2.setOnClickListener(new View.OnClickListener() {
@@ -173,6 +173,11 @@ public class MainActivity6 extends AppCompatActivity {
                 }
             }
         });*/
+
+
+
+
+
 
 
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
@@ -191,6 +196,7 @@ public class MainActivity6 extends AppCompatActivity {
                 directors.setText(data.directors);
                 adp1(data.watch_next);
                 adp(data.episodes);
+
 //                Log.d("TAG", "sirsss: "+data.episodes);
 
 
@@ -199,6 +205,7 @@ public class MainActivity6 extends AppCompatActivity {
                     public void onClick(View v) {
 //                show();
                         if(data.membership=="false"){
+
                             show();
                         }else{
                             shows();
