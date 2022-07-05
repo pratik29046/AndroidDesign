@@ -27,7 +27,18 @@ public class Searchbar extends AppCompatActivity {
         setContentView(R.layout.searchbar);
         recyclerView=findViewById(R.id.recycler_search);
 
+        WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
+            @Override
+            public void onResponse(Call<Root> call, Response<Root> response) {
+//                for (int i = 0 ; i < response.body().categories.get().size() ; i ++)
+//                adp(response.body().categories.get(0).content);
+            }
 
+            @Override
+            public void onFailure(Call<Root> call, Throwable t) {
+
+            }
+        });
 
 
     }

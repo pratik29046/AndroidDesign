@@ -38,9 +38,8 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
     public void onBindViewHolder(@NonNull AdapterEpisodes.ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+userList2.get(position).poster).into( holder.vs);
         holder.n.setText(userList2.get(position).name);
-        holder.d.setText(userList2.get(position).content_link);
         holder.no.setText(userList2.get(position).number);
-        holder.time.setText(userList2.get(position).number);
+        holder.time.setText(userList2.get(position).duration);
 
         final Episode temp = userList2.get(position);
 
@@ -64,7 +63,6 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView vs;
         private TextView n;
-        private  TextView d;
         private TextView no,time;
 
 
@@ -72,7 +70,6 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
             super(itemView);
             vs=itemView.findViewById(R.id.video1);
             n=itemView.findViewById(R.id.name);
-            d=itemView.findViewById(R.id.desc);
             no=itemView.findViewById(R.id.number);
             time=itemView.findViewById(R.id.time);
         }

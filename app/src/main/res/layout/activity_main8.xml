@@ -70,15 +70,6 @@
             android:text="3355555"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            android:layout_alignRight="@id/time"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="-27dp"
-            android:text="min"
-            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/img"
@@ -89,19 +80,19 @@
             android:layout_marginEnd="10dp"
             android:src="@drawable/download_recy" />
 
-        <com.borjabravo.readmoretextview.ReadMoreTextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/video1"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="Video is an electronic medium for the recording, copying, playback, broadcasting, and display of moving visual media"
-            app:colorClickableText="@color/white"
-            app:trimCollapsedText=" @string/read_more"
-            app:trimExpandedText=" @string/read_less"
-            app:trimLength="30"
-            app:trimMode="trimModeLength" />
+<!--        <com.borjabravo.readmoretextview.ReadMoreTextView-->
+<!--            android:id="@+id/desc"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/video1"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="Video is an electronic medium for the recording, copying, playback, broadcasting, and display of moving visual media"-->
+<!--            app:colorClickableText="@color/white"-->
+<!--            app:trimCollapsedText=" @string/read_more"-->
+<!--            app:trimExpandedText=" @string/read_less"-->
+<!--            app:trimLength="30"-->
+<!--            app:trimMode="trimModeLength" />-->
 
     </RelativeLayout>
 
