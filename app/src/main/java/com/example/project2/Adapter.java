@@ -47,6 +47,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 //        final Category temp=mainPOJOSlist.get(position);
 //        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
+
+
     }
 
     @Override

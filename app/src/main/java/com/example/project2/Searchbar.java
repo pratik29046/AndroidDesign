@@ -28,6 +28,8 @@ public class Searchbar extends AppCompatActivity {
         recyclerView=findViewById(R.id.recycler_search);
 
 
+
+
     }
 
     public void adp(List<Content> contents){

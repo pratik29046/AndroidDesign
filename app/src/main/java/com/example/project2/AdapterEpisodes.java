@@ -42,6 +42,18 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
         holder.no.setText(userList2.get(position).number);
         holder.time.setText(userList2.get(position).number);
 
+        final Episode temp = userList2.get(position);
+
+        holder.vs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context1,MainPlayerActivity.class);
+                intent.putExtra("link",temp.content_link);
+                intent.putExtra("name",temp.name);
+                context1.startActivity(intent);
+            }
+        });
+
     }
 
     @Override

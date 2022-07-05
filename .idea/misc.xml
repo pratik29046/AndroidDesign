@@ -3,14 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/arrowleft.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/backpressicon.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/bottomsheetbackground.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/brightness4.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/btext.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/card_plan.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/close.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/colorroundbg.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/cri.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/cri2.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/download.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/download5.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/download_recy.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/downloadmenubar.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/downloadvideo.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/gradint.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/home.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_arrow_circle_down_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_arrow_circle_left_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_assignment_ind_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_brightness_6_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.2285" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_forward_10_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_fullscreen_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_linear_scale_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1975" />
@@ -20,18 +43,35 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_circle_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_circle_outline_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_running_with_errors_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_screen_rotation_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_tornado_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_video_settings_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_volume_off_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_volume_up_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_watch_later_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/information_foreground.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/menu.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/pausebuttonvideoplayer.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/plans.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/play123.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/play5.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/playbuttonvideoplayer.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/playerback.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/plays.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/playvideo.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ract.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rect_2.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rightarrow.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/roundbg.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rounded_cornor_border_plans.xml" value="0.2285" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.192" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main13.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main2.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main4.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main6.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main7.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/bottomsheet.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/chlidcategoies_row.xml" value="0.23645833333333333" />

@@ -176,10 +176,6 @@ public class MainActivity6 extends AppCompatActivity {
 
 
 
-
-
-
-
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
         WebService.getClient().getSeriesPage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<SeriesRootnames>() {
             @Override
@@ -197,6 +193,8 @@ public class MainActivity6 extends AppCompatActivity {
                 adp1(data.watch_next);
                 adp(data.episodes);
 
+
+
 //                Log.d("TAG", "sirsss: "+data.episodes);
 
 
@@ -206,7 +204,39 @@ public class MainActivity6 extends AppCompatActivity {
 //                show();
                         if(data.membership=="false"){
 
-                            show();
+                            final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
+                            View mView = getLayoutInflater().inflate(R.layout.popups,null);
+                            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+                            TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+
+                            alert.setView(mView);
+                            final AlertDialog alertDialog = alert.create();
+                            alertDialog.setCanceledOnTouchOutside(false);
+                            Window window = alertDialog.getWindow();
+                            WindowManager.LayoutParams wlp = window.getAttributes();
+                            wlp.gravity = Gravity.BOTTOM;
+                            wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+                            window.setAttributes(wlp);
+
+                            btn_cancel.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
+                                    intent1.putExtra("link",data.episodes.get(0).content_link);
+                                    startActivity(intent1);
+                                    alertDialog.dismiss();
+                                }
+                            });
+                            btn_okay.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    alertDialog.dismiss();
+                                }
+
+                            });
+                            alertDialog.show();
+
+//                            show();
                         }else{
                             shows();
                         }
