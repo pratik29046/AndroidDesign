@@ -30,8 +30,11 @@ public class Searchbar extends AppCompatActivity {
         WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
             @Override
             public void onResponse(Call<Root> call, Response<Root> response) {
-//                for (int i = 0 ; i < response.body().categories.get().size() ; i ++)
-//                adp(response.body().categories.get(0).content);
+
+                for (int i = 0 ; i < response.body().categories.size() ; i ++){
+                    adp(response.body().categories.get(i).content);
+                }
+
             }
 
             @Override

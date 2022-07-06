@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity5">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
       <RelativeLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="match_parent" >
 
           <androidx.recyclerview.widget.RecyclerView
               android:id="@+id/upData"
@@ -26,7 +24,6 @@
 
       </RelativeLayout>
 
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/booms"

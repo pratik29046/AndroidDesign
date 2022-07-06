@@ -98,5 +98,11 @@ public class MainActivity5 extends AppCompatActivity {
         recyclerView.setAdapter(adapterUpcoming);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+        startActivity(intent);
+    }
+
 
 }

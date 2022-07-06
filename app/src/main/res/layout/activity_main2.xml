@@ -7,9 +7,7 @@
     tools:context=".MainActivity2"
     android:background="@color/black"
     >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
      <RelativeLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent"
@@ -79,6 +77,16 @@
          android:background="@color/black">
 
          <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/banner"
+             android:layout_width="match_parent"
+             android:layout_height="505dp">
+
+         </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+         <androidx.recyclerview.widget.RecyclerView
              android:id="@+id/review"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
@@ -89,7 +97,7 @@
      </RelativeLayout>
 
     </RelativeLayout>
-    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/boom"

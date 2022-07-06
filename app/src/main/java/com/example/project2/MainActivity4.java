@@ -165,8 +165,9 @@ public class MainActivity4 extends AppCompatActivity {
                 });
     }
 
-    //method of backpress
-    public void back(){
-        super.onBackPressed();
+    @Override
+    public void onBackPressed() {
+        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+        startActivity(intent);
     }
 }
