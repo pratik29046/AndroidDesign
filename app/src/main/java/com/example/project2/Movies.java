@@ -73,7 +73,7 @@ public class Movies extends AppCompatActivity {
         starring=findViewById(R.id.text11);
         genres=findViewById(R.id.text22);
         directors=findViewById(R.id.text13);
-        imageSlider=findViewById(R.id.post);
+//        imageSlider=findViewById(R.id.post);
         moretrailers=findViewById(R.id.moretrailers);
         recyclerView=findViewById(R.id.watchnext);
         t1=findViewById(R.id.b1);

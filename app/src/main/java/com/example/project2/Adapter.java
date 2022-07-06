@@ -15,7 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project2.POJO.Banner;
 import com.example.project2.POJO.Category;
+import com.example.project2.POJO.Root;
 import com.example.project2.POJO.Series;
 import com.example.project2.POJO.SeriesRootnames;
 
@@ -23,10 +25,10 @@ import com.example.project2.POJO.SeriesRootnames;
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     Context context;
     List<Category> mainPOJOSlist;
+
     public Adapter(Context context, List<Category> mainPOJOSlist){
         this.context = context;
         this.mainPOJOSlist = mainPOJOSlist;
-
     }
 
     @NonNull
@@ -41,13 +43,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull @NotNull final Adapter.ViewHolder h, int position) {
 
         h.rowtitle.setText(mainPOJOSlist.get(position).name);
+
         categeriouschlidAdapter chailedAdapter = new categeriouschlidAdapter(context,mainPOJOSlist.get(position).content);
         h.recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
        h.recyclerView.setAdapter(chailedAdapter);
 
 //        final Category temp=mainPOJOSlist.get(position);
 //        Log.d("TAG", "onBindViewHolder: "+mainPOJOSlist.get(position).name+"  : "+mainPOJOSlist.get(position).content.toString());
-
 
     }
 
@@ -61,10 +63,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         TextView rowtitle;
         RecyclerView recyclerView;
 
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             rowtitle=itemView.findViewById(R.id.names);
             recyclerView=itemView.findViewById(R.id.review2);
+
+
         }
     }
 }
