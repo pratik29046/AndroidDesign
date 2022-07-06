@@ -74,17 +74,17 @@ public class MainActivity2 extends AppCompatActivity {
         popup = findViewById(R.id.continues);
         linearLayoutplay = findViewById(R.id.plays);
 //        ImageSlider imageSlider=findViewById(R.id.post);
-        search_btn = findViewById(R.id.search_btn);
+//        search_btn = findViewById(R.id.search_btn);
 
 
-        search_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Searchbar.class);
-                startActivity(intent);
-
-            }
-        });
+//        search_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), Searchbar.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
 
         WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
