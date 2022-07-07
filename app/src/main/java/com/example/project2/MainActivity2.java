@@ -101,6 +101,7 @@ public class MainActivity2 extends AppCompatActivity {
                 adp2(response.body().banners);
 
 
+
                 Log.d("TAG", "onResponse: " + response.body().toString());
 //                imageSlider.setImageList(slideModels);
 
@@ -179,13 +180,13 @@ public class MainActivity2 extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                if (linearLayoutManager.findLastCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
-                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), linearLayoutManager.findLastCompletelyVisibleItemPosition() + 1);
-                } else if (linearLayoutManager.findLastCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
+                if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
+                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), linearLayoutManager.findFirstCompletelyVisibleItemPosition() + 1);
+                } else if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
                     linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), 0);
                 }
             }
-        }, 200, 1000);
+        }, 0, 200);
 
 
     }

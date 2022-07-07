@@ -6,30 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Searchbar">
 
-    <androidx.appcompat.widget.SearchView
+    <android.widget.SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="2dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:outlineAmbientShadowColor="@color/white"
-        >
-        <requestFocus />
-    </androidx.appcompat.widget.SearchView>
+        android:queryHint="Search Here"
+        android:outlineAmbientShadowColor="#FB0202"
+        android:textColorHint="#F10606"
+        android:iconifiedByDefault="false"
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_search"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/search"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp" />
 
 </RelativeLayout>

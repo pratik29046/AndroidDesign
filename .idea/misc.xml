@@ -76,6 +76,8 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main6.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main7.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main8.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_movie_watchnext.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_series_watchnext.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_upcomming_next.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/banner.xml" value="0.23541666666666666" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/banners.xml" value="0.23645833333333333" />
@@ -84,11 +86,13 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/main_player_activity.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/movies.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/plans_subscription.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/popups.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/popups_subscribe.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar.xml" value="0.23645833333333333" />
-        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar_items.xml" value="0.1" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/searchbar_items.xml" value="0.264" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/track_selection_dialog.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/ustom_controls.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/menu/menu.xml" value="0.23645833333333333" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/background_movies.xml" value="0.1" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/backpressicon.xml" value="0.197" />
         <entry key="..\:/anroid Studio Applicatio/project2/app/src/main/res/drawable/bottomsheetbackground.xml" value="0.113" />

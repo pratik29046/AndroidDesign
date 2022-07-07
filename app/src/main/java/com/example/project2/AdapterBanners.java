@@ -1,6 +1,7 @@
 package com.example.project2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,14 @@ public class AdapterBanners extends RecyclerView.Adapter<AdapterBanners.View_Hol
     public void onBindViewHolder(@NonNull View_Holder holder, int position) {
         Picasso.get().load("https://katto.in"+bannerList.get(position).poster).into( holder.img1);
 
+        holder.search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context1,Searchbar.class);
+                context1.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -45,11 +54,12 @@ public class AdapterBanners extends RecyclerView.Adapter<AdapterBanners.View_Hol
     }
 
     public class View_Holder extends RecyclerView.ViewHolder {
-        ImageView img1;
+        ImageView img1,search;
         public View_Holder(@NonNull View itemView) {
             super(itemView);
 
             img1=itemView.findViewById(R.id.img1);
+            search=itemView.findViewById(R.id.search_btn);
         }
     }
 }

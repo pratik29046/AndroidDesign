@@ -5,13 +5,20 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
+import android.widget.SearchView;
 
 import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.Content;
 import com.example.project2.POJO.Root;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -21,11 +28,15 @@ import retrofit2.Response;
 public class Searchbar extends AppCompatActivity {
     RecyclerView recyclerView;
     AdaptersSearchNames adaptersSearchNames;
+    SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.searchbar);
         recyclerView=findViewById(R.id.recycler_search);
+        searchView=findViewById(R.id.search);
+        searchView.clearFocus();
 
         WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
             @Override
@@ -43,8 +54,8 @@ public class Searchbar extends AppCompatActivity {
             }
         });
 
-
     }
+
 
     public void adp(List<Content> contents){
         recyclerView=findViewById(R.id.recycler_search);
@@ -55,4 +66,6 @@ public class Searchbar extends AppCompatActivity {
         recyclerView.setAdapter(adaptersSearchNames);
     }
 
+
 }
+

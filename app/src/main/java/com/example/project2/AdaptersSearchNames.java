@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,6 +42,37 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
     public int getItemCount() {
         return contents.size();
     }
+
+//    @Override
+//    public Filter getFilter() {
+//        return exampleFilter;
+//    }
+
+//    private Filter exampleFilter = new Filter() {
+//        @Override
+//        protected FilterResults performFiltering(CharSequence constraint) {
+//            if (constraint == null || constraint.length() == 0) {
+//                contents.addAll(exampleListFull);
+//            } else {
+//                String filterPattern = constraint.toString().toLowerCase().trim();
+//                for (Content item : exampleListFull) {
+//                    if ( item.name.toLowerCase().contains(filterPattern)) {
+//                        contents.add(item);
+//                    }
+//                }
+//            }
+//            FilterResults results = new FilterResults();
+//            results.values = contents;
+//            return results;
+//        }
+//        @Override
+//        protected void publishResults(CharSequence constraint, FilterResults results) {
+//            contents.clear();
+//            contents.addAll((List) results.values);
+//            notifyDataSetChanged();
+//        }
+//    };
+
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
