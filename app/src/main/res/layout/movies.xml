@@ -427,10 +427,8 @@
                     android:id="@+id/trailersPlay"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ic_baseline_play_circle_outline_24"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    />
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/epiplay" />
 
                 <TextView
                     android:id="@+id/trailers"
