@@ -41,17 +41,22 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
         holder.no.setText(userList2.get(position).number);
         holder.time.setText(userList2.get(position).duration);
 
-        final Episode temp = userList2.get(position);
+        if(userList2.get(position).free==true) {
+            holder.free.setVisibility(View.VISIBLE);
 
-        holder.vs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context1,MainPlayerActivity.class);
-                intent.putExtra("link",temp.content_link);
-                intent.putExtra("name",temp.name);
-                context1.startActivity(intent);
-            }
-        });
+        }
+            final Episode temp = userList2.get(position);
+
+            holder.vs.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context1, MainPlayerActivity.class);
+                    intent.putExtra("link", temp.content_link);
+                    intent.putExtra("name", temp.name);
+                    context1.startActivity(intent);
+                }
+            });
+
 
     }
 
@@ -63,7 +68,7 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView vs;
         private TextView n;
-        private TextView no,time;
+        private TextView no,time,free;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -72,6 +77,7 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
             n=itemView.findViewById(R.id.name);
             no=itemView.findViewById(R.id.number);
             time=itemView.findViewById(R.id.time);
+            free=itemView.findViewById(R.id.free);
         }
     }
 }
