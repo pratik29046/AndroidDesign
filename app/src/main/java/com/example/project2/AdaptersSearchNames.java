@@ -1,6 +1,7 @@
 package com.example.project2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project2.POJO.Content;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -42,6 +45,33 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+contents.get(position).poster).into( holder.poster);
         holder.name.setText(contents.get(position).name);
+
+        final Content temp=contents.get(position);
+
+        if(contents.get(position).url.contains("movie")){
+            holder.cards.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =new Intent(context1,Movies.class);
+                    intent.putExtra("content",new Gson().toJson(temp) ); //for series
+                    context1.startActivity(intent);
+                }
+            });
+        }else if(contents.get(position).url.contains("series")){
+            holder.cards.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =new Intent(context1,MainActivity6.class);
+                    intent.putExtra("content", new Gson().toJson(temp));
+                    context1.startActivity(intent);
+
+                }
+            });
+
+        }
+
+
+
     }
 
     @Override
@@ -94,10 +124,12 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView poster;
         TextView name;
+        CardView cards;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             poster=itemView.findViewById(R.id.img1);
             name=itemView.findViewById(R.id.text1);
+            cards=itemView.findViewById(R.id.cards);
         }
     }
 }
