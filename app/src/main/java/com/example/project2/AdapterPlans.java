@@ -43,7 +43,7 @@ public class AdapterPlans extends RecyclerView.Adapter<AdapterPlans.View_Holder>
 //        holder.validity.setText(membershipPlans.get(position).validity);
         holder.price.setText(String.format("%s %s", context.getResources().getString(R.string.rupee), membershipPlans.get(position).price));
         holder.validity.setText(String.format("Valid for %d days Plan", membershipPlans.get(position).validity));
-        holder.buy.setText(String.format("Continue with %s %s", context.getResources().getString(R.string.rupee), membershipPlans.get(position).price));
+//        holder.buy.setText(String.format("Continue with %s %s", context.getResources().getString(R.string.rupee), membershipPlans.get(position).price));
     }
 
     @Override

@@ -2,33 +2,34 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_marginBottom="4dp"
+
+    >
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/card_plan"
-        android:padding="15dp"
+        android:padding="5dp"
         android:foregroundGravity="center"
-        android:foreground="#CD1D1D"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         >
 
         <TextView
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="25dp"
             android:text="Plan Name"
             android:textColor="@color/white"
-            android:textSize="35dp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            />
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/price"
@@ -55,21 +56,21 @@
             android:layout_marginTop="5dp"
             android:text="Valid for 18000 days Plan"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textAlignment="center"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/buy"
-            android:layout_width="match_parent"
+            android:layout_width="130dp"
             android:layout_height="40dp"
             android:layout_below="@id/numberOfDays"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:text="Continue with 999"
             android:background="@drawable/card_plan"
+            android:gravity="center"
+            android:text="SUBSCRIBE"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20dp"

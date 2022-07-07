@@ -3,6 +3,7 @@ package com.example.project2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -146,7 +147,7 @@ public class MainActivity4 extends AppCompatActivity {
 
     public void adp(List<MembershipPlan> membershipPlans){
         recyclerView=findViewById(R.id.plans);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity4.this,LinearLayoutManager.VERTICAL,false);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(MainActivity4.this,2,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
         recyclerView.setItemAnimator(new DefaultItemAnimator() );
         adapterPlans=new AdapterPlans(this,membershipPlans);
