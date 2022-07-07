@@ -38,7 +38,6 @@ public class AdapterWelcome extends RecyclerView.Adapter<AdapterWelcome.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.text.setText(welcomeBanners.get(position).description);
         Picasso.get().load("https://katto.in"+welcomeBanners.get(position).poster).into(holder.img);
-
     }
 
     @Override

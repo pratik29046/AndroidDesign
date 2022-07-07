@@ -29,7 +29,6 @@ public class Searchbar extends AppCompatActivity {
     RecyclerView recyclerView;
     AdaptersSearchNames adaptersSearchNames;
     SearchView searchView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +36,19 @@ public class Searchbar extends AppCompatActivity {
         recyclerView=findViewById(R.id.recycler_search);
         searchView=findViewById(R.id.search);
         searchView.clearFocus();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adaptersSearchNames.getFilter().filter(newText);
+                return false;
+            }
+        });
 
         WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
             @Override

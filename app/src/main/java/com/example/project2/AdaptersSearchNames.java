@@ -15,15 +15,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.project2.POJO.Content;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchNames.ViewHolder> {
+public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchNames.ViewHolder> implements Filterable {
     private List<Content> contents;
     Context context1;
+
+    List<Content> mStringFilterList;
+    ValueFilter valueFilter;
 
     public AdaptersSearchNames(List<Content> contents, Context context1){
         this.contents=contents;
         this.context1=context1;
+        mStringFilterList=contents;
     }
     @NonNull
     @Override
@@ -43,35 +49,45 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
         return contents.size();
     }
 
-//    @Override
-//    public Filter getFilter() {
-//        return exampleFilter;
-//    }
+    @Override
+    public Filter getFilter() {
+        if (valueFilter == null) {
+            valueFilter = new ValueFilter();
+        }
+        return valueFilter;
+    }
 
-//    private Filter exampleFilter = new Filter() {
-//        @Override
-//        protected FilterResults performFiltering(CharSequence constraint) {
-//            if (constraint == null || constraint.length() == 0) {
-//                contents.addAll(exampleListFull);
-//            } else {
-//                String filterPattern = constraint.toString().toLowerCase().trim();
-//                for (Content item : exampleListFull) {
-//                    if ( item.name.toLowerCase().contains(filterPattern)) {
-//                        contents.add(item);
-//                    }
-//                }
-//            }
-//            FilterResults results = new FilterResults();
-//            results.values = contents;
-//            return results;
-//        }
-//        @Override
-//        protected void publishResults(CharSequence constraint, FilterResults results) {
-//            contents.clear();
-//            contents.addAll((List) results.values);
-//            notifyDataSetChanged();
-//        }
-//    };
+
+    private class ValueFilter extends Filter {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+
+            if (constraint != null && constraint.length() > 0) {
+                List<Content> filterList=new ArrayList<>();
+                for (int i = 0; i < mStringFilterList.size(); i++) {
+                    if (mStringFilterList.get(i).name.toUpperCase(Locale.ROOT).contains(constraint.toString().toUpperCase(Locale.ROOT))) {
+                        filterList.add(mStringFilterList.get(i));
+                    }
+                }
+                results.count = filterList.size();
+                results.values = filterList;
+            } else {
+                results.count = mStringFilterList.size();
+                results.values = mStringFilterList;
+            }
+            return results;
+
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint,
+                                      FilterResults results) {
+            contents = (List<Content>) results.values;
+            notifyDataSetChanged();
+        }
+
+    }
 
 
 
