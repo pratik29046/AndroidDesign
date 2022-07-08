@@ -21,28 +21,35 @@
         <activity
             android:name=".MainPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape"
+            android:screenOrientation="sensorLandscape"
             android:exported="false" />
         <activity
             android:name=".Searchbar"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SeriesWatchnext"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity5"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".UpcommingNext"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MovieWatchnext"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Movies"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity14"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".TrackSelectionDialog"
@@ -50,25 +57,32 @@
             tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity8"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity7"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity6"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"
+            android:screenOrientation="portrait"
             android:exported="false"
             />
         <activity
             android:name=".MainActivity3"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
