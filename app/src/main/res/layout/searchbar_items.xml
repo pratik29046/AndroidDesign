@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:background="@color/black"
     android:layout_marginBottom="5dp"
     >
 
@@ -13,14 +12,14 @@
         android:id="@+id/cards"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp"
-        android:background="#F2000000"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#03000000"
         >
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#A9000000"
+            android:background="#00000000"
             >
 
 
@@ -30,6 +29,7 @@
             android:layout_height="80dp"
             android:src="@drawable/she"
             android:scaleType="fitXY"
+            android:adjustViewBounds="true"
             android:layout_margin="3dp"
             android:layout_weight="0.5"
             />
@@ -39,12 +39,13 @@
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:text="dhdhhdhddhdhh"
-            android:gravity="center"
             android:layout_margin="3dp"
+            android:gravity="center"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_weight="6"
+            android:foregroundGravity="fill"
             />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
