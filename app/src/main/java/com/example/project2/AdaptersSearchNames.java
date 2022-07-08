@@ -1,5 +1,6 @@
 package com.example.project2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -55,6 +56,7 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
                     Intent intent =new Intent(context1,Movies.class);
                     intent.putExtra("content",new Gson().toJson(temp) ); //for series
                     context1.startActivity(intent);
+                    ((Activity)context1).finish();
                 }
             });
         }else if(contents.get(position).url.contains("series")){
@@ -64,14 +66,11 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
                     Intent intent =new Intent(context1,MainActivity6.class);
                     intent.putExtra("content", new Gson().toJson(temp));
                     context1.startActivity(intent);
-
+                    ((Activity)context1).finish();
                 }
             });
 
         }
-
-
-
     }
 
     @Override
@@ -107,7 +106,6 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
                 results.values = mStringFilterList;
             }
             return results;
-
         }
 
         @Override
@@ -118,8 +116,6 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
         }
 
     }
-
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView poster;

@@ -10,8 +10,6 @@
         android:layout_alignParentEnd="true"
         android:background="@drawable/kattobgw">
 
-
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profilePic"
             android:layout_width="50dp"

@@ -54,9 +54,13 @@ public class Searchbar extends AppCompatActivity {
             @Override
             public void onResponse(Call<Root> call, Response<Root> response) {
 
-                for (int i = 0 ; i < response.body().categories.size() ; i ++){
+                /*for (int i = 0 ; i < response.body().categories.size(); i ++){
                     adp(response.body().categories.get(i).content);
-                }
+
+                }*/
+
+
+                adp(response.body().categories.get(response.body().categories.size()-2).content);
 
             }
 
