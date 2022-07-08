@@ -3,6 +3,7 @@ package com.example.project2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -91,29 +92,29 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        WebService.getClient().get_welcomeData().enqueue(new Callback<WelcomeRoot>() {
-            @Override
-            public void onResponse(Call<WelcomeRoot> call, Response<WelcomeRoot> response) {
-                adp(response.body().welcome_banners);
-            }
-
-            @Override
-            public void onFailure(Call<WelcomeRoot> call, Throwable t) {
-
-            }
-        });
+//        WebService.getClient().get_welcomeData().enqueue(new Callback<WelcomeRoot>() {
+//            @Override
+//            public void onResponse(Call<WelcomeRoot> call, Response<WelcomeRoot> response) {
+//                adp(response.body().welcome_banners);
+//            }
+//
+//            @Override
+//            public void onFailure(Call<WelcomeRoot> call, Throwable t) {
+//
+//            }
+//        });
 
     }
 
 
-    public void adp(List<WelcomeBanner> welcomeBanners){
-        recyclerView=findViewById(R.id.Welcome);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapterWelcome=new AdapterWelcome(this,welcomeBanners);
-        recyclerView.setAdapter(adapterWelcome);
-    }
+//    public void adp(List<WelcomeBanner> welcomeBanners){
+//        recyclerView=findViewById(R.id.Welcome);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false);
+//        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+//        recyclerView.setItemAnimator(new DefaultItemAnimator() );
+//        adapterWelcome=new AdapterWelcome(this,welcomeBanners);
+//        recyclerView.setAdapter(adapterWelcome);
+//    }
 
 
 

@@ -36,7 +36,7 @@ public class AdapterWelcome extends RecyclerView.Adapter<AdapterWelcome.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.text.setText(welcomeBanners.get(position).description);
+//        holder.text.setText(welcomeBanners.get(position).description);
         Picasso.get().load("https://katto.in"+welcomeBanners.get(position).poster).into(holder.img);
     }
 
@@ -52,7 +52,7 @@ public class AdapterWelcome extends RecyclerView.Adapter<AdapterWelcome.ViewHold
             super(itemView);
 
             img=itemView.findViewById(R.id.img1);
-            text=itemView.findViewById(R.id.text3);
+//            text=itemView.findViewById(R.id.text3);
         }
     }
 }
