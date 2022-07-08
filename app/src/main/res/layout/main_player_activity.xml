@@ -170,7 +170,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:maxprogress="15"
-                app:progesscolor="#787575"
+                app:progesscolor="@color/information_background"
                 app:progress="0"
                 app:viewbackgroundcolor="#8C8C8C" />
             <!--            app:progesscolor="#3db5ea"-->
@@ -250,7 +250,7 @@
                 android:progressDrawable="@drawable/seekbar_progress_style"
                 android:theme="@style/SeekBarWithoutSteps"
                 android:thumb="@drawable/thumb_image"
-                app:tickColor="#FFB300"
+                app:tickColor="@color/white"
                 tools:ignore="UnusedAttribute" />
         </RelativeLayout>
 
