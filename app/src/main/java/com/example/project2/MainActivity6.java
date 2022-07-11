@@ -75,8 +75,6 @@ public class MainActivity6 extends AppCompatActivity {
         Dec=findViewById(R.id.text9);
         starring=findViewById(R.id.text11);
         directors=findViewById(R.id.text13);
-//        text15=findViewById(R.id.text15);
-//        text17=findViewById(R.id.text17);
         t1=findViewById(R.id.b1);
         t2=findViewById(R.id.b2);
         tab=findViewById(R.id.text17);
@@ -84,25 +82,6 @@ public class MainActivity6 extends AppCompatActivity {
         moretrailers=findViewById(R.id.moretrailers);
         textTr=findViewById(R.id.textTr);
         trailersPlay=findViewById(R.id.trailersPlay);
-//        text15.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                text15.setTextColor(Color.parseColor("#FF0000"));
-//                text17.setTextColor(Color.parseColor("#FFFFFF"));
-//                recyclerView.setVisibility(View.VISIBLE);
-//                recyclerView1.setVisibility(View.GONE);
-//            }
-//        });
-//        text17.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                text15.setTextColor(Color.parseColor("#FFFFFF"));
-//                text17.setTextColor(Color.parseColor("#FF0000"));
-//                recyclerView.setVisibility(View.GONE);
-//                recyclerView1.setVisibility(View.VISIBLE);
-//            }
-//        });
-
 
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -152,14 +131,6 @@ public class MainActivity6 extends AppCompatActivity {
                 }
             }
         });
-
-      /*  img2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                show();
-            }
-        });*/
-
 
         Intent intent = getIntent();
 //        int img=intent.getIntExtra("img",0);

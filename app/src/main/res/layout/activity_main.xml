@@ -13,8 +13,8 @@
         android:id="@+id/img1"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
         android:src="@drawable/kattowelcome" />
 
     <TextView
@@ -45,17 +45,42 @@
         android:fontFamily="sans-serif-condensed"
         />
 
-    <com.google.android.gms.common.SignInButton
+<!--    <com.google.android.gms.common.SignInButton-->
+<!--        android:id="@+id/login"-->
+<!--        android:layout_width="320dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_below="@+id/text2"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="30dp"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_below="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/loginback"
+        android:drawableStart="@drawable/googleg_standard_color_18"
+        android:drawableLeft="@drawable/googleg_standard_color_18"
+        android:paddingStart="30dp"
+        android:paddingLeft="30dp"
+        android:gravity="center"
+        android:text="CONTINUE WITH GOOGLE"
         android:textColor="@color/black"
-        android:textSize="30dp"
         android:textStyle="bold"
-        />
+        android:textAlignment="center"
+        tools:ignore="RtlHardcoded" />
 
 </RelativeLayout>

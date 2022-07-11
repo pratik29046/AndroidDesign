@@ -1,6 +1,7 @@
 package com.example.project2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     AdapterWelcome adapterWelcome;
     RecyclerView recyclerView;
 
-    SignInButton signInButton;
+    AppCompatButton signInButton;
     GoogleSignInClient mGoogleSignInClient;
     static final int RC_SIGN_IN =1000;
 
