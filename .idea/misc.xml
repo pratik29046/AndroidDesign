@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/arrowleft.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/background_movies.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/backpressicon.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/bottomsheetbackground.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/brightness4.xml" value="0.1975" />
@@ -53,6 +54,7 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_volume_up_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_watch_later_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/information_foreground.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/layout_bg.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/loginback.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/menu.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/pausebuttonvideoplayer.xml" value="0.1975" />
@@ -73,6 +75,9 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress.xml" value="0.1915" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.192" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_track.xml" value="0.1915" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/selector.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/selectors.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/share.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/shareicon.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/speedvideoplayer.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/thumb_image.xml" value="0.1915" />

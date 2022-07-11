@@ -58,6 +58,7 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
 
                 Intent intent= new Intent(context,MainPlayerActivity.class);
                 intent.putExtra("link",temp.trailer_link);
+                intent.putExtra("name",temp.name);
                 context.startActivity(intent);
 
 

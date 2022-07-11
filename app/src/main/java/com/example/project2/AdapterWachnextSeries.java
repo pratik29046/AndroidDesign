@@ -41,21 +41,57 @@ public class AdapterWachnextSeries extends RecyclerView.Adapter<AdapterWachnextS
 
         final Watchnextseries temp=watchnextseries.get(position);
 
-        holder.img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(context,MainActivity6.class);
-                Content content=new Content();
-                content.name=temp.name;
-                content.url=temp.url;
-                content.poster=temp.poster;
-                content.v_poster=temp.v_poster;
-                content.age_rating= temp.age_rating;
-                intent.putExtra("content", new Gson().toJson(content));
-                context.startActivity(intent);
-                ((Activity)context).finish(); //back
-            }
-        });
+//        holder.img.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent =new Intent(context,MainActivity6.class);
+//                Content content=new Content();
+//                content.name=temp.name;
+//                content.url=temp.url;
+//                content.poster=temp.poster;
+//                content.v_poster=temp.v_poster;
+//                content.age_rating= temp.age_rating;
+//                intent.putExtra("content", new Gson().toJson(content));
+//                context.startActivity(intent);
+//                ((Activity)context).finish(); //back
+//            }
+//        });
+
+        if(watchnextseries.get(position).url.contains("series")) {
+            holder.img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, MainActivity6.class);
+                    Content content = new Content();
+                    content.name = temp.name;
+                    content.age_rating = temp.age_rating;
+                    content.url = temp.url;
+                    content.poster = temp.poster;
+                    content.v_poster = temp.v_poster;
+                    intent.putExtra("content", new Gson().toJson(content));
+                    context.startActivity(intent);
+                    ((Activity) context).finish();
+
+                }
+            });
+        }else if(watchnextseries.get(position).url.contains("movies")){
+            holder.img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, Movies.class);
+                    Content content = new Content();
+                    content.name = temp.name;
+                    content.age_rating = temp.age_rating;
+                    content.url = temp.url;
+                    content.poster = temp.poster;
+                    content.v_poster = temp.v_poster;
+                    intent.putExtra("content", new Gson().toJson(content));
+                    context.startActivity(intent);
+                    ((Activity) context).finish();
+
+                }
+            });
+        }
 
 
     }

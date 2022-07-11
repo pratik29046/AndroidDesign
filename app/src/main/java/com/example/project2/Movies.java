@@ -190,6 +190,7 @@ public class Movies extends AppCompatActivity {
                         try {
                             Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
                             intent1.putExtra("link", data.trailer_link);
+                            intent1.putExtra("name",data.name);
                             startActivity(intent1);
                         }catch (Exception| Error e){
                             e.printStackTrace();

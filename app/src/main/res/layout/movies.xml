@@ -17,7 +17,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="22dp"
             android:src="@drawable/arrowleft" />
 
 
@@ -39,7 +39,9 @@
             android:layout_height="50dp"
             android:layout_below="@+id/img3"
             android:layout_marginStart="4dp"
-            android:src="@drawable/logo1" />
+            android:src="@drawable/kattowelcome"
+            android:padding="2dp"
+            />
 
 
         <TextView
@@ -47,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img3"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="60dp"
             android:text="Movie Name"
             android:textColor="@color/white"
             android:textSize="30dp"
