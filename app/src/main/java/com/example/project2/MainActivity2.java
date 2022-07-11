@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -85,62 +86,58 @@ public class MainActivity2 extends AppCompatActivity {
 //        search_btn = findViewById(R.id.search_btn);
 
 
-//        search_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), Searchbar.class);
-//                startActivity(intent);
-//
-//            }
-//        });
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
-        String id=account.getIdToken();
-        Log.d("TAG", "onCreate: "+id);
-        WebService.getClient().post_idData(new RawData_POJO( id, "", ""
-        )).enqueue(new Callback<TokenID>() {
-            @Override
-            public void onResponse(Call<TokenID> call, Response<TokenID> response) {
+            GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+            String id=account.getIdToken();
+            Log.d("TAG", "onCreate: "+id);
+            WebService.getClient().post_idData(new RawData_POJO( id, "", ""
+            )).enqueue(new Callback<TokenID>() {
+                @Override
+                public void onResponse(Call<TokenID> call, Response<TokenID> response) {
 
-            }
-            @Override
-            public void onFailure(Call<TokenID> call, Throwable t) {
+                }
+                @Override
+                public void onFailure(Call<TokenID> call, Throwable t) {
 
-            }
-        });
+                }
+            });
 
 
 
-        WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
-            @Override
-            public void onResponse(Call<Root> call, Response<Root> response) {
-                List<Category> categories = new ArrayList<>();
+
+
+        try {
+            WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {
+                @Override
+                public void onResponse(Call<Root> call, Response<Root> response) {
+                    List<Category> categories = new ArrayList<>();
 //                for (int i = 0 ; i < response.body().banners.size() ; i ++) {
 //                    slideModels.add(new SlideModel(url+response.body().banners.get(i).poster, ScaleTypes.FIT));
 ////                    response.body().getBanners().get(i).get();
 //
 //                }
 
-                adp(response.body().categories);
-                adp2(response.body().banners);
-
-
-
-                Log.d("TAG", "onResponse: " + response.body().toString());
+                    adp(response.body().categories);
+                    adp2(response.body().banners);
+                    Log.d("TAG", "onResponse: " + response.body().toString());
 //                imageSlider.setImageList(slideModels);
 
-            }
+                }
 
-            @Override
-            public void onFailure(Call<Root> call, Throwable t) {
+                @Override
+                public void onFailure(Call<Root> call, Throwable t) {
 
-            }
-        });
+                }
+            });
+
+
+        }catch (Exception | Error e){
+            e.printStackTrace();
+        }
 
 
         bottomNavigationView = findViewById(R.id.boom);
@@ -205,17 +202,17 @@ public class MainActivity2 extends AppCompatActivity {
         LinearSnapHelper linearSnapHelper = new LinearSnapHelper();
         linearSnapHelper.attachToRecyclerView(recyclerView1);
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
-                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), linearLayoutManager.findFirstCompletelyVisibleItemPosition() + 1);
-                } else if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
-                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), 0);
-                }
-            }
-        }, 0, 200);
+//        Timer timer = new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
+//                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), linearLayoutManager.findFirstCompletelyVisibleItemPosition() + 1);
+//                } else if (linearLayoutManager.findFirstCompletelyVisibleItemPosition() < (adapterBanners.getItemCount() - 1)) {
+//                    linearLayoutManager.smoothScrollToPosition(recyclerView1, new RecyclerView.State(), 0);
+//                }
+//            }
+//        }, 0, 200);
 
 
     }
@@ -224,34 +221,42 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity2.this, R.style.BottomSheetDialogTheme);
+        try {
 
-        View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
-                R.layout.bottomsheet, (RelativeLayout) findViewById(R.id.hello)
-        );
-        bottomSheetView.findViewById(R.id.b2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetDialog.dismiss();
-            }
-        });
-        bottomSheetView.findViewById(R.id.b1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finishAffinity();
-            }
-        });
+            BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity2.this, R.style.BottomSheetDialogTheme);
 
-        bottomSheetView.findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetDialog.dismiss();
-            }
-        });
+            View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                    R.layout.bottomsheet, (RelativeLayout) findViewById(R.id.hello)
+            );
+            bottomSheetView.findViewById(R.id.b2).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bottomSheetDialog.dismiss();
+                }
+            });
+            bottomSheetView.findViewById(R.id.b1).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finishAffinity();
+                }
+            });
+
+            bottomSheetView.findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bottomSheetDialog.dismiss();
+                }
+            });
 
 
-        bottomSheetDialog.setContentView(bottomSheetView);
-        bottomSheetDialog.show();
+            bottomSheetDialog.setContentView(bottomSheetView);
+            bottomSheetDialog.show();
+
+
+        }catch (Exception | Error e){
+            e.printStackTrace();
+        }
+
     }
 
 }

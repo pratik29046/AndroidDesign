@@ -21,29 +21,35 @@ public class MainActivity14 extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.download);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()){
-                    case R.id.menu:
-                        startActivity(new Intent(getApplicationContext(),MainActivity4.class));
-                        overridePendingTransition(0,0);
-                        return true;
+                try {
+                    switch (item.getItemId()){
+                        case R.id.menu:
+                            startActivity(new Intent(getApplicationContext(),MainActivity4.class));
+                            overridePendingTransition(0,0);
+                            return true;
 
 
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity2.class));
-                        overridePendingTransition(0,0);
-                        return true;
+                        case R.id.home:
+                            startActivity(new Intent(getApplicationContext(),MainActivity2.class));
+                            overridePendingTransition(0,0);
+                            return true;
 
-                    case R.id.download:
-                        return true;
+                        case R.id.download:
+                            return true;
 
-                    case R.id.upcomes:
-                        startActivity(new Intent(getApplicationContext(),MainActivity5.class));
-                        overridePendingTransition(0,0);
-                        return true;
+                        case R.id.upcomes:
+                            startActivity(new Intent(getApplicationContext(),MainActivity5.class));
+                            overridePendingTransition(0,0);
+                            return true;
 
+                    }
+
+                }catch (Exception | Error e){
+                    e.printStackTrace();
                 }
 
                 return false;
@@ -56,7 +62,12 @@ public class MainActivity14 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
-        startActivity(intent);
+        try {
+            Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+            startActivity(intent);
+        }catch (Exception | Error e){
+            e.printStackTrace();
+        }
+
     }
 }

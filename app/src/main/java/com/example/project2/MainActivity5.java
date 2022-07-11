@@ -50,19 +50,15 @@ public class MainActivity5 extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
 
-
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),MainActivity2.class));
                         overridePendingTransition(0,0);
                         return true;
 
-
-
                     case R.id.download:
                         startActivity(new Intent(getApplicationContext(),MainActivity14.class));
                         overridePendingTransition(0,0);
                         return true;
-
 
                     case R.id.upcomes:
                         return true;
@@ -73,7 +69,6 @@ public class MainActivity5 extends AppCompatActivity {
         });
 
 
-
         WebService.getClient().get_upcomingData().enqueue(new Callback<UpcomingRoot>() {
             @Override
             public void onResponse(Call<UpcomingRoot> call, Response<UpcomingRoot> response){
@@ -82,7 +77,6 @@ public class MainActivity5 extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<UpcomingRoot> call, Throwable t){
-
             }
         });
 
@@ -90,18 +84,26 @@ public class MainActivity5 extends AppCompatActivity {
 
 
     public void adps(List<Upcoming> upcomings){
-        recyclerView=findViewById(R.id.upData);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity5.this,LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapterUpcoming=new AdapterUpcoming(this,upcomings);
-        recyclerView.setAdapter(adapterUpcoming);
+        try {
+            recyclerView = findViewById(R.id.upData);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity5.this, LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            adapterUpcoming = new AdapterUpcoming(this, upcomings);
+            recyclerView.setAdapter(adapterUpcoming);
+        }catch (Exception|Error e){
+           e.printStackTrace();
+        }
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
-        startActivity(intent);
+        try {
+            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
 

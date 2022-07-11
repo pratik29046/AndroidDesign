@@ -38,6 +38,11 @@ public class MainActivity7 extends AppCompatActivity {
     }
 
     public void back(){
-        super.onBackPressed();
+        try {
+            super.onBackPressed();
+        }catch (Exception| Error e){
+            e.printStackTrace();
+        }
+
     }
 }

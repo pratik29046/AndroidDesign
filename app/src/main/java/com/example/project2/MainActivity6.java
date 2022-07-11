@@ -130,13 +130,8 @@ public class MainActivity6 extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+
         });
-
-
-
-
-
-
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -149,8 +144,12 @@ public class MainActivity6 extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start = new Intent(MainActivity6.this, MainActivity7.class);
-                startActivity(start);
+                try {
+                    Intent start = new Intent(MainActivity6.this, MainActivity7.class);
+                    startActivity(start);
+                }catch (Exception |Error e){
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -206,14 +205,18 @@ public class MainActivity6 extends AppCompatActivity {
                 adp1(data.watch_next);
                 adp(data.episodes);
 
-
                 trailersPlay.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
-                        intent1.putExtra("link",data.trailer_link);
-                        intent1.putExtra("name",data.name);
-                        startActivity(intent1);
+                        try {
+
+                            Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
+                            intent1.putExtra("link", data.trailer_link);
+                            intent1.putExtra("name", data.name);
+                            startActivity(intent1);
+                        }catch (Exception|Error e){
+                            e.printStackTrace();
+                        }
                     }
                 });
 
@@ -221,43 +224,47 @@ public class MainActivity6 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 //                show();
-                        if(data.membership=="false"){
+                        try {
+                            if (data.membership == "false") {
+                                final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
+                                View mView = getLayoutInflater().inflate(R.layout.popups, null);
+                                TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+                                TextView btn_okay = (TextView) mView.findViewById(R.id.b2);
 
-                            final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
-                            View mView = getLayoutInflater().inflate(R.layout.popups,null);
-                            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
-                            TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+                                alert.setView(mView);
+                                final AlertDialog alertDialog = alert.create();
+                                alertDialog.setCanceledOnTouchOutside(false);
+                                Window window = alertDialog.getWindow();
+                                WindowManager.LayoutParams wlp = window.getAttributes();
+                                wlp.gravity = Gravity.BOTTOM;
+                                wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+                                window.setAttributes(wlp);
 
-                            alert.setView(mView);
-                            final AlertDialog alertDialog = alert.create();
-                            alertDialog.setCanceledOnTouchOutside(false);
-                            Window window = alertDialog.getWindow();
-                            WindowManager.LayoutParams wlp = window.getAttributes();
-                            wlp.gravity = Gravity.BOTTOM;
-                            wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-                            window.setAttributes(wlp);
+                                btn_cancel.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
+                                        intent1.putExtra("link", data.episodes.get(0).content_link);
+                                        startActivity(intent1);
+                                        alertDialog.dismiss();
+                                    }
+                                });
+                                btn_okay.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        alertDialog.dismiss();
+                                    }
 
-                            btn_cancel.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
-                                    intent1.putExtra("link",data.episodes.get(0).content_link);
-                                    startActivity(intent1);
-                                    alertDialog.dismiss();
-                                }
-                            });
-                            btn_okay.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    alertDialog.dismiss();
-                                }
-
-                            });
-                            alertDialog.show();
+                                });
+                                alertDialog.show();
 
 //                            show();
-                        }else{
-                            shows();
+                            } else {
+                                shows();
+                            }
+
+                        }catch (Exception |Error e){
+                            e.printStackTrace();
                         }
                     }
                 });
@@ -269,32 +276,44 @@ public class MainActivity6 extends AppCompatActivity {
             }
         });
 
-
-
 }
 
     public void adp(List<Episode> episodes){
-        recyclerView=findViewById(R.id.seasons);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this,LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new AdapterEpisodes(episodes,this);
-        recyclerView.setAdapter(adapter);
+        try {
+            recyclerView = findViewById(R.id.seasons);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this, LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            adapter = new AdapterEpisodes(episodes, this);
+            recyclerView.setAdapter(adapter);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
 
     public void adp1(List<Watchnextseries> watchnextseries){
-        recyclerView1=findViewById(R.id.seriesnextss);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView1.setItemAnimator(new DefaultItemAnimator() );
-        adapterWachnextSeries=new AdapterWachnextSeries(this,watchnextseries);
-        recyclerView1.setAdapter(adapterWachnextSeries);
+        try {
+            recyclerView1=findViewById(R.id.seriesnextss);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity6.this,LinearLayoutManager.HORIZONTAL,false);
+            recyclerView1.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView1.setItemAnimator(new DefaultItemAnimator() );
+            adapterWachnextSeries=new AdapterWachnextSeries(this,watchnextseries);
+            recyclerView1.setAdapter(adapterWachnextSeries);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
+
     }
 
     // back to last activity
     public void back(){
-        super.onBackPressed();
+        try {
+            super.onBackPressed();
+        }catch (Exception | Error e){
+            e.printStackTrace();
+        }
+
     }
 
     public void show(){
@@ -330,35 +349,43 @@ public class MainActivity6 extends AppCompatActivity {
         alertDialog.show();
     }
 
+
+
     public void shows(){
-        final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
-        View mView = getLayoutInflater().inflate(R.layout.popups_subscribe,null);
-        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
-        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+        try {
+            final AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity6.this);
+            View mView = getLayoutInflater().inflate(R.layout.popups_subscribe,null);
+            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+            TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
 
-        alert.setView(mView);
-        final AlertDialog alertDialog = alert.create();
-        alertDialog.setCanceledOnTouchOutside(false);
-        Window window = alertDialog.getWindow();
-        WindowManager.LayoutParams wlp = window.getAttributes();
-        wlp.gravity = Gravity.BOTTOM;
-        wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
-        window.setAttributes(wlp);
-        btn_cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent start=new Intent(MainActivity6.this,MainActivity4.class);
-                startActivity(start);
-                alertDialog.dismiss();
-            }
-        });
-        btn_okay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertDialog.dismiss();
-            }
+            alert.setView(mView);
+            final AlertDialog alertDialog = alert.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            Window window = alertDialog.getWindow();
+            WindowManager.LayoutParams wlp = window.getAttributes();
+            wlp.gravity = Gravity.BOTTOM;
+            wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
+            window.setAttributes(wlp);
+            btn_cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent start=new Intent(MainActivity6.this,MainActivity4.class);
+                    startActivity(start);
+                    alertDialog.dismiss();
+                }
+            });
+            btn_okay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                }
 
-        });
-        alertDialog.show();
+            });
+            alertDialog.show();
+
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
+
     }
 }

@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Category;
@@ -64,7 +65,6 @@ public class MainActivity4 extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch (item.getItemId()){
                     case R.id.menu:
                         return true;
@@ -111,12 +111,15 @@ public class MainActivity4 extends AppCompatActivity {
          });
 
         if(account != null){
-            String name=account.getDisplayName();
-            String email=account.getEmail();
-           names.setText(name);
-           emailid.setText(email);
-            Picasso.get().load(account.getPhotoUrl()).placeholder(R.drawable.ic_baseline_person_24).into(circleImageView);
-
+            try {
+                String name = account.getDisplayName();
+                String email = account.getEmail();
+                names.setText(name);
+                emailid.setText(email);
+                Picasso.get().load(account.getPhotoUrl()).placeholder(R.drawable.ic_baseline_person_24).into(circleImageView);
+            }catch (Exception|Error e){
+                e.printStackTrace();
+            }
         }
 
         Log.d("TAG", "onCreate: "+account.getDisplayName() +" email   "+account.getEmail()+" authCode  "+account.getServerAuthCode()+" pic "+
@@ -128,7 +131,6 @@ public class MainActivity4 extends AppCompatActivity {
                 signOut();
             }
         });
-
 
         WebService.getClient().get_planData().enqueue(new Callback<MembershipPlanRoot>() {
             @Override
@@ -144,31 +146,43 @@ public class MainActivity4 extends AppCompatActivity {
 
     }
 
-
     public void adp(List<MembershipPlan> membershipPlans){
-        recyclerView=findViewById(R.id.plans);
-        GridLayoutManager linearLayoutManager = new GridLayoutManager(MainActivity4.this,2,LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapterPlans=new AdapterPlans(this,membershipPlans);
-        recyclerView.setAdapter(adapterPlans);
+        try {
+            recyclerView = findViewById(R.id.plans);
+            GridLayoutManager linearLayoutManager = new GridLayoutManager(MainActivity4.this, 2, LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            adapterPlans = new AdapterPlans(this, membershipPlans);
+            recyclerView.setAdapter(adapterPlans);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
 
-    void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        finish();
-                        startActivity(new Intent(MainActivity4.this,MainActivity.class));
-                    }
-                });
+   private void signOut() {
+        try {
+            mGoogleSignInClient.signOut()
+                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(MainActivity4.this, MainActivity.class));
+                        }
+                    });
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
-        startActivity(intent);
+        try {
+            Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+            startActivity(intent);
+        }catch (Exception | Error e){
+            e.printStackTrace();
+        }
     }
 }
