@@ -23,91 +23,39 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/img1"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="Welcome"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        />
 
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/Welcome"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        >-->
-<!--    </androidx.recyclerview.widget.RecyclerView>-->
-
-
-<!--    <TextView-->
-<!--        android:id="@+id/text1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/Welcome"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:layout_marginTop="5dp"-->
-<!--        android:layout_marginBottom="5dp"-->
-<!--        android:scaleY="2"-->
-<!--        android:text="Welcome to"-->
-<!--        android:textColor="?attr/actionMenuTextColor"-->
-<!--        android:textScaleX="2"-->
-<!--        android:textSize="22dp"-->
-<!--        android:textStyle="bold" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/text1"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:layout_marginTop="13dp"-->
-<!--        android:layout_marginBottom="5dp"-->
-<!--        android:scaleY="2.5"-->
-<!--        android:text="KATTO DIGITAL!!"-->
-<!--        android:textColor="#FFC107"-->
-<!--        android:textScaleX="2"-->
-<!--        android:textSize="22dp"-->
-<!--        android:textStyle="bold" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/text2"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:scaleY="0.8"-->
-<!--        android:text="Join to KATTO APP and Watching to unlimited Movies, Series with Episodes!!!"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textColorLink="@color/white"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textStyle="bold" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/text3"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:text="Get to access all of your favourite content"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="15dp"-->
-<!--        android:textStyle="bold" />-->
-
-
-
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Burst of Entertainment"
+        android:textColor="@color/white"
+        android:layout_below="@id/text1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/login"
-        android:layout_width="200dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/text1"
-        android:background="@color/white"
-        android:gravity="center"
+        android:layout_below="@+id/text2"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         />
+
 </RelativeLayout>

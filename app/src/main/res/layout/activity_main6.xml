@@ -371,29 +371,34 @@
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:layout_below="@+id/text14"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="4dp"
             android:background="@color/black"
-            android:outlineSpotShadowColor="#F61302"
+            android:outlineSpotShadowColor="@color/black"
             app:tabGravity="center"
-            app:tabIndicatorColor="#9CFD1403"
-            app:tabIndicatorHeight="50dp"
+            app:tabIndicatorAnimationDuration="1000"
+            app:tabIndicatorColor="#FF0000"
             app:tabIndicatorFullWidth="true"
-            app:tabMode="fixed"
-            app:tabRippleColor="#FA440B"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="scrollable"
+            app:tabRippleColor="#FFAB00"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/white"
-            app:tabIndicatorAnimationDuration="1000"
-            android:layout_marginStart="10dp"
-            app:tabUnboundedRipple="true"
-            >
+            app:tabUnboundedRipple="true">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/b1"
                 android:layout_width="12dp"
                 android:layout_height="wrap_content"
                 android:background="#F30808"
-                android:text="Episodes"
-                />
+                android:text="Episodes" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/b3"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:text="TRAILERS &amp; More"
+                android:textAlignment="center" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/b2"
@@ -401,6 +406,8 @@
                 android:layout_height="wrap_content"
                 android:text="MORE LIKE THIS"
                 android:textAlignment="center" />
+
+
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -441,6 +448,66 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/tra1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text17"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/moretrailers"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:background="@color/black"
+                android:scaleType="fitXY"
+                android:scaleY="1.2"
+                android:src="@drawable/she" />
+
+            <ImageView
+                android:id="@+id/trailersPlay"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/epiplay" />
+
+            <TextView
+                android:id="@+id/trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moretrailers"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:text="Trailer : "
+                android:textSize="15dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/textTr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moretrailers"
+                android:layout_alignLeft="@+id/trailers"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="7dp"
+                android:text="trailer name"
+                android:textSize="15dp" />
 
         </RelativeLayout>
 

@@ -53,6 +53,7 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_volume_up_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_watch_later_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/information_foreground.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/loginback.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/menu.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/pausebuttonvideoplayer.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/plans.xml" value="0.1975" />
@@ -67,10 +68,20 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rightarrow.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/roundbg.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/rounded_cornor_border_plans.xml" value="0.2285" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/roundview.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/search5.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress.xml" value="0.1915" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_progress_style.xml" value="0.192" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/seekbar_track.xml" value="0.1915" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/shareicon.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/speedvideoplayer.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/thumb_image.xml" value="0.1915" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/watchlist.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/watchnow_1.xml" value="0.2055" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/font/lobster.xml" value="0.265625" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/font/lobster_italic.xml" value="0.265625" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/font/lobster_regular.xml" value="0.265625" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/font/montserrat.xml" value="0.26666666666666666" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main13.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/activity_main14.xml" value="0.23645833333333333" />

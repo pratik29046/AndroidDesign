@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -48,13 +49,14 @@ public class MainActivity6 extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     AdapterEpisodes adapter;
     AdapterWachnextSeries adapterWachnextSeries;
-    ImageView imageView;
+    ImageView imageView,trailersPlay;
     TextView textView,text15,text17;
-    TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors;
-    ImageView img1, img2;
+    TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors,textTr;
+    ImageView img1, img2,moretrailers;
     TabLayout tab;
     TabItem t1,t2;
     private String s;
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,8 +80,10 @@ public class MainActivity6 extends AppCompatActivity {
         t1=findViewById(R.id.b1);
         t2=findViewById(R.id.b2);
         tab=findViewById(R.id.text17);
-
-
+        relativeLayout=findViewById(R.id.tra1);
+        moretrailers=findViewById(R.id.moretrailers);
+        textTr=findViewById(R.id.textTr);
+        trailersPlay=findViewById(R.id.trailersPlay);
 //        text15.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -106,9 +110,16 @@ public class MainActivity6 extends AppCompatActivity {
                 if(tab.getPosition()==0){
                     recyclerView.setVisibility(View.VISIBLE);
                     recyclerView1.setVisibility(View.GONE);
+                    relativeLayout.setVisibility(View.GONE);
+                }else if(tab.getPosition()==2){
+                    recyclerView.setVisibility(View.GONE);
+                    relativeLayout.setVisibility(View.GONE);
+                    recyclerView1.setVisibility(View.VISIBLE);
+
                 }else if(tab.getPosition()==1){
                     recyclerView.setVisibility(View.GONE);
-                    recyclerView1.setVisibility(View.VISIBLE);
+                    recyclerView1.setVisibility(View.GONE);
+                    relativeLayout.setVisibility(View.VISIBLE);
                 }
             }
             @Override
@@ -190,13 +201,21 @@ public class MainActivity6 extends AppCompatActivity {
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);
+                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
+                textTr.setText(data.name);
                 adp1(data.watch_next);
                 adp(data.episodes);
 
 
-
-//                Log.d("TAG", "sirsss: "+data.episodes);
-
+                trailersPlay.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
+                        intent1.putExtra("link",data.trailer_link);
+                        intent1.putExtra("name",data.name);
+                        startActivity(intent1);
+                    }
+                });
 
                 img2.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -34,9 +34,15 @@ import com.example.project2.Network.WebService;
 import com.example.project2.POJO.Banner;
 import com.example.project2.POJO.Category;
 import com.example.project2.POJO.HomePOJO;
+import com.example.project2.POJO.RawData_POJO;
 import com.example.project2.POJO.Root;
 import com.example.project2.POJO.RootSeries;
 import com.example.project2.POJO.Series;
+import com.example.project2.POJO.TokenID;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -64,6 +70,8 @@ public class MainActivity2 extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     ImageView search_btn;
     private String url = "https://katto.in";
+    GoogleSignInClient mGoogleSignInClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +93,27 @@ public class MainActivity2 extends AppCompatActivity {
 //
 //            }
 //        });
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
+        String id=account.getIdToken();
+        Log.d("TAG", "onCreate: "+id);
+        WebService.getClient().post_idData(new RawData_POJO( id, "", ""
+        )).enqueue(new Callback<TokenID>() {
+            @Override
+            public void onResponse(Call<TokenID> call, Response<TokenID> response) {
+
+            }
+            @Override
+            public void onFailure(Call<TokenID> call, Throwable t) {
+
+            }
+        });
+
 
 
         WebService.getClient().get_HomeData().enqueue(new Callback<Root>() {

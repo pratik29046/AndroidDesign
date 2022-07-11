@@ -42,7 +42,7 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
         holder.time.setText(userList2.get(position).duration);
 
         if(userList2.get(position).free==true) {
-            holder.free.setVisibility(View.VISIBLE);
+            holder.free.setVisibility(View.GONE);
 
         }
             final Episode temp = userList2.get(position);

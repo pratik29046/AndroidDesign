@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
     android:layout_marginBottom="4dp"
-
+    android:padding="5dp"
     >
 
 
@@ -18,6 +18,8 @@
         android:foregroundGravity="center"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
+        android:background="#FFAB00"
+
         >
 
         <TextView
@@ -72,7 +74,7 @@
             android:gravity="center"
             android:text="SUBSCRIBE"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
 

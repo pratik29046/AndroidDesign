@@ -138,7 +138,7 @@ public class MainPlayerActivity extends AppCompatActivity {
 
             Log.d("Player oncreate", "oncreate");
             url = getIntent().getStringExtra("link");
-//            name = getIntent().getStringExtra("name");
+            name = getIntent().getStringExtra("name");
             Log.d("PlayerPATH :", "App :" + url + ":" + name);
 
             scaleFactor = 1.0f;

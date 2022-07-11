@@ -60,17 +60,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         signInButton = findViewById(R.id.login);
 
-
-//         time=new Timer();
+//        time=new Timer();
 //        time.schedule(new TimerTask() {
 //            @Override
 //            public void run() {
 //                Intent send = new Intent(MainActivity.this, MainActivity2.class);
 //                startActivity(send);
 //            }
-//        },8000);
-
-
+//        },2000);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("7654007831-971a1qee7lcgrt19ph2cbsd413qjdkik.apps.googleusercontent.com")
@@ -133,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 navigateToSecodeActivity();
 
             } catch (ApiException e) {
-                Toast.makeText(getApplicationContext(),"wrong",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Login unsuccessful check your Internet Connection",Toast.LENGTH_SHORT).show();
             }
         }
     }
