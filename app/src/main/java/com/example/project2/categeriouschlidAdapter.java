@@ -25,11 +25,9 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
     Context context;
     List<Content> memberList;
 
-
     public categeriouschlidAdapter(Context context, List<Content> members){
         this.context=context;
         this.memberList=members;
-
     }
 
     @NonNull
@@ -72,7 +70,6 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
              });
 
          }
-
 
     }
 

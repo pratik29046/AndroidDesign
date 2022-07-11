@@ -38,7 +38,6 @@ public class MainActivity5 extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.upcomes);
         recyclerView=findViewById(R.id.upData);
 
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
