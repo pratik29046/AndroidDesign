@@ -52,8 +52,7 @@
             android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="90dp"
-            android:src="@drawable/ic_baseline_play_circle_outline_24"
-            />
+            android:src="@drawable/epiplay" />
 
 
         <TextView

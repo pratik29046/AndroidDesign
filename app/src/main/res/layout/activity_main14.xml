@@ -10,9 +10,13 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="download comming soon "
-        android:textSize="25dp"
+        android:layout_height="wrap_content"
+        android:text="Download Comming Soon Enjoy To Katto Now....."
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FFD600"
+        android:textAlignment="center"
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

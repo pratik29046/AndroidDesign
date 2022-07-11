@@ -18,14 +18,13 @@
             android:layout_alignParentLeft="true"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="6dp"
             android:layout_marginBottom="5dp"
             android:src="@drawable/ic_baseline_person_24"
             app:civ_border_color="@color/white"
             app:civ_border_width="1dp"
             app:civ_circle_background_color="@color/information_background"
             tools:ignore="RtlHardcoded"
-            android:layout_above="@+id/sub"
             />
         <TextView
             android:id="@+id/names"
@@ -36,14 +35,14 @@
             android:textColor="@color/white"
             android:layout_alignLeft="@+id/profilePic"
             android:layout_marginStart="60dp"
-            android:layout_above="@+id/emailId"
+            android:layout_marginTop="6dp"
             />
 
         <TextView
             android:id="@+id/emailId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/sub"
+            android:layout_below="@+id/names"
             android:layout_alignLeft="@+id/profilePic"
             android:layout_marginStart="60dp"
             android:text="pratikpawade8667@gmail.com"
@@ -56,7 +55,7 @@
             android:id="@+id/sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/rec"
+            android:layout_below="@+id/profilePic"
             android:layout_marginStart="8dp"
             android:text="SUBSCRIBE TO WATCH"
             android:textColor="#F40529"
@@ -67,7 +66,7 @@
             android:id="@+id/rec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/p1"
+            android:layout_below="@+id/sub"
             android:layout_marginStart="8dp"
             android:layout_marginTop="-5dp"
             android:text="Recommended"
@@ -85,7 +84,7 @@
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
             android:layout_marginStart="25dp"
-            android:layout_above="@+id/p2"
+            android:layout_below="@+id/rec"
             />
 
         <TextView
@@ -95,10 +94,10 @@
             android:text="Unlimited Documentaries"
             android:layout_marginStart="60dp"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="7dp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_above="@+id/v2"
+            android:layout_below="@+id/rec"
             />
 
 
@@ -110,16 +109,16 @@
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
             android:layout_marginStart="25dp"
-            android:layout_above="@+id/p3"
+            android:layout_below="@+id/p1"
             />
 
         <TextView
             android:id="@+id/v2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/v3"
+            android:layout_below="@+id/v1"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="Full HD"
             android:textColor="@color/white"
             android:textSize="15dp"
@@ -135,7 +134,7 @@
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
             android:layout_marginStart="25dp"
-            android:layout_above="@+id/p4"
+            android:layout_below="@+id/p2"
             />
 
         <TextView
@@ -145,10 +144,10 @@
             android:text="Web Series &amp; Blockbuster Movies"
             android:layout_marginStart="60dp"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="9dp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_above="@+id/v4"
+            android:layout_below="@+id/v2"
             />
 
         <ImageView
@@ -158,7 +157,7 @@
             android:src="@drawable/ic_baseline_check_circle_24"
             android:layout_marginTop="5dp"
             android:layout_marginStart="25dp"
-            android:layout_above="@+id/plans"
+            android:layout_below="@+id/p3"
             android:layout_marginBottom="6dp"
             />
 
@@ -166,101 +165,101 @@
         android:id="@+id/v4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/plans"
+        android:layout_below="@+id/v3"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="6dp"
         android:text="Watch on Mobile, Laptop"
         android:textColor="@color/white"
         android:textSize="15dp"
         android:textStyle="bold" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/plans"
+    <RelativeLayout
+        android:id="@+id/rel12"
         android:layout_width="wrap_content"
-        android:layout_height="290dp"
-        android:layout_above="@+id/l5"
-        android:layout_centerHorizontal="true"
-        />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v4"
+        android:layout_marginTop="4dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/plans"
+            android:layout_width="wrap_content"
+            android:layout_height="290dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/l5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel12"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/l5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/l7"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="25dp"
+                android:layout_weight="1"
+                android:text="Invite a Friend"
+                android:textColor="@color/information_background"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="-8dp"
-                    android:text="____________________________________________________"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_weight="1"
+                android:text="Parental Control"
+                android:textColor="@color/information_background"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:text="Invite a Friend"
-                    android:textColor="@color/information_background"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_weight="1"
+                android:text="Help"
+                android:textColor="@color/information_background"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:text="Parental Control"
-                    android:textColor="@color/information_background"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    />
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:text="Log Out"
+                android:textColor="@color/information_background"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:text="Help"
-                    android:textColor="@color/information_background"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    />
-
-                <TextView
-                    android:id="@+id/logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:text="Log Out"
-                    android:textColor="@color/information_background"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="-8dp"
-                    android:text="____________________________________________________"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
 
         </LinearLayout>
+
+    </LinearLayout>
 
 
         <LinearLayout
@@ -297,6 +296,8 @@
                 android:textColor="@color/white" />
 
         </LinearLayout>
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/boom"
         android:layout_width="match_parent"
