@@ -45,7 +45,12 @@ public class Searchbar extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                adaptersSearchNames.getFilter().filter(newText);
+
+                try {
+                    adaptersSearchNames.getFilter().filter(newText);
+                }catch (Exception|Error e){
+                    e.printStackTrace();
+                }
                 return false;
             }
         });
@@ -58,7 +63,6 @@ public class Searchbar extends AppCompatActivity {
                     adp(response.body().categories.get(i).content);
 
                 }*/
-
 
                 adp(response.body().categories.get(response.body().categories.size()-2).content);
 
@@ -74,12 +78,16 @@ public class Searchbar extends AppCompatActivity {
 
 
     public void adp(List<Content> contents){
-        recyclerView=findViewById(R.id.recycler_search);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Searchbar.this,LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adaptersSearchNames=new AdaptersSearchNames(contents,this);
-        recyclerView.setAdapter(adaptersSearchNames);
+        try {
+            recyclerView = findViewById(R.id.recycler_search);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Searchbar.this, LinearLayoutManager.VERTICAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            adaptersSearchNames = new AdaptersSearchNames(contents, this);
+            recyclerView.setAdapter(adaptersSearchNames);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
 

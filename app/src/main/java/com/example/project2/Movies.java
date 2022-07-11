@@ -139,41 +139,43 @@ public class Movies extends AppCompatActivity {
                 play.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
                         if(data.membership=="false"){
+                            try {
+                                final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
+                                View mView = getLayoutInflater().inflate(R.layout.popups, null);
+                                TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+                                TextView btn_okay = (TextView) mView.findViewById(R.id.b2);
 
-                            final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
-                            View mView = getLayoutInflater().inflate(R.layout.popups,null);
-                            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
-                            TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+                                alert.setView(mView);
+                                final AlertDialog alertDialog = alert.create();
+                                alertDialog.setCanceledOnTouchOutside(false);
+                                Window window = alertDialog.getWindow();
+                                WindowManager.LayoutParams wlp = window.getAttributes();
+                                wlp.gravity = Gravity.BOTTOM;
+                                wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+                                window.setAttributes(wlp);
 
-                            alert.setView(mView);
-                            final AlertDialog alertDialog = alert.create();
-                            alertDialog.setCanceledOnTouchOutside(false);
-                            Window window = alertDialog.getWindow();
-                            WindowManager.LayoutParams wlp = window.getAttributes();
-                            wlp.gravity = Gravity.BOTTOM;
-                            wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-                            window.setAttributes(wlp);
+                                btn_cancel.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent start = new Intent(Movies.this, MainPlayerActivity.class);
+                                        start.putExtra("link", data.content_link);
+                                        start.putExtra("name", data.name);
+                                        startActivity(start);
+                                        alertDialog.dismiss();
+                                    }
+                                });
+                                btn_okay.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        alertDialog.dismiss();
+                                    }
 
-                            btn_cancel.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent start=new Intent(Movies.this,MainPlayerActivity.class);
-                                    start.putExtra("link",data.content_link);
-                                    start.putExtra("name",data.name);
-                                    startActivity(start);
-                                    alertDialog.dismiss();
-                                }
-                            });
-                            btn_okay.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    alertDialog.dismiss();
-                                }
-
-                            });
-                            alertDialog.show();
+                                });
+                                alertDialog.show();
+                            }catch (Exception|Error e){
+                                e.printStackTrace();
+                            }
 
                         }else{
                             shows();
@@ -185,9 +187,13 @@ public class Movies extends AppCompatActivity {
                 trailersPlay.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent1=new Intent(getApplicationContext(),MainPlayerActivity.class);
-                        intent1.putExtra("link",data.trailer_link);
-                        startActivity(intent1);
+                        try {
+                            Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
+                            intent1.putExtra("link", data.trailer_link);
+                            startActivity(intent1);
+                        }catch (Exception| Error e){
+                            e.printStackTrace();
+                        }
                     }
                 });
 
@@ -204,16 +210,24 @@ public class Movies extends AppCompatActivity {
 
 
     public void adp(List<Watchnextmovies> watchnextmovies){
-        recyclerView=findViewById(R.id.watchnext);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Movies.this,LinearLayoutManager.HORIZONTAL,false);
-        recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
-        recyclerView.setItemAnimator(new DefaultItemAnimator() );
-        adapter=new AdapterWatchnext(this,watchnextmovies);
-        recyclerView.setAdapter(adapter);
+        try {
+            recyclerView = findViewById(R.id.watchnext);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Movies.this, LinearLayoutManager.HORIZONTAL, false);
+            recyclerView.setLayoutManager(linearLayoutManager); // set LayoutManager to RecyclerView
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            adapter = new AdapterWatchnext(this, watchnextmovies);
+            recyclerView.setAdapter(adapter);
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
     public void back(){
-        super.onBackPressed();
+        try {
+            super.onBackPressed();
+        }catch (Exception|Error e){
+            e.printStackTrace();
+        }
     }
 
   /*  public void show(){
@@ -250,35 +264,39 @@ public class Movies extends AppCompatActivity {
     }*/
 
     public void shows(){
-        final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
-        View mView = getLayoutInflater().inflate(R.layout.popups_subscribe,null);
-        TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
-        TextView btn_okay = (TextView)mView.findViewById(R.id.b2);
+        try {
+            final AlertDialog.Builder alert = new AlertDialog.Builder(Movies.this);
+            View mView = getLayoutInflater().inflate(R.layout.popups_subscribe, null);
+            TextView btn_cancel = (TextView) mView.findViewById(R.id.b1);
+            TextView btn_okay = (TextView) mView.findViewById(R.id.b2);
 
-        alert.setView(mView);
-        final AlertDialog alertDialog = alert.create();
-        alertDialog.setCanceledOnTouchOutside(false);
-        Window window = alertDialog.getWindow();
-        WindowManager.LayoutParams wlp = window.getAttributes();
-        wlp.gravity = Gravity.BOTTOM;
-        wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
-        window.setAttributes(wlp);
-        btn_cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent start=new Intent(Movies.this,MainActivity4.class);
-                startActivity(start);
-                alertDialog.dismiss();
-            }
-        });
-        btn_okay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertDialog.dismiss();
-            }
+            alert.setView(mView);
+            final AlertDialog alertDialog = alert.create();
+            alertDialog.setCanceledOnTouchOutside(false);
+            Window window = alertDialog.getWindow();
+            WindowManager.LayoutParams wlp = window.getAttributes();
+            wlp.gravity = Gravity.BOTTOM;
+            wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
+            window.setAttributes(wlp);
+            btn_cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent start = new Intent(Movies.this, MainActivity4.class);
+                    startActivity(start);
+                    alertDialog.dismiss();
+                }
+            });
+            btn_okay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                }
 
-        });
-        alertDialog.show();
+            });
+            alertDialog.show();
+        }catch (Exception| Error e){
+            e.printStackTrace();
+        }
     }
 
 }
