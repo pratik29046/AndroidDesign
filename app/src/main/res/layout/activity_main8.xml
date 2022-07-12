@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginEnd="2dp"
     android:background="@color/black"
-    android:layout_marginBottom="5dp"
+    android:layout_marginBottom="1dp"
     >
 
     <RelativeLayout
@@ -31,7 +31,7 @@
             android:layout_marginStart="1dp"
             android:layout_marginTop="2dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/she" />
+            />
 
             <ImageView
                 android:layout_width="30dp"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="158dp"
             android:layout_marginTop="12dp"
-            android:text="12"
+            android:text=""
             android:textColor="@color/white"
             android:textStyle="bold" />
         <TextView
@@ -71,7 +71,7 @@
             android:layout_alignLeft="@+id/dot"
             android:layout_marginStart="10dp"
             android:layout_marginTop="12dp"
-            android:text="The pickup  "
+            android:text=""
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
             android:layout_below="@+id/name"
             android:layout_marginStart="158dp"
             android:layout_marginTop="3dp"
-            android:text="3355555555"
+            android:text=""
             android:textStyle="bold" />
 
 
@@ -95,15 +95,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:src="@drawable/download_recy" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card"
-            android:text="hello dhddh dhdhdh dhdhdh dhydhdhdn  hhdhhdh hdhhd hdhd dhdhd hdh hdhh dhdhdh dhdh dhdhh"
-            android:textStyle="bold"
-            />
 
         <TextView
             android:id="@+id/free"

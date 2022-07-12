@@ -29,7 +29,6 @@
             android:layout_marginTop="2dp"
             android:adjustViewBounds="true"
             android:background="@color/black"
-            android:src="@drawable/she"
             android:scaleType="fitXY"
             />
 
@@ -51,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img3"
             android:layout_marginStart="60dp"
-            android:text="Movie Name"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold"
@@ -78,7 +77,7 @@
             android:layout_below="@+id/text2"
             android:layout_marginStart="70dp"
             android:layout_marginTop="12dp"
-            android:text="2022"
+            android:text=""
             android:textSize="15dp"
             android:textStyle="bold" />
 
@@ -91,7 +90,7 @@
             android:layout_marginTop="13dp"
             android:background="@drawable/btext"
             android:gravity="center"
-            android:text="18+"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -104,7 +103,7 @@
             android:layout_below="@+id/text5"
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:text="English"
+            android:text=""
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -116,7 +115,7 @@
             android:layout_alignLeft="@+id/text23"
             android:layout_marginTop="4dp"
             android:layout_marginStart="11dp"
-            android:text="Drama sex romance comed"
+            android:text=""
             android:textColor="@color/white"
             android:textStyle="bold" />
 
@@ -167,7 +166,7 @@
             android:layout_alignLeft="@+id/text5"
             android:layout_marginStart="122dp"
             android:layout_marginTop="11dp"
-            android:text="Season"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="15dp" />
 
@@ -238,7 +237,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
-            android:text="A ordinary girl trying to discover her sexuality in a world which has been cruel  molestful to her since childhood, is an impressive story telling of a dicothom."
+            android:text=""
             android:textColor="#E8D7DDD7" />
 
         <TextView
@@ -261,7 +260,7 @@
             android:layout_alignLeft="@+id/text10"
             android:layout_marginStart="64dp"
             android:layout_marginTop="6dp"
-            android:text="Hi hello my dear frineds how are your and what are your doing in your life "
+            android:text=""
             app:colorClickableText="@color/white"
             app:trimCollapsedText="@string/read_more"
             app:trimExpandedText="@string/read_less"
@@ -287,7 +286,7 @@
             android:layout_alignLeft="@+id/text10"
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"
-            android:text="Imtiaz Ali" />
+            android:text="" />
 
 <!--        <ImageView-->
 <!--            android:id="@+id/img7"-->
@@ -480,7 +479,7 @@
                 android:background="@color/black"
                 android:scaleType="fitXY"
                 android:scaleY="1.2"
-                android:src="@drawable/she" />
+                 />
 
             <ImageView
                 android:id="@+id/trailersPlay"
@@ -512,7 +511,7 @@
                 android:layout_marginStart="55dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="7dp"
-                android:text="trailer name"
+                android:text=""
                 android:textSize="15dp" />
 
         </RelativeLayout>

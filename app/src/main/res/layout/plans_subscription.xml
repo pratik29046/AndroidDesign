@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="25dp"
-            android:text="Plan Name"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -39,7 +39,7 @@
             android:layout_below="@+id/month"
             android:layout_marginStart="25dp"
             android:layout_marginTop="5dp"
-            android:text="₹ 1499.00"
+            android:text=""
             android:layout_centerHorizontal="true"
             android:textColor="@color/white"
             android:textSize="30dp"
@@ -55,7 +55,7 @@
             android:layout_marginStart="25dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:text="Valid for 18000 days Plan"
+            android:text=""
             android:textColor="@color/white"
             android:textAlignment="center"
             android:textStyle="italic" />
