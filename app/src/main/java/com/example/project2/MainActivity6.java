@@ -65,7 +65,7 @@ public class MainActivity6 extends AppCompatActivity {
         recyclerView = findViewById(R.id.seasons);
         recyclerView1=findViewById(R.id.seriesnextss);
         imageView = findViewById(R.id.img1);
-        textView = findViewById(R.id.text14);
+//        textView = findViewById(R.id.text14);
         img2 = findViewById(R.id.img5);
         img1 = findViewById(R.id.img3);
         Title = findViewById(R.id.text2);
@@ -120,17 +120,17 @@ public class MainActivity6 extends AppCompatActivity {
             }
         });
 
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent start = new Intent(MainActivity6.this, MainActivity7.class);
-                    startActivity(start);
-                }catch (Exception |Error e){
-                    e.printStackTrace();
-                }
-            }
-        });
+//        textView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                try {
+//                    Intent start = new Intent(MainActivity6.this, MainActivity7.class);
+//                    startActivity(start);
+//                }catch (Exception |Error e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
 
         Intent intent = getIntent();
 //        int img=intent.getIntExtra("img",0);

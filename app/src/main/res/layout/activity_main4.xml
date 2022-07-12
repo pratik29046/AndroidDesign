@@ -26,30 +26,29 @@
             app:civ_circle_background_color="@color/information_background"
             tools:ignore="RtlHardcoded"
             />
-        <TextView
-            android:id="@+id/names"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="name"
-            android:textSize="15dp"
-            android:textColor="@color/white"
-            android:layout_alignLeft="@+id/profilePic"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="6dp"
-            />
 
-        <TextView
-            android:id="@+id/emailId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/names"
-            android:layout_alignLeft="@+id/profilePic"
-            android:layout_marginStart="60dp"
-            android:text="pratikpawade8667@gmail.com"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:layout_marginBottom="10dp"
-            />
+    <TextView
+        android:id="@+id/names"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profilePic"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="6dp"
+        android:text="name"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/emailId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/names"
+        android:layout_alignLeft="@+id/profilePic"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:text="xyz@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
 
         <TextView
             android:id="@+id/sub"

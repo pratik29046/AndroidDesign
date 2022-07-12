@@ -317,15 +317,17 @@
         <!--            />-->
 
 
-        <TextView
+        <View
             android:id="@+id/text14"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="2dp"
             android:layout_below="@+id/text13"
             android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:background="@color/information_background"
             android:gravity="center"
-            android:text="_______________________________________________________________"
-            android:textColor="@color/play_background"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:textStyle="bold" />
 
 <!--        <TextView-->
@@ -357,8 +359,8 @@
             android:layout_height="24dp"
             android:layout_below="@+id/text14"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
             android:background="@color/black"
+            android:layout_marginTop="2dp"
             android:outlineSpotShadowColor="#F61302"
             app:tabGravity="center"
             app:tabIndicatorAnimationDuration="1000"
@@ -408,6 +410,7 @@
                 android:id="@+id/tra1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 >
 
                 <ImageView
