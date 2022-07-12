@@ -134,10 +134,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-
-
     void navigateToSecodeActivity() {
         finish();
         Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
@@ -146,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        ((Activity)getApplicationContext()).finish();
+        finishAffinity();
     }
 }
