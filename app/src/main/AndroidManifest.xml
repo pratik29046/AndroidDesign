@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.project2">
+    package="com.katto.pro">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,69 +19,69 @@
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
-            android:name=".MainPlayerActivity"
+            android:name="com.katto.pro.MainPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="sensorLandscape"
             android:exported="false" />
         <activity
-            android:name=".Searchbar"
+            android:name="com.katto.pro.Searchbar"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".SeriesWatchnext"
+            android:name="com.katto.pro.SeriesWatchnext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name="com.katto.pro.MainActivity5"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".UpcommingNext"
+            android:name="com.katto.pro.UpcommingNext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MovieWatchnext"
+            android:name="com.katto.pro.MovieWatchnext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".Movies"
+            android:name="com.katto.pro.Movies"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity14"
+            android:name="com.katto.pro.MainActivity14"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".TrackSelectionDialog"
+            android:name="com.katto.pro.TrackSelectionDialog"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".MainActivity8"
+            android:name="com.katto.pro.MainActivity8"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity7"
+            android:name="com.katto.pro.MainActivity7"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6"
+            android:name="com.katto.pro.MainActivity6"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name="com.katto.pro.MainActivity4"
             android:screenOrientation="portrait"
             android:exported="false"
             />
         <activity
-            android:name=".MainActivity3"
+            android:name="com.katto.pro.MainActivity3"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name="com.katto.pro.MainActivity2"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.katto.pro.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

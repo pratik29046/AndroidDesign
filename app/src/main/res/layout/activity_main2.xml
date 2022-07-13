@@ -15,7 +15,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity2"
+        tools:context="com.example.project2.com.katto.project2.MainActivity2"
         android:background="@color/black">
 
        <!-- <ImageView

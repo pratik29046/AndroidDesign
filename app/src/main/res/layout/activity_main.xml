@@ -8,14 +8,14 @@
     android:background="@drawable/kattobg"
     >
 
-
     <ImageView
         android:id="@+id/img1"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="170dp"
-        android:src="@drawable/kattowelcome" />
+        android:src="@drawable/kattowelcome"
+        />
 
     <TextView
         android:id="@+id/text1"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/img1"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginTop="30dp"
         android:text="Welcome"
         android:textColor="@color/white"
@@ -40,6 +41,7 @@
         android:textColor="@color/white"
         android:layout_below="@id/text1"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:textSize="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed"
