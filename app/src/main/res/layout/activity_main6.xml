@@ -127,7 +127,7 @@
             android:layout_alignRight="@+id/text20"
             android:layout_marginEnd="-11dp"
             android:text="."
-            android:textColor="#FF9800"
+            android:textColor="#D50000"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -175,8 +175,8 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_below="@+id/text2"
-            android:layout_alignLeft="@+id/text4"
-            android:layout_marginStart="43dp"
+            android:layout_alignRight="@+id/text4"
+            android:layout_marginEnd="-28dp"
             android:layout_marginTop="12dp"
             android:scaleType="center"
             android:src="@drawable/ic_baseline_hd_24" />
@@ -382,10 +382,11 @@
             app:tabGravity="center"
             app:tabIndicatorAnimationDuration="1000"
             app:tabIndicatorColor="#FF0000"
+            app:tabMinWidth="20dp"
             app:tabIndicatorFullWidth="true"
             app:tabIndicatorHeight="2dp"
             app:tabMode="scrollable"
-            app:tabRippleColor="#FFAB00"
+            app:tabRippleColor="#D50000"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/white"
             app:tabUnboundedRipple="true">
@@ -410,7 +411,6 @@
                 android:layout_height="wrap_content"
                 android:text="MORE LIKE THIS"
                 android:textAlignment="center" />
-
 
 
         </com.google.android.material.tabs.TabLayout>

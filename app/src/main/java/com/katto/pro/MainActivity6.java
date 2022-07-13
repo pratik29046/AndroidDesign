@@ -42,7 +42,7 @@ public class MainActivity6 extends AppCompatActivity {
     AdapterWachnextSeries adapterWachnextSeries;
     ImageView imageView,trailersPlay;
     TextView textView,text15,text17;
-    TextView Title, Dec, Date, Age, Season,language,desc,genres,starring,directors,textTr;
+    TextView Title, Dec, dates, Age, Season,language,desc,genres,starring,directors,textTr;
     ImageView img1, img2,moretrailers;
     TabLayout tab;
     TabItem t1,t2;
@@ -73,6 +73,7 @@ public class MainActivity6 extends AppCompatActivity {
         moretrailers=findViewById(R.id.moretrailers);
         textTr=findViewById(R.id.textTr);
         trailersPlay=findViewById(R.id.trailersPlay);
+        dates=findViewById(R.id.text4);
 
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -159,6 +160,7 @@ public class MainActivity6 extends AppCompatActivity {
                 Age.setText(data.age_rating);
                 language.setText(data.language);
                 genres.setText(data.genres);
+                dates.setText(data.created_at);
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);

@@ -34,7 +34,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/banner"
                 android:layout_width="wrap_content"
-                android:layout_height="505dp"
+                android:layout_height="550dp"
                 >
 
             </androidx.recyclerview.widget.RecyclerView>

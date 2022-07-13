@@ -11,17 +11,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
         android:layout_marginBottom="10dp"
-        >
+        android:background="@color/black">
 
         <com.google.android.exoplayer2.ui.PlayerView
             android:id="@+id/exoplayer1"
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:visibility="gone"
-            app:resize_mode="fill"
-            >
+            app:resize_mode="fill">
 
         </com.google.android.exoplayer2.ui.PlayerView>
 
@@ -33,17 +31,15 @@
             android:layout_marginTop="2dp"
             android:adjustViewBounds="true"
             android:background="@color/black"
-            android:visibility="visible"
             android:scaleType="fitXY"
-            />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/img22"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="270dp"
-            android:adjustViewBounds="true"
-             />
+            android:adjustViewBounds="true" />
 
         <ImageView
             android:id="@+id/img34"
@@ -75,7 +71,7 @@
             android:layout_marginStart="200dp"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
@@ -122,10 +118,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img22"
             android:layout_alignRight="@+id/text20"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="-11dp"
             android:text="."
-            android:textColor="#FF9800"
-            android:layout_marginTop="10dp"
+            android:textColor="#D50000"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -141,16 +137,16 @@
             android:text=""
             android:textColor="#E8D7DDD7" />
 
-                <TextView
-                    android:id="@+id/text13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text2"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Starring :"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Starring :"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
 
         <com.borjabravo.readmoretextview.ReadMoreTextView
@@ -168,16 +164,16 @@
             app:trimLength="20"
             app:trimMode="trimModeLength" />
 
-                <TextView
-                    android:id="@+id/text15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text14"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Creator  :"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text14"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="Creator  :"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text6"

@@ -39,7 +39,7 @@ public class Movies extends AppCompatActivity {
     RelativeLayout relativeLayout1;
     RecyclerView recyclerView;
     AdapterWatchnext adapter;
-    TextView Title,Dec,Date,Age,Season,Duration,language,starring,genres,directors,trailerNames;
+    TextView Title,Dec,dates,Age,Season,Duration,language,starring,genres,directors,trailerNames;
     ImageView img1,back,play,trailer,moretrailers,trailersPlay;
     TabLayout tab;
     TabItem t1,t2;
@@ -57,7 +57,7 @@ public class Movies extends AppCompatActivity {
         back=findViewById(R.id.img1);
         img1=findViewById(R.id.img3);
         Title=findViewById(R.id.text2);
-        Date=findViewById(R.id.text4);
+        dates=findViewById(R.id.text4);
         Age=findViewById(R.id.text5);
         Season=findViewById(R.id.text6);
         Dec=findViewById(R.id.text9);
@@ -125,6 +125,7 @@ public class Movies extends AppCompatActivity {
                 genres.setText(data.genres);
                 directors.setText(data.directors);
                 trailerNames.setText(data.name);
+                dates.setText(data.created_at);
                 Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
 
                 adp(data.watch_next);
