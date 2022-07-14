@@ -1,5 +1,6 @@
 package com.katto.pro;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -7,7 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -16,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.common.base.Strings;
 import com.katto.pro.POJO.Content;
 import com.katto.pro.POJO.MovieRootnames;
 import com.katto.pro.POJO.Watchnextmovies;
@@ -27,6 +31,10 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Month;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -111,6 +119,7 @@ public class Movies extends AppCompatActivity {
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT));
 
         WebService.getClient().getMoviePage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<MovieRootnames>() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<MovieRootnames> call, Response<MovieRootnames> response) {
 //                Log.d("TAG", "onResponse: "+response.body());
@@ -125,9 +134,21 @@ public class Movies extends AppCompatActivity {
                 genres.setText(data.genres);
                 directors.setText(data.directors);
                 trailerNames.setText(data.name);
-                dates.setText(data.created_at);
-                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
 
+                String date1=data.created_at.substring(0,10);
+                java.text.SimpleDateFormat month_date = new java.text.SimpleDateFormat("MMM yyyy", Locale.ENGLISH);
+                java.text.SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String actualDate =date1;
+                Date date = null;
+                try {
+                    date = sdf.parse(actualDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                String month_name = month_date.format(date);
+                dates.setText(month_name);
+
+                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
                 adp(data.watch_next);
 
                 play.setOnClickListener(new View.OnClickListener() {
@@ -293,5 +314,7 @@ public class Movies extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+
 
 }

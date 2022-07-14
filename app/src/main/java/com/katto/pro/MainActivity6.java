@@ -1,5 +1,6 @@
 package com.katto.pro;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -28,6 +30,12 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -151,6 +159,7 @@ public class MainActivity6 extends AppCompatActivity {
 
 //        Log.d("TAG", "onCreate: "+content.name.toLowerCase(Locale.ROOT).replace(" ","-"));
         WebService.getClient().getSeriesPage(content.name.toLowerCase(Locale.ROOT).replace(" ","-")).enqueue(new Callback<SeriesRootnames>() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onResponse(Call<SeriesRootnames> call, Response<SeriesRootnames> response) {
                 Log.d("TAG", "onResponse: "+response.body());
@@ -160,7 +169,22 @@ public class MainActivity6 extends AppCompatActivity {
                 Age.setText(data.age_rating);
                 language.setText(data.language);
                 genres.setText(data.genres);
-                dates.setText(data.created_at);
+
+                String date1=data.created_at.substring(0,10);
+                SimpleDateFormat month_date = new SimpleDateFormat("MMM yyyy", Locale.ENGLISH);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String actualDate =date1;
+                Date date = null;
+                try {
+                    date = sdf.parse(actualDate);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                String month_name = month_date.format(date);
+                dates.setText(month_name);
+
+
+//               dates.setText(data.created_at.substring(0,10));
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);

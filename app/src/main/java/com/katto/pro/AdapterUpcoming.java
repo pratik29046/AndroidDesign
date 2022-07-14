@@ -16,7 +16,11 @@ import com.katto.pro.R;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.squareup.picasso.Picasso;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHolder> {
     Context context;
@@ -39,12 +43,25 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
         Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img1);
         Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img2);
         holder.age.setText(upcomings1.get(position).age_rating);
-        holder.date.setText(upcomings1.get(position).release_date);
+        holder.date.setText(upcomings1.get(position).release_date.substring(0,10));
         holder.lang.setText(upcomings1.get(position).language);
         holder.genres.setText(upcomings1.get(position).genres);
         holder.description.setText(upcomings1.get(position).description);
         holder.starring.setText(upcomings1.get(position).starring);
         holder.directors.setText(upcomings1.get(position).directors);
+
+        String date1=upcomings1.get(position).release_date.substring(0,10);
+        java.text.SimpleDateFormat month_date = new java.text.SimpleDateFormat("dd MMM", Locale.ENGLISH);
+        java.text.SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String actualDate =date1;
+        Date date = null;
+        try {
+            date = sdf.parse(actualDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String month_name = month_date.format(date);
+        holder.date.setText(month_name);
 
         final Upcoming temp= upcomings1.get(position);
 
