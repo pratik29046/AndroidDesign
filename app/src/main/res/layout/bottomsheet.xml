@@ -46,7 +46,7 @@
             android:textSize="25dp"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:background="#FFD600"
+            android:background="#FF0000"
             android:layout_marginBottom="7dp"
             android:layout_marginTop="25dp"
             />
