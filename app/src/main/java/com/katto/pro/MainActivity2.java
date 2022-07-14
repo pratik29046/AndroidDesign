@@ -56,6 +56,7 @@ public class MainActivity2 extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
         popup = findViewById(R.id.continues);
         linearLayoutplay = findViewById(R.id.plays);
 //        ImageSlider imageSlider=findViewById(R.id.post);
-//        search_btn = findViewById(R.id.search_btn);
+        search_btn = findViewById(R.id.search_btn);
 
 
         try {
@@ -148,6 +149,16 @@ public class MainActivity2 extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        search_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),Searchbar.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 //        linearLayoutplay.setOnClickListener(new View.OnClickListener() {

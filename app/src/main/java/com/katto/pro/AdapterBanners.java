@@ -38,13 +38,13 @@ public class AdapterBanners extends RecyclerView.Adapter<AdapterBanners.View_Hol
     public void onBindViewHolder(@NonNull View_Holder holder, int position) {
         Picasso.get().load("https://katto.in"+bannerList.get(position).poster).into( holder.img1);
 
-        holder.search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context1,Searchbar.class);
-                context1.startActivity(intent);
-            }
-        });
+//        holder.search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(context1,Searchbar.class);
+//                context1.startActivity(intent);
+//            }
+//        });
 
     }
 
@@ -59,7 +59,7 @@ public class AdapterBanners extends RecyclerView.Adapter<AdapterBanners.View_Hol
             super(itemView);
 
             img1=itemView.findViewById(R.id.img1);
-            search=itemView.findViewById(R.id.search_btn);
+//            search=itemView.findViewById(R.id.search_btn);
         }
     }
 }

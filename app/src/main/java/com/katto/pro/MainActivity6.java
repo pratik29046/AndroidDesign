@@ -182,9 +182,6 @@ public class MainActivity6 extends AppCompatActivity {
                 }
                 String month_name = month_date.format(date);
                 dates.setText(month_name);
-
-
-//               dates.setText(data.created_at.substring(0,10));
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);

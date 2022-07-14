@@ -13,7 +13,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/kattowelcome"
-        android:label="Katto"
+        android:label="Taak"
         android:roundIcon="@drawable/kattowelcome"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2"

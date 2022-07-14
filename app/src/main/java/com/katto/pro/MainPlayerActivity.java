@@ -69,7 +69,7 @@ public class MainPlayerActivity extends AppCompatActivity {
     private TracksInfo lastSeenTracksInfo;
 
     private ImageView playpausebutton, forward10Sec, rewind10Sec, setting, backarrow;
-
+    ImageView episode;
     private float downy, endheight, diffheight, lastx, putx, puty,
             trackx, scaleFactor = 1.0f, savebright = -1.0f;
 

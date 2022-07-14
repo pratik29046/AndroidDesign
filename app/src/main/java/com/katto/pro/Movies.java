@@ -166,7 +166,7 @@ public class Movies extends AppCompatActivity {
                                 alertDialog.setCanceledOnTouchOutside(false);
                                 Window window = alertDialog.getWindow();
                                 WindowManager.LayoutParams wlp = window.getAttributes();
-                                wlp.gravity = Gravity.BOTTOM;
+                                wlp.gravity = Gravity.CENTER_HORIZONTAL;
                                 wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
                                 window.setAttributes(wlp);
 
@@ -291,7 +291,7 @@ public class Movies extends AppCompatActivity {
             alertDialog.setCanceledOnTouchOutside(false);
             Window window = alertDialog.getWindow();
             WindowManager.LayoutParams wlp = window.getAttributes();
-            wlp.gravity = Gravity.BOTTOM;
+            wlp.gravity = Gravity.CENTER_HORIZONTAL;
             wlp.flags &= ~WindowManager.LayoutParams.FLAG_BLUR_BEHIND;
             window.setAttributes(wlp);
             btn_cancel.setOnClickListener(new View.OnClickListener() {

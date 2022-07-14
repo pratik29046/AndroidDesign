@@ -265,6 +265,13 @@
             android:visibility="gone">
 
             <ImageView
+                android:id="@+id/episode"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/epiplay"
+                />
+
+            <ImageView
                 android:id="@+id/aspectbtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
