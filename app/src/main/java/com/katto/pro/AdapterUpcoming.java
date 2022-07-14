@@ -41,7 +41,7 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img1);
-        Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img2);
+        Picasso.get().load("https://katto.in"+upcomings1.get(position).v_poster).into(holder.img2);
         holder.age.setText(upcomings1.get(position).age_rating);
         holder.date.setText(upcomings1.get(position).release_date.substring(0,10));
         holder.lang.setText(upcomings1.get(position).language);
