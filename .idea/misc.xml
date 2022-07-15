@@ -44,6 +44,7 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_circle_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_play_circle_outline_24.xml" value="0.1975" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_replay_10_24.xml" value="0.2055" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_running_with_errors_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_screen_rotation_24.xml" value="0.1975" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1975" />
@@ -105,7 +106,7 @@
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/banners.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/bottomsheet.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/chlidcategoies_row.xml" value="0.23645833333333333" />
-        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/main_player_activity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/main_player_activity.xml" value="0.264" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/movies.xml" value="0.264" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/plans_subscription.xml" value="0.23645833333333333" />
         <entry key="..\:/Katto/AndroidDesign/app/src/main/res/layout/popups.xml" value="0.4" />
