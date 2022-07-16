@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.katto.pro">
+    package="com.taak.pro">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,76 +12,76 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/taak1"
+        android:icon="@drawable/taak5"
         android:label="Taak"
-        android:roundIcon="@drawable/taak1"
+        android:roundIcon="@drawable/taak5"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
-            android:name="com.katto.pro.MainPlayerActivity"
+            android:name="com.taak.pro.MainPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="sensorLandscape"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.Searchbar"
+            android:name="com.taak.pro.Searchbar"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.SeriesWatchnext"
+            android:name="com.taak.pro.SeriesWatchnext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity5"
+            android:name="com.taak.pro.MainActivity5"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.UpcommingNext"
+            android:name="com.taak.pro.UpcommingNext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MovieWatchnext"
+            android:name="com.taak.pro.MovieWatchnext"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.Movies"
+            android:name="com.taak.pro.Movies"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity14"
+            android:name="com.taak.pro.MainActivity14"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.TrackSelectionDialog"
+            android:name="com.taak.pro.TrackSelectionDialog"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name="com.katto.pro.MainActivity8"
+            android:name="com.taak.pro.MainActivity8"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity7"
+            android:name="com.taak.pro.MainActivity7"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity6"
+            android:name="com.taak.pro.MainActivity6"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity4"
+            android:name="com.taak.pro.MainActivity4"
             android:screenOrientation="portrait"
             android:exported="false"
             />
         <activity
-            android:name="com.katto.pro.MainActivity3"
+            android:name="com.taak.pro.MainActivity3"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity2"
+            android:name="com.taak.pro.MainActivity2"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name="com.katto.pro.MainActivity"
+            android:name="com.taak.pro.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
