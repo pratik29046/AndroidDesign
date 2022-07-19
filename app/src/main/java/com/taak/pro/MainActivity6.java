@@ -225,10 +225,15 @@ public class MainActivity6 extends AppCompatActivity {
                                 btn_cancel.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
-                                        intent1.putExtra("link", data.episodes.get(0).content_link);
-                                        startActivity(intent1);
-                                        alertDialog.dismiss();
+                                        try {
+
+                                            Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
+                                            intent1.putExtra("link", data.episodes.get(0).content_link);
+                                            startActivity(intent1);
+                                            alertDialog.dismiss();
+                                        }catch (Exception|Error e){
+                                            e.printStackTrace();
+                                        }
                                     }
                                 });
                                 btn_okay.setOnClickListener(new View.OnClickListener() {

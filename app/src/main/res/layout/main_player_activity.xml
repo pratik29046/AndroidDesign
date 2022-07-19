@@ -20,7 +20,8 @@
         app:auto_show="false"
         app:resize_mode="fit"
         app:show_buffering="always"
-        app:use_controller="false" />
+        app:use_controller="false"
+        />
 
     <RelativeLayout
         android:id="@+id/topview"
