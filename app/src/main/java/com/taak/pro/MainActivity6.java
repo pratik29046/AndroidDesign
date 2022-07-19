@@ -56,6 +56,8 @@ public class MainActivity6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
         recyclerView = findViewById(R.id.seasons);
@@ -226,11 +228,11 @@ public class MainActivity6 extends AppCompatActivity {
                                     @Override
                                     public void onClick(View v) {
                                         try {
-
                                             Intent intent1 = new Intent(getApplicationContext(), MainPlayerActivity.class);
                                             intent1.putExtra("link", data.episodes.get(0).content_link);
                                             startActivity(intent1);
                                             alertDialog.dismiss();
+
                                         }catch (Exception|Error e){
                                             e.printStackTrace();
                                         }
