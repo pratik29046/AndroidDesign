@@ -12,9 +12,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/taakroundlogo"
+        android:icon="@drawable/taak5"
         android:label="Taak"
-        android:roundIcon="@drawable/taakroundlogo"
+        android:roundIcon="@drawable/taak5"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
