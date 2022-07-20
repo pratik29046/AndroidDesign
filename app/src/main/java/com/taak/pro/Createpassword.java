@@ -30,7 +30,7 @@ public class Createpassword extends AppCompatActivity {
                 String text2 = editText2.getText().toString();
 
                 if (text1.equals("") || text2.equals("")) {
-                    Toast.makeText(getApplicationContext(), "No password enter", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please select your password", Toast.LENGTH_SHORT).show();
 
                 } else {
                     if (text1.equals(text2)) {
@@ -39,12 +39,11 @@ public class Createpassword extends AppCompatActivity {
                         editor.putString("password", text1);
                         editor.apply();
 
-
                         Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(getApplicationContext(), "password not match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Password not match", Toast.LENGTH_SHORT).show();
 
                     }
 
