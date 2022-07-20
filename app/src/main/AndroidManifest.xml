@@ -19,71 +19,88 @@
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
-            android:name="com.taak.pro.MainPlayerActivity"
+            android:name=".Splash"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".Enterpassword"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".Createpassword"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name=".MainPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="sensorLandscape"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
         <activity
-            android:name="com.taak.pro.Searchbar"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".Searchbar"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.SeriesWatchnext"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".SeriesWatchnext"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MainActivity5"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".MainActivity5"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.UpcommingNext"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".UpcommingNext"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MovieWatchnext"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".MovieWatchnext"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.Movies"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".Movies"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MainActivity14"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".MainActivity14"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.TrackSelectionDialog"
+            android:name=".TrackSelectionDialog"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name="com.taak.pro.MainActivity8"
-            android:screenOrientation="portrait"
-            android:exported="false" />
-        <activity
-            android:name="com.taak.pro.MainActivity7"
-            android:screenOrientation="portrait"
-            android:exported="false" />
-        <activity
-            android:name="com.taak.pro.MainActivity6"
-            android:screenOrientation="portrait"
-            android:exported="false" />
-        <activity
-            android:name="com.taak.pro.MainActivity4"
-            android:screenOrientation="portrait"
+            android:name=".MainActivity8"
             android:exported="false"
-            />
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MainActivity3"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".MainActivity7"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MainActivity2"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:name=".MainActivity6"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.taak.pro.MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:name=".MainActivity4"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

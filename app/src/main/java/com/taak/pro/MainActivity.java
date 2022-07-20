@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     void navigateToSecodeActivity() {
         finish();
-        Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+        Intent intent = new Intent(getApplicationContext(),Splash.class);
         startActivity(intent);
     }
 

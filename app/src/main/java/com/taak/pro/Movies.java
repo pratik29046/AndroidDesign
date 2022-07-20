@@ -55,7 +55,6 @@ public class Movies extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movies);
-
         relativeLayout1=findViewById(R.id.tra1);
         trailer=findViewById(R.id.img6);
         play=findViewById(R.id.img5);
