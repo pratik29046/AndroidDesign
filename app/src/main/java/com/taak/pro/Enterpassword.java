@@ -1,13 +1,19 @@
 package com.taak.pro;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hanks.passcodeview.PasscodeView;
@@ -22,10 +28,17 @@ public class Enterpassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enterpassword);
+        btn = findViewById(R.id.btn1);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                forgets();
+            }
+        });
 
 //        editText = findViewById(R.id.edit1);
-//        btn = findViewById(R.id.btn1);
+
 //
 //        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -42,7 +55,6 @@ public class Enterpassword extends AppCompatActivity {
 //
 //            }
 //        });
-
 
 
         passcodeView = findViewById(R.id.passcodeview);
@@ -73,5 +85,26 @@ public class Enterpassword extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void forgets(){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(Enterpassword.this);
+        View mView = getLayoutInflater().inflate(R.layout.forgetpassowrd, null);
+        Button btn_cancel = (Button) mView.findViewById(R.id.btn2);
+        alert.setView(mView);
+        final AlertDialog alertDialog = alert.create();
+        alertDialog.setCanceledOnTouchOutside(false);
+        Window window = alertDialog.getWindow();
+        WindowManager.LayoutParams wlp = window.getAttributes();
+        wlp.gravity = Gravity.CENTER_HORIZONTAL;
+        wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        window.setAttributes(wlp);
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 }

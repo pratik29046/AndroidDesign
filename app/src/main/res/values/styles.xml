@@ -9,4 +9,8 @@
         <item name="android:textSize">16.5dp</item>
     </style>
 
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@color/black</item>
+    </style>
+
 </resources>
