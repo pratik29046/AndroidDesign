@@ -84,15 +84,7 @@
         android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
         />
 
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="170dp"-->
-<!--        android:src="@drawable/taak2"-->
-<!--        android:layout_below="@+id/login"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-
-<!--        />-->
-
 </RelativeLayout>
+
+
+
