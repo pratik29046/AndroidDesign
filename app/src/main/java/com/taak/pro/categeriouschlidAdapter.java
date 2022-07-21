@@ -42,7 +42,7 @@ public class categeriouschlidAdapter extends RecyclerView.Adapter<categeriouschl
     public void onBindViewHolder(@NonNull @NotNull final categeriouschlidAdapter.ViewHolder h, int position) {
 
 
-        Picasso.get().load("https://katto.in"+memberList.get(position).v_poster).into( h.img);
+        Picasso.get().load("https://taak.digital"+memberList.get(position).v_poster).into( h.img);
 //        Log.d("TAG", "onBindViewHolder: "+"https://katto.in"+memberList.get(position).poster);
 
 //        Picasso.get().load("https://katto.in"+seriesList.get(position).v_poster).into( h.img); //for series

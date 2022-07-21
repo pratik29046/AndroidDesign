@@ -53,7 +53,7 @@ public class WebService {
             // Post post = gson.fromJson(reader, Post.class);
 
             Retrofit client = new Retrofit.Builder()
-                    .baseUrl("https://katto.in/")
+                    .baseUrl("https://taak.digital/")
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(okclient)
                     .build();
@@ -73,7 +73,7 @@ public class WebService {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://katto.in/")
+                .baseUrl("https://taak.digital/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

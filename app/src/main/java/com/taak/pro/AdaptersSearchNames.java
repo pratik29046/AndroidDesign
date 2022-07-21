@@ -45,7 +45,7 @@ public class AdaptersSearchNames extends RecyclerView.Adapter<AdaptersSearchName
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Picasso.get().load("https://katto.in"+contents.get(position).poster).into( holder.poster);
+        Picasso.get().load("https://taak.digital"+contents.get(position).poster).into( holder.poster);
         holder.name.setText(contents.get(position).name);
 
         final Content temp=contents.get(position);

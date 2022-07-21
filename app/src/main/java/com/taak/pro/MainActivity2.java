@@ -54,7 +54,7 @@ public class MainActivity2 extends AppCompatActivity {
     List<SlideModel> slideModels = new ArrayList<SlideModel>();
     BottomNavigationView bottomNavigationView;
     ImageView search_btn;
-    private String url = "https://katto.in";
+    private String url = "https://taak.digital";
     GoogleSignInClient mGoogleSignInClient;
 
 

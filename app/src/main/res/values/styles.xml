@@ -2,8 +2,11 @@
 <resources>
 
     <style parent="ThemeOverlay.AppCompat.Dialog.Alert" name="TrackSelectionDialogThemeOverlay">
-
         <item name="windowNoTitle">false</item>
-
     </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16.5dp</item>
+    </style>
+
 </resources>

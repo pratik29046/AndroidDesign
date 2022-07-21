@@ -35,6 +35,8 @@
         app:itemTextColor="@drawable/selector"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menus"
+        app:itemTextAppearanceInactive="@dimen/design_bottom_navigation_active_text_size"
+        app:itemTextAppearanceActive="@dimen/design_bottom_navigation_active_text_size"
         />
 
 </RelativeLayout>

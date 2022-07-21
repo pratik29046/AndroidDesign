@@ -120,7 +120,7 @@ public class Movies extends AppCompatActivity {
             public void onResponse(Call<MovieRootnames> call, Response<MovieRootnames> response) {
 //                Log.d("TAG", "onResponse: "+response.body());
                 MovieRootnames data=response.body();
-                Picasso.get().load("https://katto.in"+data.poster).into(img1);
+                Picasso.get().load("https://taak.digital"+data.poster).into(img1);
                 Title.setText(data.name);
                 Age.setText(data.age_rating);
                 Dec.setText(data.description);
@@ -144,7 +144,7 @@ public class Movies extends AppCompatActivity {
                 String month_name = month_date.format(date);
                 dates.setText(month_name);
 
-                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
+                Picasso.get().load("https://taak.digital"+data.poster).into(moretrailers);
                 adp(data.watch_next);
 
                 play.setOnClickListener(new View.OnClickListener() {

@@ -40,8 +40,8 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Picasso.get().load("https://katto.in"+upcomings1.get(position).poster).into(holder.img1);
-        Picasso.get().load("https://katto.in"+upcomings1.get(position).v_poster).into(holder.img2);
+        Picasso.get().load("https://taak.digital"+upcomings1.get(position).poster).into(holder.img1);
+        Picasso.get().load("https://taak.digital"+upcomings1.get(position).v_poster).into(holder.img2);
         holder.age.setText(upcomings1.get(position).age_rating);
         holder.date.setText(upcomings1.get(position).release_date.substring(0,10));
         holder.lang.setText(upcomings1.get(position).language);
@@ -128,8 +128,8 @@ public class AdapterUpcoming extends RecyclerView.Adapter<AdapterUpcoming.ViewHo
             lang=itemView.findViewById(R.id.text20);
             genres=itemView.findViewById(R.id.text22);
             description=itemView.findViewById(R.id.text2);
-            starring=itemView.findViewById(R.id.text14);
-            directors=itemView.findViewById(R.id.text6);
+            starring=itemView.findViewById(R.id.text11);
+            directors=itemView.findViewById(R.id.text13);
 
             play=itemView.findViewById(R.id.img34);
             playerView=itemView.findViewById(R.id.exoplayer1);

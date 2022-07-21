@@ -38,7 +38,7 @@ public class AdapterWatchnext extends RecyclerView.Adapter<AdapterWatchnext.View
 
     @Override
     public void onBindViewHolder(@NonNull AdapterWatchnext.ViewHolder holder, int position) {
-        Picasso.get().load("https://katto.in"+watchnextmovies.get(position).v_poster).into(holder.img);
+        Picasso.get().load("https://taak.digital"+watchnextmovies.get(position).v_poster).into(holder.img);
 
        final Watchnextmovies temp = watchnextmovies.get(position);
 

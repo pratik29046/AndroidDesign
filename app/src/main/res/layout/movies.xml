@@ -121,6 +121,7 @@
                     android:layout_marginTop="4dp"
                     android:text=""
                     android:textColor="@color/white"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -145,6 +146,7 @@
                     android:layout_marginTop="4dp"
                     android:text=""
                     android:textColor="@color/white"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -169,6 +171,7 @@
                     android:layout_marginTop="4dp"
                     android:text=""
                     android:textColor="@color/white"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
 
@@ -268,7 +271,8 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="20dp"
                     android:text=""
-                    android:textColor="#E8D7DDD7" />
+                    android:textColor="#E8D7DDD7"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/text10"
@@ -277,8 +281,22 @@
                     android:layout_below="@+id/text9"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
-                    android:text="Starring :"
+                    android:text="Starring"
                     android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text9"
+                    android:layout_alignRight="@+id/text10"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="-10dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
 
@@ -287,10 +305,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/text9"
-                    android:layout_alignLeft="@+id/text10"
-                    android:layout_marginStart="64dp"
+                    android:layout_alignLeft="@+id/dot1"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="6dp"
                     android:text=""
+                    android:textSize="15dp"
                     app:colorClickableText="@color/white"
                     app:trimCollapsedText="@string/read_more"
                     app:trimExpandedText="@string/read_less"
@@ -304,8 +323,22 @@
                     android:layout_below="@+id/text11"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="4dp"
-                    android:text="Creator  :"
+                    android:text="Creator"
                     android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text11"
+                    android:layout_alignRight="@+id/text10"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="-10dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -313,10 +346,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/text11"
-                    android:layout_alignLeft="@+id/text10"
-                    android:layout_marginStart="64dp"
+                    android:layout_alignLeft="@+id/dot2"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="4dp"
-                    android:text="" />
+                    android:text=""
+                    android:textSize="15dp" />
 
                 <!--        <ImageView-->
                 <!--            android:id="@+id/img7"-->
@@ -369,22 +403,21 @@
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/text17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
                     android:layout_below="@+id/text14"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="2dp"
                     android:background="@color/black"
-                    android:outlineSpotShadowColor="#F61302"
-                    app:tabGravity="center"
+                    android:outlineSpotShadowColor="@color/black"
                     app:tabIndicatorAnimationDuration="1000"
                     app:tabIndicatorColor="#FF0000"
                     app:tabIndicatorFullWidth="true"
                     app:tabIndicatorHeight="2dp"
                     app:tabMinWidth="20dp"
-                    app:tabMode="fixed"
+                    app:tabMode="scrollable"
                     app:tabRippleColor="#D50000"
                     app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
                     app:tabTextColor="@color/white"
                     app:tabUnboundedRipple="true">
 
@@ -393,13 +426,13 @@
                         android:layout_width="12dp"
                         android:layout_height="wrap_content"
                         android:background="#F30808"
-                        android:text="TRAILERS &amp; MORE" />
+                        android:text="Trailers &amp; More" />
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/b2"
                         android:layout_width="12dp"
                         android:layout_height="wrap_content"
-                        android:text="MORE LIKE THIS"
+                        android:text="More Like This"
                         android:textAlignment="center" />
 
                 </com.google.android.material.tabs.TabLayout>

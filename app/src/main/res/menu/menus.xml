@@ -4,14 +4,15 @@
         android:title="@string/home"
         android:icon="@drawable/home" />
 
-    <item android:id="@+id/download"
-        android:title="@string/Download"
-        android:icon="@drawable/downloadmenubar" />
-
     <item android:id="@+id/upcomes"
         android:title="@string/Upcomming"
         android:icon="@drawable/ic_baseline_grid_view_24"
         />
+
+    <item android:id="@+id/download"
+        android:title="@string/Download"
+        android:icon="@drawable/downloadmenubar" />
+
 
      <item
     android:id="@+id/menu"

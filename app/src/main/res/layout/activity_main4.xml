@@ -266,7 +266,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Terms Of Use"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -274,7 +276,9 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Version 1.1.20"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -282,7 +286,9 @@
             android:layout_marginStart="20dp"
             android:layout_weight="1"
             android:text="Privacy Policy"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            />
 
     </LinearLayout>
 
@@ -296,7 +302,10 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/menus" />
+        app:menu="@menu/menus"
+        app:itemTextAppearanceInactive="@dimen/design_bottom_navigation_active_text_size"
+        app:itemTextAppearanceActive="@dimen/design_bottom_navigation_active_text_size"
+        />
 
 </RelativeLayout>
 

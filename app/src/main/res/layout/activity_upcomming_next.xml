@@ -104,10 +104,11 @@
             android:layout_marginTop="13dp"
             android:background="@drawable/btext"
             android:gravity="center"
-            android:text=""
+            android:text="18"
             android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="15dp"
-            android:textStyle="bold" />
+            />
 
 
         <TextView
@@ -119,7 +120,9 @@
             android:layout_marginTop="13dp"
             android:text=""
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
 
         <TextView
             android:id="@+id/text22"
@@ -131,7 +134,9 @@
             android:layout_marginTop="13dp"
             android:text=""
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
 
         <TextView
             android:id="@+id/text23"
@@ -139,12 +144,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/card2"
             android:layout_alignRight="@+id/text20"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="13dp"
             android:layout_marginEnd="-11dp"
             android:text="."
             android:textColor="#D50000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
 
 
         <TextView
@@ -156,55 +162,94 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:text=""
-            android:textColor="#E8D7DDD7" />
+            android:textColor="#E8D7DDD7"
+            android:textSize="15dp"
+            />
 
         <TextView
-            android:id="@+id/text13"
+            android:id="@+id/text10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text2"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="Starring :"
+            android:text="Starring"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:layout_below="@id/text2"
+            android:layout_alignRight="@+id/text10"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginTop="6dp"
+            android:textSize="15dp"
+            />
+
 
 
         <com.borjabravo.readmoretextview.ReadMoreTextView
-            android:id="@+id/text14"
+            android:id="@+id/text11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text2"
-            android:layout_alignLeft="@+id/text13"
-            android:layout_marginStart="64dp"
+            android:layout_alignLeft="@+id/dot1"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="6dp"
             android:text=""
             app:colorClickableText="@color/white"
             app:trimCollapsedText="@string/read_more"
             app:trimExpandedText="@string/read_less"
             app:trimLength="20"
-            app:trimMode="trimModeLength" />
+            app:trimMode="trimModeLength"
+            android:textSize="15dp"
+            />
 
         <TextView
-            android:id="@+id/text15"
+            android:id="@+id/text12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text14"
+            android:layout_below="@+id/text11"
             android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:text="Creator  :"
+            android:text="Creator"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
 
         <TextView
-            android:id="@+id/text6"
+            android:id="@+id/dot2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text14"
-            android:layout_alignLeft="@+id/text5"
-            android:layout_marginStart="64dp"
+            android:text=":"
+            android:layout_below="@id/text11"
+            android:layout_alignRight="@+id/text10"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="-10dp"
             android:layout_marginTop="4dp"
-            android:text="" />
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:id="@+id/text13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text11"
+            android:layout_alignLeft="@+id/dot2"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textSize="15dp"
+            />
 
     </RelativeLayout>
 

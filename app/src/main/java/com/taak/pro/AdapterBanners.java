@@ -35,7 +35,7 @@ public class AdapterBanners extends RecyclerView.Adapter<AdapterBanners.View_Hol
 
     @Override
     public void onBindViewHolder(@NonNull View_Holder holder, int position) {
-        Picasso.get().load("https://katto.in"+bannerList.get(position).poster).into( holder.img1);
+        Picasso.get().load("https://taak.digital"+bannerList.get(position).poster).into( holder.img1);
 
 //        holder.search.setOnClickListener(new View.OnClickListener() {
 //            @Override

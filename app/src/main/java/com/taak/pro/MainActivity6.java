@@ -161,7 +161,7 @@ public class MainActivity6 extends AppCompatActivity {
             public void onResponse(Call<SeriesRootnames> call, Response<SeriesRootnames> response) {
                 Log.d("TAG", "onResponse: "+response.body());
                 SeriesRootnames data=response.body();
-                Picasso.get().load("https://katto.in"+data.poster).into(img1);
+                Picasso.get().load("https://taak.digital"+data.poster).into(img1);
                 Title.setText(data.name);
                 Age.setText(data.age_rating);
                 language.setText(data.language);
@@ -182,7 +182,7 @@ public class MainActivity6 extends AppCompatActivity {
                 Dec.setText(data.description);
                 starring.setText(data.starring);
                 directors.setText(data.directors);
-                Picasso.get().load("https://katto.in"+data.poster).into(moretrailers);
+                Picasso.get().load("https://taak.digital"+data.poster).into(moretrailers);
                 textTr.setText(data.name);
                 adp1(data.watch_next);
                 adp(data.episodes);

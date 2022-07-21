@@ -36,7 +36,7 @@ public class AdapterEpisodes extends RecyclerView.Adapter<AdapterEpisodes.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull AdapterEpisodes.ViewHolder holder, int position) {
-        Picasso.get().load("https://katto.in"+userList2.get(position).poster).into( holder.vs);
+        Picasso.get().load("https://taak.digital"+userList2.get(position).poster).into( holder.vs);
         holder.n.setText(userList2.get(position).name);
         holder.no.setText(userList2.get(position).number);
         holder.time.setText(userList2.get(position).duration);
