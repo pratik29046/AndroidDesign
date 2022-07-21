@@ -34,15 +34,13 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Burst of Entertainment"
-        android:textColor="@color/white"
         android:layout_below="@id/text1"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="20dp"
+        android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed"
-        />
+        android:text="Burst of Entertainment"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
 <!--    <com.google.android.gms.common.SignInButton-->
 <!--        android:id="@+id/login"-->
@@ -56,6 +54,7 @@
 <!--        android:textSize="30dp"-->
 <!--        android:textStyle="bold"-->
 <!--        />-->
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
@@ -75,11 +74,15 @@
         android:gravity="center"
         android:paddingStart="30dp"
         android:paddingLeft="30dp"
-        android:text="CONTINUE WITH GOOGLE"
+        android:text="Continue With Google"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlHardcoded"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+        />
 
 
 <!--    <ImageView-->
